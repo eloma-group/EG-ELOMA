@@ -23,8 +23,12 @@ DirectoryIndex index.html
   # A missing file under /assets/ stays a real 404 instead of returning the page.
   RewriteRule ^assets/ - [L,R=404]
 
-  # Every other URL (/seo, /contact, /privacy, a refreshed page ...) is handled by the React app.
-  RewriteRule ^ index.html [L]
+  # Every page is prebuilt as static HTML: /seo is served from seo.html (works on refresh too).
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^([a-z0-9-]+)$ $1.html [L]
+
+  # Any other URL (old links, typos) gets the app shell, which redirects to the right page.
+  RewriteRule ^ app-shell.html [L]
 </IfModule>
 
 <IfModule mod_mime.c>
@@ -33,8 +37,8 @@ DirectoryIndex index.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  # index.html must always be fresh so visitors get the latest build straight away.
-  <FilesMatch "^index\.html$">
+  # Pages must always be fresh so visitors get the latest build straight away.
+  <FilesMatch "\.html$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
   # Built JS/CSS files have a content hash in their names, so they can be cached for a year.

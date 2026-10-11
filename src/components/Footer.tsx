@@ -47,7 +47,7 @@ export default function Footer() {
     <footer>
       <div className="wrap fgrid">
         <div>
-          <Link className="logo" to="/" aria-label="EG Eloma home">
+          <Link className="logo" to="/">
             <img src="/assets/logo-mark-eloma.png" alt="" width="50" height="40" />
             <span className="lw">
               <span className="lwn"><b>EG</b> Eloma</span>

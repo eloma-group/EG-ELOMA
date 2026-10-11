@@ -1,4 +1,4 @@
-import { lazy, Suspense, useLayoutEffect, type ComponentType, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, useLayoutEffect, type ComponentType, type ReactNode } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useReveal } from './hooks/useReveal'
 import ComingSoon from './components/ComingSoon'
@@ -18,11 +18,24 @@ const slugFor = (file: string) => {
   return name.replace(/^P(?=\d)/, '').replace(/(?<=[a-z0-9])(?=[A-Z])|(?<=[a-z])(?=\d)/g, '-').toLowerCase()
 }
 
-const pages = Object.entries(modules).map(([file, load]) => ({ path: '/' + slugFor(file), Page: lazy(load) }))
+const pages = Object.entries(modules).map(([file, load]) => ({ path: '/' + slugFor(file), load, Page: lazy(load) }))
+
+// Every published URL, used to prerender each page to static HTML at build time.
+export const routes = pages.map(p => p.path)
+
+// Loads the page module for a URL before hydrating, so the prerendered HTML is reused straight away.
+export const preloadRoute = (pathname: string) => pages.find(p => p.path === pathname)?.load()
 
 function PageShell({ children }: { children: ReactNode }) {
   const { pathname, hash } = useLocation()
   useReveal(pathname)
+  useEffect(() => {
+    // The prerendered page put <title>/<meta>/<link> copies in <head>; drop each one React has added again.
+    document.querySelectorAll('head [data-pre]').forEach(el => {
+      const twin = [...document.head.children].some(x => x !== el && !x.hasAttribute('data-pre') && x.outerHTML === el.outerHTML.replace(' data-pre=""', ''))
+      if (twin) el.remove()
+    })
+  }, [])
   useLayoutEffect(() => {
     const target = hash && document.getElementById(decodeURIComponent(hash.slice(1)))
     if (target) target.scrollIntoView()

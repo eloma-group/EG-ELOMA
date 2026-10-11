@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import ContactForm from '../components/ContactForm'
 import { BUSINESS } from '../siteInfo'
-import Header from '../components/Header'
+import Header, { PORTAL_URL } from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
@@ -238,7 +238,7 @@ export default function Contact() {
                   Raise a ticket and track it in your client portal. Our team is available 24/7.
                 </p>
                 <div className="cta" style={{ justifyContent: "flex-start", marginTop: "18px" }}>
-                  <a className="btn w" href="https://teamegdigital.com" rel="noopener">Client portal</a>
+                  <a className="btn w" href={PORTAL_URL} rel="noopener">Client portal</a>
                   <Link className="btn d" to="/support-services">Support</Link>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
-import Header from '../components/Header'
+import Header, { PORTAL_URL } from '../components/Header'
 import Footer from '../components/Footer'
 import Credentials from '../components/Credentials'
 import HeroStudio from '../components/HeroStudio'
@@ -425,7 +425,7 @@ export default function Home() {
               </ul>
               <div className="cta" style={{ justifyContent: "flex-start", marginTop: "28px" }}>
                 <Link className="btn w" to="/contact">Become a client</Link>
-                <a className="btn d" href="https://teamegdigital.com" rel="noopener">Client login</a>
+                <a className="btn d" href={PORTAL_URL} rel="noopener">Client login</a>
               </div>
             </div>
             <div className="pm" aria-hidden="true">

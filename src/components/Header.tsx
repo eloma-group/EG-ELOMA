@@ -13,7 +13,7 @@ const NAV = [
   { to: '/contact', label: 'Contact' },
 ]
 
-export const PORTAL_URL = 'https://teamegdigital.com'
+export const PORTAL_URL = 'https://teamegdigital.com/'
 export const PHONE = BUSINESS.phone
 
 export default function Header({ active }: { active?: string }) {
@@ -21,7 +21,7 @@ export default function Header({ active }: { active?: string }) {
   return (
     <header>
       <div className="nav">
-        <Link className="logo" to="/" aria-label="EG Eloma home">
+        <Link className="logo" to="/">
           <img src="/assets/logo-mark-eloma.png" alt="" width="50" height="40" />
           <span className="lw">
             <span className="lwn"><b>EG</b> Eloma</span>

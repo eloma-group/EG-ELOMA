@@ -150,7 +150,7 @@ footer .k{font-size:12px}
 footer nav{display:flex;gap:22px;flex-wrap:wrap}
 footer nav a{font:600 12px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#C9CCD3}
 
-.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.rv{opacity:.01;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.orb animateMotion{display:none}}
 
@@ -530,7 +530,7 @@ h1,h2,h3,p{margin:0}
 :root{
   --bg:#071628; --card:rgba(255,255,255,.025); --card2:#153A60; --ink:#F4F5FB; --dim:#A3A8BC; --mute:#646A86; --line:rgba(255,255,255,.1); --line2:rgba(255,255,255,.16);
   --navy:#071628; --mint:#2FCFB3; --paper:#FFFFFF; --text:#121530; --rule:#E7E8EF; --acc:#984819; --acc2:#F8E6D8; --indigo:#5B5FFF;
-  --sans:"Geist",-apple-system,"Segoe UI",Arial,sans-serif; --mono:"Geist Mono",ui-monospace,Menlo,monospace;
+  --sans:"Geist","Geist Fallback",-apple-system,"Segoe UI",Arial,sans-serif; --mono:"Geist Mono","Geist Mono Fallback",ui-monospace,Menlo,monospace;
   --max:1760px; --gut:clamp(20px,4vw,64px); --r:18px;
 }
 html,body{background:var(--bg)}
@@ -766,16 +766,18 @@ a.card:hover,.card.hov:hover{border-color:rgba(255,255,255,.22);background:rgba(
 
 /* ===== Content + animation layer ===== */
 /* Reveal with stagger */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+/* Hidden states use opacity .01 rather than 0: invisible to the eye, but content on the first screen counts as painted (LCP). */
+.rv{opacity:.01;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
-.stg>*{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s}
+.stg>*{opacity:.01;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),border-color .25s,background .25s}
 .in .stg>*,.stg.in>*{opacity:1;transform:none}
 .in .stg>a.card:hover,.in .stg>.card.hov:hover{transform:translateY(-3px)}
 
 /* Inner hero entrance */
 .pc>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
 .pc>*:nth-child(2){animation-delay:.08s}.pc>*:nth-child(3){animation-delay:.16s}.pc>*:nth-child(4){animation-delay:.24s}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+/* Starts at .01, not 0: looks the same, but the browser counts the hero heading as painted straight away (LCP). */
+@keyframes rise{from{opacity:.01;transform:translateY(22px)}to{opacity:1;transform:none}}
 
 /* Card icon glow */
 .card .pi{transition:box-shadow .3s,border-color .3s,background .3s}
@@ -1074,16 +1076,16 @@ html,body{background:#071628}
 @font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-latin-600-normal.woff2) format("woff2")}
 .logo .lw{display:flex;flex-direction:column;justify-content:center}
-.logo .lwn{font:500 22px/1 "Poppins",var(--sans);letter-spacing:-.005em;color:#fff}
+.logo .lwn{font:500 22px/1 "Poppins","Poppins Fallback",var(--sans);letter-spacing:-.005em;color:#fff}
 .logo .lwn b{font-weight:600;background:linear-gradient(180deg,#63E3B6,#1FAE7E);-webkit-background-clip:text;background-clip:text;color:transparent}
-.logo .lwb{display:flex;align-items:center;gap:6px;margin-top:6px;font:500 8.5px/1 "Poppins",var(--sans);letter-spacing:.34em;text-transform:uppercase;color:#A3ABB6}
+.logo .lwb{display:flex;align-items:center;gap:6px;margin-top:6px;font:500 8.5px/1 "Poppins","Poppins Fallback",var(--sans);letter-spacing:.34em;text-transform:uppercase;color:#A3ABB6}
 .logo .lwb::before{content:"";flex:none;width:24px;height:1px;background:linear-gradient(90deg,rgba(47,207,160,0),#2FCFA0)}
 .fgrid .logo .lwn{font-size:24px}
 
 /* Homepage process: steps appear one by one as the line draws, dots light up and pulse, hover highlight */
 .proc-anim::after{transition:transform 1.5s linear .25s}
 @keyframes procPulse{0%{box-shadow:0 0 0 0 rgba(47,207,179,.5)}70%,100%{box-shadow:0 0 0 12px rgba(47,207,179,0)}}
-.proc-anim>div>*{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1),color .25s}
+.proc-anim>div>*{opacity:.01;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1),color .25s}
 .proc-anim>div::before{opacity:0;transform:scale(.4);transition:opacity .3s,transform .45s cubic-bezier(.3,1.6,.5,1),background .35s}
 .in .proc-anim>div>*{opacity:1;transform:none}
 .in .proc-anim>div::before{opacity:1;transform:scale(1);background:var(--mint);animation:procPulse 2.6s ease-out infinite}
@@ -1124,3 +1126,17 @@ html,body{background:#071628}
 .cinfo small{display:block;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 /* Long industry names in the hero select end with "…" instead of being cut mid-word */
 .maker select{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+
+/* Speed: sections below the first screen skip layout and paint until they get near the viewport.
+   overflow-clip-margin keeps hover lifts and card shadows from being clipped at the section edge. */
+main>.s:not(.first),main>.final,footer{content-visibility:auto;contain-intrinsic-block-size:auto 900px;overflow-clip-margin:48px}
+/* Fallback fonts sized to match Geist, Poppins and Geist Mono, so text does not jump when the web fonts arrive. */
+@font-face{font-family:"Geist Fallback";font-weight:100 450;src:local("Arial"),local("ArialMT"),local("Helvetica"),local("Liberation Sans"),local("Arimo"),local("Roboto");size-adjust:104.45%;ascent-override:88.09%;descent-override:21.06%;line-gap-override:9.57%}
+@font-face{font-family:"Geist Fallback";font-weight:451 550;src:local("Arial"),local("ArialMT"),local("Helvetica"),local("Liberation Sans"),local("Arimo"),local("Roboto");size-adjust:104.21%;ascent-override:88.29%;descent-override:21.11%;line-gap-override:9.60%}
+@font-face{font-family:"Geist Fallback";font-weight:551 650;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Roboto Bold");size-adjust:101.4%;ascent-override:90.74%;descent-override:21.70%;line-gap-override:9.86%}
+@font-face{font-family:"Geist Fallback";font-weight:651 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Roboto Bold");size-adjust:103.37%;ascent-override:89.01%;descent-override:21.28%;line-gap-override:9.67%}
+@font-face{font-family:"Poppins Fallback";font-weight:100 550;src:local("Arial"),local("ArialMT"),local("Helvetica"),local("Liberation Sans"),local("Arimo"),local("Roboto");size-adjust:115.09%;ascent-override:91.23%;descent-override:30.41%;line-gap-override:8.69%}
+@font-face{font-family:"Poppins Fallback";font-weight:551 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold"),local("Arimo Bold"),local("Roboto Bold");size-adjust:107.12%;ascent-override:98.02%;descent-override:32.67%;line-gap-override:9.34%}
+@font-face{font-family:"Geist Mono Fallback";src:local("Courier New"),local("CourierNewPSMT"),local("Liberation Mono"),local("Cousine");size-adjust:99.98%;ascent-override:100.52%;descent-override:29.5%;line-gap-override:0%}
+/* The decorative orbit layer is self-contained, so web-font swaps never re-layout (or shift) it. */
+.orbits{contain:strict}

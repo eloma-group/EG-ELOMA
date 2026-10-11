@@ -1,0 +1,310 @@
+{
+  "routes": [
+    {
+      "route": "/index.html",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/about.html",
+      "redirect": "/about",
+      "statusCode": 301
+    },
+    {
+      "route": "/api-integrations.html",
+      "redirect": "/api-integrations",
+      "statusCode": 301
+    },
+    {
+      "route": "/app-development.html",
+      "redirect": "/app-development",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog.html",
+      "redirect": "/blog",
+      "statusCode": 301
+    },
+    {
+      "route": "/cloud-maintenance.html",
+      "redirect": "/cloud-maintenance",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact.html",
+      "redirect": "/contact",
+      "statusCode": 301
+    },
+    {
+      "route": "/cybersecurity.html",
+      "redirect": "/cybersecurity",
+      "statusCode": 301
+    },
+    {
+      "route": "/design.html",
+      "redirect": "/design",
+      "statusCode": 301
+    },
+    {
+      "route": "/google-meta-ads.html",
+      "redirect": "/google-meta-ads",
+      "statusCode": 301
+    },
+    {
+      "route": "/industries.html",
+      "redirect": "/industries",
+      "statusCode": 301
+    },
+    {
+      "route": "/ivr-system.html",
+      "redirect": "/ivr-system",
+      "statusCode": 301
+    },
+    {
+      "route": "/landline-number.html",
+      "redirect": "/landline-number",
+      "statusCode": 301
+    },
+    {
+      "route": "/local-listing.html",
+      "redirect": "/local-listing",
+      "statusCode": 301
+    },
+    {
+      "route": "/microsoft.html",
+      "redirect": "/microsoft",
+      "statusCode": 301
+    },
+    {
+      "route": "/microsoft-development.html",
+      "redirect": "/microsoft-development",
+      "statusCode": 301
+    },
+    {
+      "route": "/microsoft-licensing.html",
+      "redirect": "/microsoft-licensing",
+      "statusCode": 301
+    },
+    {
+      "route": "/ppc.html",
+      "redirect": "/ppc",
+      "statusCode": 301
+    },
+    {
+      "route": "/pricing.html",
+      "redirect": "/pricing",
+      "statusCode": 301
+    },
+    {
+      "route": "/privacy.html",
+      "redirect": "/privacy",
+      "statusCode": 301
+    },
+    {
+      "route": "/saas-development.html",
+      "redirect": "/saas-development",
+      "statusCode": 301
+    },
+    {
+      "route": "/seo.html",
+      "redirect": "/seo",
+      "statusCode": 301
+    },
+    {
+      "route": "/server-maintenance.html",
+      "redirect": "/server-maintenance",
+      "statusCode": 301
+    },
+    {
+      "route": "/services.html",
+      "redirect": "/services",
+      "statusCode": 301
+    },
+    {
+      "route": "/social-media.html",
+      "redirect": "/social-media",
+      "statusCode": 301
+    },
+    {
+      "route": "/software-development.html",
+      "redirect": "/software-development",
+      "statusCode": 301
+    },
+    {
+      "route": "/support-services.html",
+      "redirect": "/support-services",
+      "statusCode": 301
+    },
+    {
+      "route": "/terms.html",
+      "redirect": "/terms",
+      "statusCode": 301
+    },
+    {
+      "route": "/toll-free-number.html",
+      "redirect": "/toll-free-number",
+      "statusCode": 301
+    },
+    {
+      "route": "/virtual-customer-care.html",
+      "redirect": "/virtual-customer-care",
+      "statusCode": 301
+    },
+    {
+      "route": "/virtual-mobile-number.html",
+      "redirect": "/virtual-mobile-number",
+      "statusCode": 301
+    },
+    {
+      "route": "/website-development.html",
+      "redirect": "/website-development",
+      "statusCode": 301
+    },
+    {
+      "route": "/about",
+      "rewrite": "/about.html"
+    },
+    {
+      "route": "/api-integrations",
+      "rewrite": "/api-integrations.html"
+    },
+    {
+      "route": "/app-development",
+      "rewrite": "/app-development.html"
+    },
+    {
+      "route": "/blog",
+      "rewrite": "/blog.html"
+    },
+    {
+      "route": "/cloud-maintenance",
+      "rewrite": "/cloud-maintenance.html"
+    },
+    {
+      "route": "/contact",
+      "rewrite": "/contact.html"
+    },
+    {
+      "route": "/cybersecurity",
+      "rewrite": "/cybersecurity.html"
+    },
+    {
+      "route": "/design",
+      "rewrite": "/design.html"
+    },
+    {
+      "route": "/google-meta-ads",
+      "rewrite": "/google-meta-ads.html"
+    },
+    {
+      "route": "/industries",
+      "rewrite": "/industries.html"
+    },
+    {
+      "route": "/ivr-system",
+      "rewrite": "/ivr-system.html"
+    },
+    {
+      "route": "/landline-number",
+      "rewrite": "/landline-number.html"
+    },
+    {
+      "route": "/local-listing",
+      "rewrite": "/local-listing.html"
+    },
+    {
+      "route": "/microsoft",
+      "rewrite": "/microsoft.html"
+    },
+    {
+      "route": "/microsoft-development",
+      "rewrite": "/microsoft-development.html"
+    },
+    {
+      "route": "/microsoft-licensing",
+      "rewrite": "/microsoft-licensing.html"
+    },
+    {
+      "route": "/ppc",
+      "rewrite": "/ppc.html"
+    },
+    {
+      "route": "/pricing",
+      "rewrite": "/pricing.html"
+    },
+    {
+      "route": "/privacy",
+      "rewrite": "/privacy.html"
+    },
+    {
+      "route": "/saas-development",
+      "rewrite": "/saas-development.html"
+    },
+    {
+      "route": "/seo",
+      "rewrite": "/seo.html"
+    },
+    {
+      "route": "/server-maintenance",
+      "rewrite": "/server-maintenance.html"
+    },
+    {
+      "route": "/services",
+      "rewrite": "/services.html"
+    },
+    {
+      "route": "/social-media",
+      "rewrite": "/social-media.html"
+    },
+    {
+      "route": "/software-development",
+      "rewrite": "/software-development.html"
+    },
+    {
+      "route": "/support-services",
+      "rewrite": "/support-services.html"
+    },
+    {
+      "route": "/terms",
+      "rewrite": "/terms.html"
+    },
+    {
+      "route": "/toll-free-number",
+      "rewrite": "/toll-free-number.html"
+    },
+    {
+      "route": "/virtual-customer-care",
+      "rewrite": "/virtual-customer-care.html"
+    },
+    {
+      "route": "/virtual-mobile-number",
+      "rewrite": "/virtual-mobile-number.html"
+    },
+    {
+      "route": "/website-development",
+      "rewrite": "/website-development.html"
+    },
+    {
+      "route": "/assets/*",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/app-shell.html",
+    "exclude": [
+      "/assets/*",
+      "/*.{png,jpg,svg,ico,webp,woff2,js,css,json,xml,txt}"
+    ]
+  },
+  "globalHeaders": {
+    "Cache-Control": "no-cache",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "mimeTypes": {
+    ".woff2": "font/woff2",
+    ".webmanifest": "application/manifest+json"
+  }
+}
