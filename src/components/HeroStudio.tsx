@@ -159,12 +159,12 @@ export default function HeroStudio() {
       <div>
         <span className="eyebrow">
           <b>Live</b>
-          Try it with your business name
+          Try It With Your Business Name
         </span>
         <h1 id="hero-title">
-          <span className="h1k">{'Websites, software, SEO & toll-free numbers · AU, US, Canada, UK & NZ'}</span>
-          {'See your business, '}
-          <span className="hl">upgraded.</span>
+          <span className="h1k">{'Websites, Software, SEO & Toll-Free Numbers · AU, US, Canada, UK & NZ'}</span>
+          {'See Your Business, '}
+          <span className="hl">Upgraded.</span>
         </h1>
         <p className="lead">
           Type your business name and see the website, Google listing, software and phone number we would build for you.

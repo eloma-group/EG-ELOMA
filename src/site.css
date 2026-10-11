@@ -353,7 +353,7 @@ h1,h2,h3,p{margin:0}
 .logo{display:flex;align-items:center;gap:10px;font:600 18px var(--sans);letter-spacing:-.02em;text-decoration:none}
 .logo i{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--indigo),var(--mint));display:grid;place-items:center}
 .logo i svg{width:16px;height:16px}
-.logo small{font:500 12px var(--sans);color:var(--dim);padding-left:12px;margin-left:2px;border-left:1px solid var(--line)}
+.logo small{font:500 12px var(--sans);color:var(--gold);padding-left:12px;margin-left:2px;border-left:1px solid var(--line)}
 
 /* Grid */
 .g{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(32px,4.5vw,72px);align-items:center;padding-block:clamp(40px,6vw,80px) clamp(44px,5vw,72px)}
@@ -545,7 +545,7 @@ header{position:relative;z-index:5}
 .logo{display:flex;align-items:center;gap:10px;font:600 18px var(--sans);letter-spacing:-.02em;white-space:nowrap}
 .logo i{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#5B5FFF,#2FCFB3);display:grid;place-items:center;flex:none}
 .logo i svg{width:16px;height:16px}
-.logo small{font:500 12px var(--sans);color:var(--dim);padding-left:12px;margin-left:2px;border-left:1px solid var(--line)}
+.logo small{font:500 12px var(--sans);color:var(--gold);padding-left:12px;margin-left:2px;border-left:1px solid var(--line)}
 .nav ul{gap:24px;margin-left:8px}
 .nav ul a{font:500 14.5px var(--sans);letter-spacing:0;text-transform:none;color:var(--dim);border-bottom:0;padding:6px 0}
 .nav ul a:hover,.nav ul a[aria-current]{color:var(--ink)}
