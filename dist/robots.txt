@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://egdigital.com.au/sitemap.xml
