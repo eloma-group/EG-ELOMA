@@ -371,6 +371,8 @@ h1,h2,h3,p{margin:0}
 .maker select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%23A6ABCB' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:14px;padding-right:36px}
 .maker select option{color:#111}
 .maker input:focus,.maker select:focus{outline:none;border-color:var(--mint);background-color:rgba(6,9,30,.8)}
+.maker input::placeholder{color:var(--dim);opacity:1}
+.maker input:focus::placeholder{color:transparent}
 .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
 .lbtn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 22px;border-radius:10px;font:600 15px var(--sans);text-decoration:none;border:0;cursor:pointer;white-space:nowrap;transition:background .2s,box-shadow .2s}
 .lbtn.a{background:var(--ink);color:var(--navy)}
@@ -1068,9 +1070,13 @@ html,body{background:#071628}
 @media (max-width:1520px){.logo small{display:none}}
 @media (max-width:1360px){.nav .r .tel{display:none}}
 
-/* Memberships: full "Australian Signals Directorate" name needs a wider first column and may wrap */
+/* Memberships: columns size to their names (long names wrap) so text never runs into the divider lines */
 .aff b.sm.long{white-space:normal}
-@media (min-width:641px){.aff ul{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.5fr)}}
+.aff b{overflow-wrap:break-word}
+/* Names stretch so every MEMBER label sits on the same bottom line within its row */
+.aff li{display:flex;flex-direction:column}.aff li b{flex:1 0 auto}
+@media (min-width:1400px){.aff ul{grid-template-columns:repeat(4,auto);justify-content:space-between}.aff li{padding:2px 20px}.aff li:first-child{padding-left:0}.aff li:last-child{padding-right:0}}
+@media (max-width:1399px){.aff ul{grid-template-columns:1fr 1fr;row-gap:18px}.aff li:nth-child(odd){border-left:0;padding-left:0}.aff li:nth-child(even){padding-left:20px}}
 
 /* EG Eloma logo lockup: bird mark + "EG Eloma" wordmark + "By Eloma Group" tagline */
 @font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format("woff2")}

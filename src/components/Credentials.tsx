@@ -4,9 +4,9 @@ const STAR = 'M0 -7l1.6 3.5 3.8.4-2.9 2.5.9 3.7L0 1.2-3.4 3.1l.9-3.7-2.9-2.5 3.8
 const STARS = ['translate(60 42) scale(1.05)', 'translate(47 58) scale(.9)', 'translate(74 56) scale(.9)', 'translate(60 76) scale(1.1)', 'translate(67 66) scale(.55)']
 const COUNTRIES = ['Australia', 'United States', 'Canada', 'United Kingdom', 'New Zealand']
 const AFFILIATIONS = [
-  { name: 'Australian Signals Directorate', note: 'Business Partner', small: true, long: true },
-  { name: 'UN', note: 'Global Compact participant' },
-  { name: 'WEPs', note: 'Signatory' },
+  { name: 'Australian Signals Directorate', note: 'Member', small: true, long: true },
+  { name: 'United Nations', note: 'Member', small: true, long: true },
+  { name: 'Women’s Empowerment Principles (WEPs)', note: 'Member', small: true, long: true },
   { name: 'Australian Red Cross Lifeblood', note: 'Proud Member', small: true, long: true },
 ]
 

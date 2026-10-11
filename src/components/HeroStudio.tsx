@@ -63,7 +63,9 @@ const IND = {
 
 type Industry = keyof typeof IND
 
-const DEMOS: [string, Industry, string][] = [['Harbour Plumbing', 'trades', 'Bondi'], ['Northside Medical', 'healthcare', 'Chermside'], ['Sunrise Bakery', 'hospitality', 'Fitzroy']]
+// The demo alternates these names and cities while stepping through every industry in IND.
+const DEMOS: [string, string][] = [['Eloma Group', 'Sydney'], ['Bivry', 'Melbourne']]
+const INDUSTRIES = Object.keys(IND) as Industry[]
 
 const slug = (s: string) => (s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '') || 'yourbusiness').slice(0, 28)
 const initials = (s: string) => {
@@ -87,15 +89,19 @@ const searchIcon = (
 
 // Home hero: the "type your business name" form and its live mock-up preview.
 export default function HeroStudio() {
-  const [biz, setBiz] = useState('Sunrise Bakery')
-  const [sub, setSub] = useState('Fitzroy')
-  const [ind, setInd] = useState<Industry>('hospitality')
+  // biz/sub hold what the visitor typed; the demo only types into the placeholders.
+  const [biz, setBiz] = useState('')
+  const [sub, setSub] = useState('')
+  const [demoBiz, setDemoBiz] = useState(DEMOS[0][0])
+  const [demoSub, setDemoSub] = useState(DEMOS[0][1])
+  const [ind, setInd] = useState<Industry>(INDUSTRIES[0])
+  const edited = useRef(false)
   const stageRef = useRef<HTMLDivElement>(null)
   const demo = useRef<{ pause: () => void; resumeSoon: () => void } | null>(null)
   const reduce = useRef(false)
 
-  const name = biz.trim() || 'Your Business'
-  const area = sub.trim() || 'your area'
+  const name = biz.trim() || demoBiz.trim() || 'Your Business'
+  const area = sub.trim() || demoSub.trim() || 'your area'
   const d = IND[ind]
   const sl = slug(name)
   const ini = initials(name)
@@ -110,8 +116,9 @@ export default function HeroStudio() {
     })
   }
 
-  // Auto-typing demo that cycles through example businesses. It pauses while the visitor edits the form
-  // and starts again after they have been idle for a few seconds (and are not typing in a text field).
+  // Auto-typing demo that cycles through example businesses in the field placeholders. It pauses while the
+  // visitor edits the form and starts again after they have been idle for a few seconds (and are not typing in a text field).
+  // Once the visitor has typed anything, the demo stops changing the industry and preview.
   useEffect(() => {
     reduce.current = matchMedia('(prefers-reduced-motion: reduce)').matches
     if (reduce.current) return
@@ -120,18 +127,21 @@ export default function HeroStudio() {
     let paused = false
     const later = (fn: () => void, ms: number) => timers.push(window.setTimeout(fn, ms))
     const clear = () => { timers.forEach(clearTimeout); timers = [] }
-    let di = 0
+    let di = 1
     const typeDemo = () => {
       if (paused) return
-      const [n, demoInd, demoSub] = DEMOS[di++ % DEMOS.length]
-      setInd(demoInd)
-      setSub(demoSub)
-      pop()
+      const [n, nSub] = DEMOS[di % DEMOS.length]
+      const nInd = INDUSTRIES[di++ % INDUSTRIES.length]
+      setDemoSub(nSub)
+      if (!edited.current) {
+        setInd(nInd)
+        pop()
+      }
       let i = 0
-      setBiz('')
+      setDemoBiz('')
       const type = () => {
         if (paused) return
-        setBiz(n.slice(0, ++i))
+        setDemoBiz(n.slice(0, ++i))
         if (i < n.length) later(type, 65)
         else later(typeDemo, 4200)
       }
@@ -173,18 +183,18 @@ export default function HeroStudio() {
           <div className="row">
             <label htmlFor="biz">
               Business name
-              <input id="biz" name="business" autoComplete="organization" maxLength={40} value={biz} onFocus={pause} onBlur={resumeSoon} onChange={e => setBiz(e.target.value)} />
+              <input id="biz" name="business" autoComplete="organization" maxLength={40} value={biz} placeholder={demoBiz} onFocus={pause} onBlur={resumeSoon} onChange={e => { edited.current = true; setBiz(e.target.value) }} />
             </label>
             <label htmlFor="ind">
               Industry
-              <select id="ind" name="industry" value={ind} onFocus={pause} onBlur={resumeSoon} onChange={e => { setInd(e.target.value as Industry); pop(); resumeSoon() }}>
-                {(Object.keys(IND) as Industry[]).map(k => <option key={k} value={k}>{IND[k].label}</option>)}
+              <select id="ind" name="industry" value={ind} onFocus={pause} onBlur={resumeSoon} onChange={e => { edited.current = true; setInd(e.target.value as Industry); pop(); resumeSoon() }}>
+                {INDUSTRIES.map(k => <option key={k} value={k}>{IND[k].label}</option>)}
               </select>
             </label>
           </div>
           <label htmlFor="sub">
             City or suburb
-            <input id="sub" name="suburb" autoComplete="address-level2" maxLength={30} value={sub} onFocus={pause} onBlur={resumeSoon} onChange={e => setSub(e.target.value)} />
+            <input id="sub" name="suburb" autoComplete="address-level2" maxLength={30} value={sub} placeholder={demoSub} onFocus={pause} onBlur={resumeSoon} onChange={e => { edited.current = true; setSub(e.target.value) }} />
           </label>
           <div className="ctas">
             <Link className="lbtn a" to="/contact" id="go">
