@@ -533,7 +533,8 @@ h1,h2,h3,p{margin:0}
   --bg:#071628; --card:rgba(255,255,255,.025); --card2:#153A60; --ink:#F4F5FB; --dim:#A3A8BC; --mute:#646A86; --line:rgba(255,255,255,.1); --line2:rgba(255,255,255,.16);
   --navy:#071628; --mint:#2FCFB3; --paper:#FFFFFF; --text:#121530; --rule:#E7E8EF; --acc:#984819; --acc2:#F8E6D8; --indigo:#5B5FFF;
   --sans:"Geist","Geist Fallback",-apple-system,"Segoe UI",Arial,sans-serif; --mono:"Geist Mono","Geist Mono Fallback",ui-monospace,Menlo,monospace;
-  --max:1760px; --gut:clamp(20px,4vw,64px); --r:18px;
+  /* Boxed: content stays 1600px wide on every large screen (2K/4K/8K too, never stretched); side gap is 10px on every device */
+  --max:1600px; --gut:10px; --r:18px;
 }
 html,body{background:var(--bg)}
 body{font:400 16px/1.55 var(--sans)}
@@ -1034,8 +1035,7 @@ html,body{background:#071628}
 .btn.w{color:#0B213A}
 .eyebrow b{background:#2DB88C;color:#04241A}
 
-/* Full-width layout: containers span the whole viewport, only the side gutter remains */
-.wrap,.nav,.pc{max-width:none}
+/* Boxed layout: header, sections and footer sit in a centred box of --max width; section backgrounds stay full width */
 
 /* Hero orbits: fit the whole orbit inside the hero so it is not clipped at the top/bottom */
 .phero .orb svg{top:50%;height:calc(100% - 16px);width:auto}
