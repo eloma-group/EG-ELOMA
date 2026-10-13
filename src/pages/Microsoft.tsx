@@ -237,10 +237,10 @@ export default function Microsoft() {
         </section>
         <section className="s rv">
           <div className="npw" style={{ borderColor: "var(--line2)" }}>
-            <h2 style={{ font: "600 clamp(24px,2.4vw,32px)/1.2 var(--sans)", letterSpacing: "-.025em" }}>
+            <h2 style={{ font: "600 clamp(20px,2vw,27px)/1.2 var(--sans)", letterSpacing: "-.025em" }}>
               Business Basic, Standard, Premium or Enterprise?
             </h2>
-            <p style={{ marginTop: "12px", color: "var(--dim)", fontSize: "17px", maxWidth: "70ch" }}>
+            <p style={{ marginTop: "12px", color: "var(--dim)", fontSize: "clamp(15px,1.25vw,18px)", maxWidth: "70ch" }}>
               Compare what each Microsoft 365 plan includes on our plans page, then ask for a quote. We often combine plans so each person has exactly what they need.
             </p>
             <div className="cta" style={{ justifyContent: "flex-start", marginTop: "22px" }}>
@@ -629,7 +629,7 @@ export default function Microsoft() {
               <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Deliverables
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(26px,2.6vw,36px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(22px,2.2vw,30px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 What you get
               </h2>
               <ul className="dl stg">
@@ -675,7 +675,7 @@ export default function Microsoft() {
               <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Technology
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(26px,2.6vw,36px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(22px,2.2vw,30px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Tools and platforms we use
               </h2>
               <div className="tools stg">
@@ -688,7 +688,7 @@ export default function Microsoft() {
                 <span style={{ transitionDelay: "420ms" }}>SharePoint</span>
                 <span style={{ transitionDelay: "490ms" }}>Teams</span>
               </div>
-              <p style={{ marginTop: "18px", color: "var(--dim)", fontSize: "15.5px" }}>
+              <p style={{ marginTop: "18px", color: "var(--dim)", fontSize: "14px" }}>
                 We choose proven, well-supported platforms so your microsoft environment is secure, reliable and easy to maintain.
               </p>
             </div>
@@ -842,7 +842,7 @@ export default function Microsoft() {
               <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(28px,2.8vw,40px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Microsoft questions
               </h2>
             </div>

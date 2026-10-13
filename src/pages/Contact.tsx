@@ -193,7 +193,7 @@ export default function Contact() {
             </div>
             <div style={{ display: "grid", gap: "32px", alignContent: "start" }}>
               <div>
-                <h2 className="t" style={{ font: "600 24px var(--sans)", letterSpacing: "-.02em" }}>Get in touch</h2>
+                <h2 className="t" style={{ font: "600 21px var(--sans)", letterSpacing: "-.02em" }}>Get in touch</h2>
                 <address className="cinfo">
                   <a href={BUSINESS.phone.href}>
                     <span className="pi">
@@ -233,7 +233,7 @@ export default function Contact() {
                 </address>
               </div>
               <div>
-                <h2 className="t" style={{ font: "600 24px var(--sans)", letterSpacing: "-.02em" }}>Existing clients</h2>
+                <h2 className="t" style={{ font: "600 21px var(--sans)", letterSpacing: "-.02em" }}>Existing clients</h2>
                 <p style={{ color: "var(--dim)", marginTop: "8px" }}>
                   Raise a ticket and track it in your client portal. Our team is available 24/7.
                 </p>
@@ -243,7 +243,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <h2 className="t" style={{ font: "600 24px var(--sans)", letterSpacing: "-.02em" }}>Where we work</h2>
+                <h2 className="t" style={{ font: "600 21px var(--sans)", letterSpacing: "-.02em" }}>Where we work</h2>
                 <ul className="bl" style={{ marginTop: "18px" }}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
@@ -362,7 +362,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "16.5px" }}>Your business name and website</b>
+                    <b style={{ fontWeight: "500", fontSize: "15px" }}>Your business name and website</b>
                   </div>
                 </li>
                 <li>
@@ -370,7 +370,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "16.5px" }}>How many people use computers or phones</b>
+                    <b style={{ fontWeight: "500", fontSize: "15px" }}>How many people use computers or phones</b>
                   </div>
                 </li>
                 <li>
@@ -378,7 +378,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "16.5px" }}>What you use today (for example email, phone or accounting systems)</b>
+                    <b style={{ fontWeight: "500", fontSize: "15px" }}>What you use today (for example email, phone or accounting systems)</b>
                   </div>
                 </li>
                 <li>
@@ -386,7 +386,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "16.5px" }}>What you'd like to improve and by when</b>
+                    <b style={{ fontWeight: "500", fontSize: "15px" }}>What you'd like to improve and by when</b>
                   </div>
                 </li>
                 <li>
@@ -394,7 +394,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "16.5px" }}>Any deadlines, budgets or compliance requirements</b>
+                    <b style={{ fontWeight: "500", fontSize: "15px" }}>Any deadlines, budgets or compliance requirements</b>
                   </div>
                 </li>
               </ul>
@@ -499,7 +499,7 @@ export default function Contact() {
               <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(28px,2.8vw,40px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Before you get in touch
               </h2>
             </div>

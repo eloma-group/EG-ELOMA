@@ -412,7 +412,7 @@ export default function About() {
             </div>
           </div>
           <div className="npw" style={{ borderColor: "var(--line2)" }}>
-            <p style={{ fontSize: "18px", color: "#D3D9E4", maxWidth: "70ch" }}>
+            <p style={{ fontSize: "clamp(15px,1.25vw,18px)", color: "#D3D9E4", maxWidth: "70ch" }}>
               We are always interested in hearing from developers, security engineers, Microsoft specialists, marketers and support professionals who care about doing great work for clients. Send your details through the contact form and choose 'Careers'.
             </p>
             <div className="cta" style={{ justifyContent: "flex-start", marginTop: "20px" }}>
@@ -426,7 +426,7 @@ export default function About() {
               <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(28px,2.8vw,40px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 About EG Eloma
               </h2>
             </div>
