@@ -1080,6 +1080,7 @@ html,body{background:#071628}
 @media (max-width:1399px){.aff ul{grid-template-columns:1fr 1fr;row-gap:18px}.aff li:nth-child(odd){border-left:0;padding-left:0}.aff li:nth-child(even){padding-left:20px}}
 
 /* EG Eloma logo lockup: bird mark + "EG Eloma" wordmark + "By Eloma Group" tagline */
+@font-face{font-family:"Poppins";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-latin-600-normal.woff2) format("woff2")}
 .logo .lw{display:flex;flex-direction:column;justify-content:center}
@@ -1196,3 +1197,9 @@ h1,.pc h1,.lhero h1{font-size:clamp(36px,4.6vw,64px)}
 .sh h2,.final h2,.ov h2,.secx h2,.bfeat h2{font-size:clamp(28px,3.4vw,50px)}
 .intro h2,.band h2,.help h2{font-size:clamp(23px,2.6vw,35px)}
 .twocol h2.t,.prose h2,.case h3,.plan h3{font-size:clamp(21px,1.8vw,26px)}
+
+/* Headings: normal letter spacing (the tight negative tracking made them look tall and narrow); small uppercase labels keep their spacing */
+:is(h1,h2,h3,h4,h5,h6):not(.ph h2,.cath h3,.fgrid h4,.fgrid h2.fh){letter-spacing:normal}
+
+/* Headings in Poppins (wider, rounder letters, so titles no longer look tall); small uppercase labels keep their font */
+:is(h1,h2,h3,h4,h5,h6):not(.ph h2,.cath h3,.fgrid h4,.fgrid h2.fh){font-family:"Poppins","Poppins Fallback",var(--sans);line-height:1.18;text-transform:capitalize}
