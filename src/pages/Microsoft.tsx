@@ -237,7 +237,7 @@ export default function Microsoft() {
         </section>
         <section className="s rv">
           <div className="npw" style={{ borderColor: "var(--line2)" }}>
-            <h2 style={{ font: "600 clamp(20px,2vw,27px)/1.2 var(--sans)", letterSpacing: "-.025em" }}>
+            <h2 style={{ font: "400 clamp(20px,2vw,27px)/1.2 var(--sans)", letterSpacing: "-.025em" }}>
               Business Basic, Standard, Premium or Enterprise?
             </h2>
             <p style={{ marginTop: "12px", color: "var(--dim)", fontSize: "clamp(15px,1.25vw,18px)", maxWidth: "70ch" }}>
@@ -272,25 +272,25 @@ export default function Microsoft() {
               <h3>Microsoft 365</h3>
               <p>Productivity, email and collaboration for every business.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Business Basic
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Business Standard
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Business Premium
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Apps for business
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   E3
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   E5
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   F3
                 </span>
               </div>
@@ -299,19 +299,19 @@ export default function Microsoft() {
               <h3>{"Communication & collaboration"}</h3>
               <p>Email, meetings, chat and calling.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Exchange Online
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Teams
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Teams Phone
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Teams Premium
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Teams Rooms
                 </span>
               </div>
@@ -320,16 +320,16 @@ export default function Microsoft() {
               <h3>{"Files & intranet"}</h3>
               <p>Store, share and manage documents securely.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   SharePoint
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   OneDrive
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Loop
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Viva
                 </span>
               </div>
@@ -338,13 +338,13 @@ export default function Microsoft() {
               <h3>{"AI & Copilot"}</h3>
               <p>AI assistants and custom agents.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft 365 Copilot
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Copilot Chat
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Copilot Studio
                 </span>
               </div>
@@ -353,19 +353,19 @@ export default function Microsoft() {
               <h3>{"Security & identity"}</h3>
               <p>Protect users, devices and data.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Entra ID
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Defender
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Intune
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Purview
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Sentinel
                 </span>
               </div>
@@ -374,22 +374,22 @@ export default function Microsoft() {
               <h3>Azure cloud</h3>
               <p>Hosting, servers, data and AI services.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Azure Virtual Machines
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Azure App Service
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Azure SQL
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Azure Backup
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Azure Virtual Desktop
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Azure AI services
                 </span>
               </div>
@@ -398,19 +398,19 @@ export default function Microsoft() {
               <h3>Dynamics 365</h3>
               <p>Business applications for finance, sales and service.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Business Central
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Sales
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Customer Service
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Field Service
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Finance
                 </span>
               </div>
@@ -419,16 +419,16 @@ export default function Microsoft() {
               <h3>Power Platform</h3>
               <p>Low-code apps, automation and analytics.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Power BI
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Power Apps
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Power Automate
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Power Pages
                 </span>
               </div>
@@ -437,16 +437,16 @@ export default function Microsoft() {
               <h3>{"Windows & devices"}</h3>
               <p>Operating systems and cloud PCs.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Windows 11 Pro
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Windows 11 Enterprise
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Windows 365
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Surface devices
                 </span>
               </div>
@@ -455,13 +455,13 @@ export default function Microsoft() {
               <h3>{"Project & work management"}</h3>
               <p>Plan and deliver work.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Microsoft Planner
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Project
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Visio
                 </span>
               </div>
@@ -470,13 +470,13 @@ export default function Microsoft() {
               <h3>Licensing</h3>
               <p>Right plans, right price.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   New Commerce (CSP)
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   {"Monthly & annual terms"}
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Licence audits
                 </span>
               </div>
@@ -485,16 +485,16 @@ export default function Microsoft() {
               <h3>Development on Microsoft</h3>
               <p>Custom solutions on Microsoft platforms.</p>
               <div className="pl">
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Power Apps solutions
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   SharePoint intranets
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Teams apps
                 </span>
-                <span style={{ font: "500 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
+                <span style={{ font: "400 14px var(--sans)", padding: "6px 12px", borderRadius: "999px", background: "rgba(255,255,255,.05)", color: "#D8DBE6" }}>
                   Dynamics customisation
                 </span>
               </div>
@@ -626,10 +626,10 @@ export default function Microsoft() {
         <section className="s rv">
           <div className="twocol">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Deliverables
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(22px,2.2vw,30px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(22px,2.2vw,30px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 What you get
               </h2>
               <ul className="dl stg">
@@ -672,10 +672,10 @@ export default function Microsoft() {
               </ul>
             </div>
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Technology
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(22px,2.2vw,30px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(22px,2.2vw,30px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Tools and platforms we use
               </h2>
               <div className="tools stg">
@@ -839,10 +839,10 @@ export default function Microsoft() {
         <section className="s rv">
           <div className="twocol">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Microsoft questions
               </h2>
             </div>

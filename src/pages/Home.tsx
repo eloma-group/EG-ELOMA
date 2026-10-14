@@ -382,10 +382,10 @@ export default function Home() {
         <section className="s rv">
           <div className="pf">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Client portal
               </p>
-              <h2 style={{ marginTop: "10px", font: "600 clamp(26px,2.7vw,39px)/1.1 var(--sans)", letterSpacing: "-.035em" }}>
+              <h2 style={{ marginTop: "10px", font: "400 clamp(26px,2.7vw,39px)/1.1 var(--sans)", letterSpacing: "-.035em" }}>
                 Everything in one place, running smoothly.
               </h2>
               <p style={{ marginTop: "16px", color: "var(--dim)", fontSize: "clamp(15px,1.25vw,18px)", maxWidth: "52ch" }}>
@@ -479,10 +479,10 @@ export default function Home() {
         <section className="s rv">
           <div className="npw" style={{ display: "grid", gridTemplateColumns: "minmax(0,1.3fr) auto", gap: "28px", alignItems: "center" }}>
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Microsoft for Nonprofits
               </p>
-              <h2 style={{ marginTop: "10px", font: "600 clamp(22px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 style={{ marginTop: "10px", font: "400 clamp(22px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Are you a charity or not-for-profit?
               </h2>
               <p style={{ marginTop: "12px", color: "var(--dim)", fontSize: "clamp(15px,1.25vw,18px)", maxWidth: "60ch" }}>
@@ -675,10 +675,10 @@ export default function Home() {
         <section className="s rv">
           <div className="twocol">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Questions we hear often
               </h2>
               <p style={{ marginTop: "14px", color: "var(--dim)" }}>

@@ -193,7 +193,7 @@ export default function Contact() {
             </div>
             <div style={{ display: "grid", gap: "32px", alignContent: "start" }}>
               <div>
-                <h2 className="t" style={{ font: "600 21px var(--sans)", letterSpacing: "-.02em" }}>Get in touch</h2>
+                <h2 className="t" style={{ font: "400 21px var(--sans)", letterSpacing: "-.02em" }}>Get in touch</h2>
                 <address className="cinfo">
                   <a href={BUSINESS.phone.href}>
                     <span className="pi">
@@ -233,7 +233,7 @@ export default function Contact() {
                 </address>
               </div>
               <div>
-                <h2 className="t" style={{ font: "600 21px var(--sans)", letterSpacing: "-.02em" }}>Existing clients</h2>
+                <h2 className="t" style={{ font: "400 21px var(--sans)", letterSpacing: "-.02em" }}>Existing clients</h2>
                 <p style={{ color: "var(--dim)", marginTop: "8px" }}>
                   Raise a ticket and track it in your client portal. Our team is available 24/7.
                 </p>
@@ -243,7 +243,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <h2 className="t" style={{ font: "600 21px var(--sans)", letterSpacing: "-.02em" }}>Where we work</h2>
+                <h2 className="t" style={{ font: "400 21px var(--sans)", letterSpacing: "-.02em" }}>Where we work</h2>
                 <ul className="bl" style={{ marginTop: "18px" }}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
@@ -326,25 +326,25 @@ export default function Contact() {
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                      <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                         New enquiries
                       </th>
                       <td>Within one business day</td>
                     </tr>
                     <tr>
-                      <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                      <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                         Support tickets
                       </th>
                       <td>Average under 15 minutes</td>
                     </tr>
                     <tr>
-                      <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                      <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                         Urgent incidents (clients)
                       </th>
                       <td>Immediate, 24/7</td>
                     </tr>
                     <tr>
-                      <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                      <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                         Quotes after consultation
                       </th>
                       <td>Typically within a few business days</td>
@@ -419,35 +419,35 @@ export default function Contact() {
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Australia
                   </th>
                   <td>Head office</td>
                   <td style={{ color: "#fff", background: "none" }}>Business hours AEST/AEDT, plus 24/7 support</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     New Zealand
                   </th>
                   <td>Remote delivery</td>
                   <td style={{ color: "#fff", background: "none" }}>NZ business hours, plus 24/7 support</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     United States
                   </th>
                   <td>Remote delivery</td>
                   <td style={{ color: "#fff", background: "none" }}>US business hours by arrangement, plus 24/7 support</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Canada
                   </th>
                   <td>Remote delivery</td>
                   <td style={{ color: "#fff", background: "none" }}>Canadian business hours by arrangement, plus 24/7 support</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     United Kingdom
                   </th>
                   <td>Remote delivery</td>
@@ -496,10 +496,10 @@ export default function Contact() {
         <section className="s rv">
           <div className="twocol">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Before you get in touch
               </h2>
             </div>

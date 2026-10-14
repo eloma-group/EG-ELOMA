@@ -139,7 +139,7 @@ export default function About() {
         <section className="s first rv">
           <div className="ov">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 Who we are
               </p>
               <h2 style={{ marginTop: "10px" }}>Technology that runs smoothly, so you can run your business.</h2>
@@ -423,10 +423,10 @@ export default function About() {
         <section className="s rv">
           <div className="twocol">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 About EG Eloma
               </h2>
             </div>

@@ -768,42 +768,42 @@ export default function Services() {
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Expertise
                   </th>
                   <td>Learn it yourself, or hire several specialists</td>
                   <td>A full team of specialists from day one</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Time
                   </th>
                   <td>Hours every week taken from your business</td>
                   <td>We do the work; you approve and stay in control</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Suppliers
                   </th>
                   <td>Separate providers for each service</td>
                   <td>One partner, one account manager, one portal</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Reporting
                   </th>
                   <td>Scattered data, hard to measure</td>
                   <td>Monthly plain-English reports and live portal</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Support
                   </th>
                   <td>Wait for business hours or forums</td>
                   <td>24/7 support, under 15 minutes on average</td>
                 </tr>
                 <tr>
-                  <th scope="row" style={{ font: "600 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
+                  <th scope="row" style={{ font: "400 15.5px var(--sans)", letterSpacing: "0", textTransform: "none", color: "#fff", background: "none" }}>
                     Security
                   </th>
                   <td>Easy to miss settings and updates</td>
@@ -816,10 +816,10 @@ export default function Services() {
         <section className="s rv">
           <div className="twocol">
             <div>
-              <p className="ey" style={{ font: "500 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
                 FAQ
               </p>
-              <h2 className="t" style={{ marginTop: "10px", font: "600 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
+              <h2 className="t" style={{ marginTop: "10px", font: "400 clamp(24px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
                 Frequently asked questions
               </h2>
             </div>
