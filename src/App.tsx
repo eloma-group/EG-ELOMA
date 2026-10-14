@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useLayoutEffect, type ComponentType, type ReactNode } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useReveal } from './hooks/useReveal'
+import { trackPageView } from './pixel'
 import ComingSoon from './components/ComingSoon'
 import NotFound from './components/NotFound'
 
@@ -30,6 +31,7 @@ export const preloadRoute = (pathname: string) => pages.find(p => p.path === pat
 function PageShell({ children }: { children: ReactNode }) {
   const { pathname, hash } = useLocation()
   useReveal(pathname)
+  useEffect(() => trackPageView(pathname), [pathname])
   useEffect(() => {
     // The prerendered page put <title>/<meta>/<link> copies in <head>; drop each one React has added again.
     document.querySelectorAll('head [data-pre]').forEach(el => {

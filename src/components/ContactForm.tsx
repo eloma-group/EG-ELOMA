@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
+import { track } from '../pixel'
 
 // Consultation request form. ?service= or ?plan= preselects the matching product.
 export default function ContactForm() {
@@ -15,6 +16,7 @@ export default function ContactForm() {
       return
     }
     setSent(true)
+    track('Lead')
   }
 
   return (

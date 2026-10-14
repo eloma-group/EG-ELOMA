@@ -184,9 +184,16 @@ export default function Privacy() {
             <p>
               If we receive personal information we did not ask for, we will check whether we could have collected it lawfully. If we could not, we will destroy or de-identify it as soon as practicable.
             </p>
-            <h2>Cookies, analytics and Google services</h2>
+            <h2>Cookies, analytics, Meta and Google services</h2>
             <p>
-              This website does not currently use analytics cookies, advertising cookies, tracking pixels or social media plugins, and it does not show ads. Our fonts are hosted on our own website, so loading our pages does not send your IP address to Google Fonts. This website does not set cookies.
+              This website uses the Meta Pixel, a tool from Meta Platforms (Facebook and Instagram), to measure how well our ads work. When you visit our pages, submit our contact form or tap our phone number, the Meta Pixel sends Meta details such as the page you viewed, the action you took, your IP address and browser information, and Meta sets cookies (such as <code>_fbp</code>) in your browser. Meta may match this with your Meta account and use it to show you our ads and to report results to us. We do not send Meta the contents of your enquiry. Meta's use of this data is described in the{" "}
+              <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta Privacy Policy</a>
+              {", and you can control ads based on your activity in your Meta "}
+              <a href="https://accountscenter.facebook.com/ad_preferences" rel="noopener">ad preferences</a>
+              {" or by blocking cookies in your browser settings."}
+            </p>
+            <p>
+              We do not use social media plugins or show ads on this website. Our fonts are hosted on our own website, so loading our pages does not send your IP address to Google Fonts.
             </p>
             <p>If we start using Google Analytics, Google Ads conversion tracking or remarketing, or Google reCAPTCHA, we will:</p>
             <ul>

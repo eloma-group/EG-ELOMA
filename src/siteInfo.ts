@@ -9,4 +9,4 @@ export const BUSINESS = {
 }
 
 // Date shown on the Privacy Policy and Terms of Use pages.
-export const LEGAL_UPDATED = '11 October 2026'
+export const LEGAL_UPDATED = '14 October 2026'
