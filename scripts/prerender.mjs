@@ -44,10 +44,9 @@ const deferScript = (html) =>
     `if(window.PerformanceObserver&&(PerformanceObserver.supportedEntryTypes||[]).indexOf('paint')>=0)new PerformanceObserver(function(l){if(l.getEntriesByName('first-contentful-paint').length)setTimeout(go)}).observe({type:'paint',buffered:true});` +
     `else addEventListener('load',function(){setTimeout(go)});setTimeout(go,2500)})()</script>`)
 
-// Empty shell for URLs that are not a page (old .html links, typos): the app redirects them on the client.
-writeFileSync(dist + 'app-shell.html', inlineCss(template))
-
-for (const route of routes) {
+// '/404' is not a page, so it renders the "Page not found" screen: written to 404.html, which every host
+// serves (with a 404 status) for URLs that are not a page.
+for (const route of [...routes, '/404']) {
   let body = await render(route)
   let head = ''
   for (let m; (m = body.match(HEAD_TAG)); body = body.slice(m[0].length)) {
@@ -70,7 +69,7 @@ writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
     ...pageRoutes.map(r => ({ route: r, rewrite: r + '.html' })),
     { route: '/assets/*', headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
   ],
-  navigationFallback: { rewrite: '/app-shell.html', exclude: ['/assets/*', '/*.{png,jpg,svg,ico,webp,woff2,js,css,json,xml,txt}'] },
+  responseOverrides: { 404: { rewrite: '/404.html', statusCode: 404 } },
   globalHeaders: { 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin' },
   mimeTypes: { '.woff2': 'font/woff2', '.webmanifest': 'application/manifest+json' },
 }, null, 2))

@@ -14,9 +14,9 @@ const app = (
 )
 
 // Pages are prerendered at build time (scripts/prerender.mjs): hydrate that HTML instead of rendering again.
-// URLs that are not a page (old .html links, typos) render from scratch and redirect.
-const page = root.hasChildNodes() && preloadRoute(location.pathname)
-if (page) {
+// The 404 page (dist/404.html, served for unknown URLs) is hydrated too; an empty shell renders from scratch.
+if (root.hasChildNodes()) {
+  const page = preloadRoute(location.pathname) ?? Promise.resolve()
   page.finally(() => hydrateRoot(root, app))
 } else {
   root.textContent = ''

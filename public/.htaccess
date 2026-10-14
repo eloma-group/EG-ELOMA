@@ -20,16 +20,15 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # A missing file under /assets/ stays a real 404 instead of returning the page.
-  RewriteRule ^assets/ - [L,R=404]
-
   # Every page is prebuilt as static HTML: /seo is served from seo.html (works on refresh too).
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^([a-z0-9-]+)$ $1.html [L]
 
-  # Any other URL (old links, typos) gets the app shell, which redirects to the right page.
-  RewriteRule ^ app-shell.html [L]
+  # Any other URL (typos, removed pages) is a real 404, answered with the "Page not found" page below.
+  RewriteRule ^ - [R=404,L]
 </IfModule>
+
+ErrorDocument 404 /404.html
 
 <IfModule mod_mime.c>
   AddType font/woff2 .woff2

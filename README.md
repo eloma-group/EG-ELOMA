@@ -30,5 +30,6 @@ npm run build    # outputs dist/ (every page prerendered to static HTML)
 Azure Static Web Apps deploys automatically on every push to `main`
 (`.github/workflows/azure-static-web-apps-*.yml`, routing in the generated `dist/staticwebapp.config.json`).
 Other hosts are covered too: `vercel.json` (Vercel), `public/.htaccess` (Apache / cPanel / Hostinger) and
-`public/web.config` (IIS). Each serves `/seo` from `seo.html`, 301s old `.html` links to clean URLs and sends
-unknown URLs to `app-shell.html`. For manual hosting, upload the contents of `dist/` to the site root.
+`public/web.config` (IIS). Each serves `/seo` from `seo.html`, 301s old `.html` links to clean URLs and answers
+unknown URLs with `404.html` ("Page not found", `src/components/NotFound.tsx`) and a 404 status.
+For manual hosting, upload the contents of `dist/` to the site root.

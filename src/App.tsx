@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useLayoutEffect, type ComponentType, type Re
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useReveal } from './hooks/useReveal'
 import ComingSoon from './components/ComingSoon'
+import NotFound from './components/NotFound'
 
 // While true, only the pages listed in the locked glob are published; every other URL shows "Coming soon".
 // The locked pages are left out of the build entirely. Set to false to publish all pages.
@@ -44,13 +45,12 @@ function PageShell({ children }: { children: ReactNode }) {
   return children
 }
 
-// Old static URLs (/seo.html, /index.html) redirect to the clean routes.
+// Old static URLs (/seo.html, /index.html) redirect to the clean routes; any other URL is a 404.
 function Fallback() {
   const { pathname, search, hash } = useLocation()
   const m = pathname.match(/^\/([a-z0-9-]+)\.html$/)
-  if (!m && SITE_LOCKED) return <PageShell><ComingSoon /></PageShell>
-  const to = m ? (m[1] === 'index' ? '/' : '/' + m[1]) : '/'
-  return <Navigate to={to + (m ? search + hash : '')} replace />
+  if (!m) return <PageShell>{SITE_LOCKED ? <ComingSoon /> : <NotFound />}</PageShell>
+  return <Navigate to={(m[1] === 'index' ? '/' : '/' + m[1]) + search + hash} replace />
 }
 
 export default function App() {

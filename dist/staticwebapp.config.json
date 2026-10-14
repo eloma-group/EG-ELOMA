@@ -291,12 +291,11 @@
       }
     }
   ],
-  "navigationFallback": {
-    "rewrite": "/app-shell.html",
-    "exclude": [
-      "/assets/*",
-      "/*.{png,jpg,svg,ico,webp,woff2,js,css,json,xml,txt}"
-    ]
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
   },
   "globalHeaders": {
     "Cache-Control": "no-cache",
