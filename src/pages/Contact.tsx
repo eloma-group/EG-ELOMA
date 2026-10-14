@@ -362,7 +362,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "15px" }}>Your business name and website</b>
+                    <b style={{ fontWeight: "400", fontSize: "15px" }}>Your business name and website</b>
                   </div>
                 </li>
                 <li>
@@ -370,7 +370,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "15px" }}>How many people use computers or phones</b>
+                    <b style={{ fontWeight: "400", fontSize: "15px" }}>How many people use computers or phones</b>
                   </div>
                 </li>
                 <li>
@@ -378,7 +378,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "15px" }}>What you use today (for example email, phone or accounting systems)</b>
+                    <b style={{ fontWeight: "400", fontSize: "15px" }}>What you use today (for example email, phone or accounting systems)</b>
                   </div>
                 </li>
                 <li>
@@ -386,7 +386,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "15px" }}>What you'd like to improve and by when</b>
+                    <b style={{ fontWeight: "400", fontSize: "15px" }}>What you'd like to improve and by when</b>
                   </div>
                 </li>
                 <li>
@@ -394,7 +394,7 @@ export default function Contact() {
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
-                    <b style={{ fontWeight: "500", fontSize: "15px" }}>Any deadlines, budgets or compliance requirements</b>
+                    <b style={{ fontWeight: "400", fontSize: "15px" }}>Any deadlines, budgets or compliance requirements</b>
                   </div>
                 </li>
               </ul>
