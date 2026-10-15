@@ -22,7 +22,7 @@ export default function Header({ active }: { active?: string }) {
     <header>
       <div className="nav">
         <Link className="logo" to="/">
-          <img src="/assets/logo-mark-eloma.png" alt="" width="50" height="40" />
+          <img src="/assets/logo-mark-eloma.png" alt="EG Eloma logo" width="50" height="40" />
           <span className="lw">
             <span className="lwn"><b>EG</b> Eloma</span>
             <span className="lwb">By Eloma Group</span>
@@ -48,7 +48,7 @@ export default function Header({ active }: { active?: string }) {
           <a className="ln" href={PORTAL_URL} rel="noopener">Client login</a>
           <Link className="btn w" to="/contact">Book a consultation</Link>
           <button className="menu-btn" type="button" aria-expanded={open} aria-controls="mnav" aria-label="Menu" onClick={() => setOpen(o => !o)}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
           </button>

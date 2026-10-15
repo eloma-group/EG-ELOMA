@@ -77,7 +77,7 @@ export default function Contact() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -114,37 +114,37 @@ export default function Contact() {
           <p className="lead">Tell us about your business. A specialist will reply within one business day.</p>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -213,7 +213,7 @@ export default function Contact() {
                 <h2 className="t" style={{ font: "400 21px var(--sans)", letterSpacing: "-.02em" }}>Where we work</h2>
                 <ul className="bl" style={{ marginTop: "18px" }}>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <div>
@@ -222,7 +222,7 @@ export default function Contact() {
                     </div>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <div>
@@ -231,7 +231,7 @@ export default function Contact() {
                     </div>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <div>
@@ -325,7 +325,7 @@ export default function Contact() {
               <p style={{ color: "var(--dim)", marginBottom: "14px" }}>If you can, include:</p>
               <ul className="bl">
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -333,7 +333,7 @@ export default function Contact() {
                   </div>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -341,7 +341,7 @@ export default function Contact() {
                   </div>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -349,7 +349,7 @@ export default function Contact() {
                   </div>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -357,7 +357,7 @@ export default function Contact() {
                   </div>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>

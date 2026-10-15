@@ -80,13 +80,17 @@ const meta = {
   "path": "/"
 }
 
+// Industry ticker rows. Each row is listed once for readers and repeated (hidden) for the scrolling loop.
+const INDUSTRIES_A = ["Retail & eCommerce", "Hospitality, Cafés & Restaurants", "Trades & Construction", "Real Estate & Property", "Legal", "Accounting & Finance", "Insurance & Mortgage Broking", "Healthcare & Medical", "Dental & Allied Health", "Pharmacy", "Aged Care & NDIS", "Education & Training", "Childcare", "Not-for-Profit & Charities", "Government & Public Sector", "Logistics & Transport", "Import & Export", "Manufacturing"]
+const INDUSTRIES_B = ["Wholesale & Distribution", "Automotive", "Beauty, Salons & Spas", "Fitness & Wellness", "Travel & Tourism", "Events & Entertainment", "Agriculture & Farming", "Mining & Resources", "Energy & Utilities", "IT & Technology", "Startups", "Professional Services", "Media & Marketing Agencies", "Cleaning & Facility Services", "Security Services", "Religious & Community Groups", "Food & Beverage Production", "Telecommunications"]
+
 export default function Home() {
   return (
     <>
       <PageMeta {...meta} />
       <section className="lhero navy portal" id="hero" aria-labelledby="hero-title">
         <div className="orbits" aria-hidden="true">
-          <svg viewBox="-600 -530 1200 1060" preserveAspectRatio="xMidYMid meet">
+          <svg aria-hidden="true" viewBox="-600 -530 1200 1060" preserveAspectRatio="xMidYMid meet">
             <g id="o1">
               <ellipse rx="580" ry="175" />
             </g>
@@ -172,7 +176,7 @@ export default function Home() {
           <div className="stg cards c3">
             <div className="card hov" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6">
                   <rect x="4" y="4" width="7" height="7" rx="1" />
                   <rect x="13" y="4" width="7" height="7" rx="1" />
                   <rect x="4" y="13" width="7" height="7" rx="1" />
@@ -191,7 +195,7 @@ export default function Home() {
             </div>
             <div className="card hov" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="7" />
                   <path d="M20 20l-4-4M8 12l2-2 2 2 2-3" />
                 </svg>
@@ -211,7 +215,7 @@ export default function Home() {
             </div>
             <div className="card hov" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" />
                 </svg>
               </span>
@@ -229,7 +233,7 @@ export default function Home() {
             </div>
             <div className="card hov" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
                 </svg>
               </span>
@@ -247,7 +251,7 @@ export default function Home() {
             </div>
             <div className="card hov" style={{ transitionDelay: "280ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                   <path d="M9 12l2 2 4-4" />
                 </svg>
@@ -281,7 +285,7 @@ export default function Home() {
           <div className="stg cards c3 reasons">
             <div className="card" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="6" cy="12" r="2.5" />
                   <circle cx="18" cy="6" r="2.5" />
                   <circle cx="18" cy="18" r="2.5" />
@@ -293,7 +297,7 @@ export default function Home() {
             </div>
             <div className="card" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z" />
                   <circle cx="12" cy="9" r="2.5" />
                 </svg>
@@ -303,7 +307,7 @@ export default function Home() {
             </div>
             <div className="card" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="9" />
                   <circle cx="12" cy="12" r="4" />
                   <path d="M5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6" />
@@ -314,7 +318,7 @@ export default function Home() {
             </div>
             <div className="card" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                   <path d="M9 12l2 2 4-4" />
                 </svg>
@@ -324,7 +328,7 @@ export default function Home() {
             </div>
             <div className="card" style={{ transitionDelay: "280ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="16" rx="1" />
                   <path d="M3 9h18M7 13h6M7 16h4" />
                 </svg>
@@ -334,7 +338,7 @@ export default function Home() {
             </div>
             <div className="card" style={{ transitionDelay: "350ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="3" width="16" height="18" rx="1" />
                   <path d="M8 8h8M8 12h8M8 16h4" />
                   <circle cx="16.5" cy="16.5" r="2" />
@@ -359,31 +363,31 @@ export default function Home() {
               </p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Live status of every product and renewal date</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Tasks and project progress in real time</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Invoices and payments in one place</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Create support tickets 24/7</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Message or call your account manager</span>
@@ -557,84 +561,18 @@ export default function Home() {
               <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <div className="marq" aria-hidden="true">
+          <div className="marq">
             <div className="track">
-              <span>{"Retail & eCommerce"}</span>
-              <span>{"Hospitality, Cafés & Restaurants"}</span>
-              <span>{"Trades & Construction"}</span>
-              <span>{"Real Estate & Property"}</span>
-              <span>Legal</span>
-              <span>{"Accounting & Finance"}</span>
-              <span>{"Insurance & Mortgage Broking"}</span>
-              <span>{"Healthcare & Medical"}</span>
-              <span>{"Dental & Allied Health"}</span>
-              <span>Pharmacy</span>
-              <span>{"Aged Care & NDIS"}</span>
-              <span>{"Education & Training"}</span>
-              <span>Childcare</span>
-              <span>{"Not-for-Profit & Charities"}</span>
-              <span>{"Government & Public Sector"}</span>
-              <span>{"Logistics & Transport"}</span>
-              <span>{"Import & Export"}</span>
-              <span>Manufacturing</span>
-              <span>{"Retail & eCommerce"}</span>
-              <span>{"Hospitality, Cafés & Restaurants"}</span>
-              <span>{"Trades & Construction"}</span>
-              <span>{"Real Estate & Property"}</span>
-              <span>Legal</span>
-              <span>{"Accounting & Finance"}</span>
-              <span>{"Insurance & Mortgage Broking"}</span>
-              <span>{"Healthcare & Medical"}</span>
-              <span>{"Dental & Allied Health"}</span>
-              <span>Pharmacy</span>
-              <span>{"Aged Care & NDIS"}</span>
-              <span>{"Education & Training"}</span>
-              <span>Childcare</span>
-              <span>{"Not-for-Profit & Charities"}</span>
-              <span>{"Government & Public Sector"}</span>
-              <span>{"Logistics & Transport"}</span>
-              <span>{"Import & Export"}</span>
-              <span>Manufacturing</span>
+              {INDUSTRIES_A.map(i => <span key={i}>{i}</span>)}
+              {/* Second copy only makes the loop seamless, so it is hidden from screen readers. */}
+              {INDUSTRIES_A.map(i => <span key={i + '-2'} aria-hidden="true">{i}</span>)}
             </div>
           </div>
-          <div className="marq rev" aria-hidden="true">
+          <div className="marq rev">
             <div className="track">
-              <span>{"Wholesale & Distribution"}</span>
-              <span>Automotive</span>
-              <span>{"Beauty, Salons & Spas"}</span>
-              <span>{"Fitness & Wellness"}</span>
-              <span>{"Travel & Tourism"}</span>
-              <span>{"Events & Entertainment"}</span>
-              <span>{"Agriculture & Farming"}</span>
-              <span>{"Mining & Resources"}</span>
-              <span>{"Energy & Utilities"}</span>
-              <span>{"IT & Technology"}</span>
-              <span>Startups</span>
-              <span>Professional Services</span>
-              <span>{"Media & Marketing Agencies"}</span>
-              <span>{"Cleaning & Facility Services"}</span>
-              <span>Security Services</span>
-              <span>{"Religious & Community Groups"}</span>
-              <span>{"Food & Beverage Production"}</span>
-              <span>Telecommunications</span>
-              <span>{"Wholesale & Distribution"}</span>
-              <span>Automotive</span>
-              <span>{"Beauty, Salons & Spas"}</span>
-              <span>{"Fitness & Wellness"}</span>
-              <span>{"Travel & Tourism"}</span>
-              <span>{"Events & Entertainment"}</span>
-              <span>{"Agriculture & Farming"}</span>
-              <span>{"Mining & Resources"}</span>
-              <span>{"Energy & Utilities"}</span>
-              <span>{"IT & Technology"}</span>
-              <span>Startups</span>
-              <span>Professional Services</span>
-              <span>{"Media & Marketing Agencies"}</span>
-              <span>{"Cleaning & Facility Services"}</span>
-              <span>Security Services</span>
-              <span>{"Religious & Community Groups"}</span>
-              <span>{"Food & Beverage Production"}</span>
-              <span>Telecommunications</span>
+              {INDUSTRIES_B.map(i => <span key={i}>{i}</span>)}
+              {/* Second copy only makes the loop seamless, so it is hidden from screen readers. */}
+              {INDUSTRIES_B.map(i => <span key={i + '-2'} aria-hidden="true">{i}</span>)}
             </div>
           </div>
         </section>

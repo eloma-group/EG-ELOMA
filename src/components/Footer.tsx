@@ -55,7 +55,7 @@ export default function Footer() {
       <div className="wrap fgrid">
         <div>
           <Link className="logo" to="/">
-            <img src="/assets/logo-mark-eloma.png" alt="" width="50" height="40" />
+            <img src="/assets/logo-mark-eloma.png" alt="EG Eloma logo" width="50" height="40" />
             <span className="lw">
               <span className="lwn"><b>EG</b> Eloma</span>
               <span className="lwb">By Eloma Group</span>

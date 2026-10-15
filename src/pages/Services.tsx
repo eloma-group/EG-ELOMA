@@ -201,7 +201,7 @@ export default function Services() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -244,37 +244,37 @@ export default function Services() {
           </div>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -333,7 +333,7 @@ export default function Services() {
           <div className="stg cards c3">
             <Link className="card" to="/microsoft" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6">
                   <rect x="4" y="4" width="7" height="7" rx="1" />
                   <rect x="13" y="4" width="7" height="7" rx="1" />
                   <rect x="4" y="13" width="7" height="7" rx="1" />
@@ -349,7 +349,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/microsoft-licensing" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="3" width="16" height="18" rx="1" />
                   <path d="M8 8h8M8 12h8M8 16h4" />
                   <circle cx="16.5" cy="16.5" r="2" />
@@ -364,7 +364,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/microsoft-development" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4z" />
                   <path d="M16.5 13.5v6M13.5 16.5h6" />
                 </svg>
@@ -391,7 +391,7 @@ export default function Services() {
           <div className="stg cards c3">
             <Link className="card" to="/social-media" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="4" width="16" height="16" rx="4" />
                   <circle cx="12" cy="12" r="3.5" />
                   <circle cx="16.8" cy="7.2" r=".8" />
@@ -406,7 +406,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/seo" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="7" />
                   <path d="M20 20l-4-4M8 12l2-2 2 2 2-3" />
                 </svg>
@@ -420,7 +420,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/local-listing" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z" />
                   <circle cx="12" cy="9" r="2.5" />
                 </svg>
@@ -434,7 +434,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/google-meta-ads" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 10v4h3l6 4V6L7 10zM16.5 9a4 4 0 0 1 0 6M19 6.5a7.5 7.5 0 0 1 0 11" />
                 </svg>
               </span>
@@ -447,7 +447,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/ppc" style={{ transitionDelay: "280ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 3l14 7-6 2-2 6z" />
                   <path d="M13 12l6 6" />
                 </svg>
@@ -461,7 +461,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/design" style={{ transitionDelay: "350ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3a9 9 0 1 0 0 18c1.2 0 2-.8 2-2 0-.6-.3-1-.6-1.4-.3-.4-.6-.8-.6-1.4 0-1.1.9-2 2-2h2.2A5 5 0 0 0 21 9.5C21 5.9 17 3 12 3z" />
                   <circle cx="7.5" cy="11" r="1" />
                   <circle cx="10" cy="7" r="1" />
@@ -490,7 +490,7 @@ export default function Services() {
           <div className="stg cards c3">
             <Link className="card" to="/website-development" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="16" rx="1" />
                   <path d="M3 9h18M7 13h6M7 16h4" />
                 </svg>
@@ -504,7 +504,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/software-development" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" />
                 </svg>
               </span>
@@ -517,7 +517,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/saas-development" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5z" />
                   <path d="M9 14h6M12 11v6" />
                 </svg>
@@ -531,7 +531,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/app-development" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="7" y="2.5" width="10" height="19" rx="2" />
                   <path d="M11 18.5h2" />
                 </svg>
@@ -545,7 +545,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/api-integrations" style={{ transitionDelay: "280ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="6" cy="12" r="2.5" />
                   <circle cx="18" cy="6" r="2.5" />
                   <circle cx="18" cy="18" r="2.5" />
@@ -574,7 +574,7 @@ export default function Services() {
           <div className="stg cards c3">
             <Link className="card" to="/toll-free-number" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
                 </svg>
               </span>
@@ -587,7 +587,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/virtual-mobile-number" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="7" y="2.5" width="10" height="19" rx="2" />
                   <path d="M10 6h4M12 13v-3M10.5 11.5L12 10l1.5 1.5" />
                 </svg>
@@ -601,7 +601,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/landline-number" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="9" width="16" height="11" rx="2" />
                   <path d="M7 9V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M9 13h1M14 13h1M9 16h1M14 16h1" />
                 </svg>
@@ -615,7 +615,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/ivr-system" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 6h10M4 12h7M4 18h10" />
                   <circle cx="18" cy="6" r="2" />
                   <circle cx="15" cy="12" r="2" />
@@ -631,7 +631,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/virtual-customer-care" style={{ transitionDelay: "280ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
                   <rect x="3" y="14" width="4" height="6" rx="1" />
                   <rect x="17" y="14" width="4" height="6" rx="1" />
@@ -660,7 +660,7 @@ export default function Services() {
           <div className="stg cards c3">
             <Link className="card" to="/cybersecurity" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                   <path d="M9 12l2 2 4-4" />
                 </svg>
@@ -674,7 +674,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/cloud-maintenance" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5z" />
                 </svg>
               </span>
@@ -687,7 +687,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/server-maintenance" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="4" y="4" width="16" height="7" rx="1" />
                   <rect x="4" y="13" width="16" height="7" rx="1" />
                   <path d="M8 7.5h.01M8 16.5h.01M12 7.5h5M12 16.5h5" />
@@ -702,7 +702,7 @@ export default function Services() {
             </Link>
             <Link className="card" to="/support-services" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="9" />
                   <circle cx="12" cy="12" r="4" />
                   <path d="M5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6" />

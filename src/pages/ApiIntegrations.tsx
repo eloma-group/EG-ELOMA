@@ -111,7 +111,7 @@ export default function ApiIntegrations() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -154,37 +154,37 @@ export default function ApiIntegrations() {
           </div>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -335,7 +335,7 @@ export default function ApiIntegrations() {
               <h2 className="t">Benefits of API Integrations</h2>
               <ul className="bl stg">
                 <li style={{ transitionDelay: "0ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -344,7 +344,7 @@ export default function ApiIntegrations() {
                   </div>
                 </li>
                 <li style={{ transitionDelay: "70ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -353,7 +353,7 @@ export default function ApiIntegrations() {
                   </div>
                 </li>
                 <li style={{ transitionDelay: "140ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -362,7 +362,7 @@ export default function ApiIntegrations() {
                   </div>
                 </li>
                 <li style={{ transitionDelay: "210ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>

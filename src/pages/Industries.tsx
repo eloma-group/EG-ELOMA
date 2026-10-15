@@ -51,7 +51,7 @@ export default function Industries() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -94,37 +94,37 @@ export default function Industries() {
           </div>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -162,7 +162,7 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>
@@ -170,19 +170,19 @@ export default function Industries() {
                     </span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Phones ringing off the hook at reception</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Practitioners sharing files by personal email</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Patients finding competitors first on Google Maps</span>
@@ -193,25 +193,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Microsoft 365 Business Premium with MFA, Intune and secure file sharing</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Online booking on a fast, accessible website</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>1300 number with IVR menus and after-hours virtual reception</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Local listing and review management for every location</span>
@@ -240,25 +240,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Phishing and invoice-redirection scams targeting firms</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Documents emailed back and forth with clients</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Tax-time workload peaks</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Regulated entities facing information security obligations (for example APRA CPS 234)</span>
@@ -269,25 +269,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Essential Eight aligned security, email protection and staff training</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Secure client portals built on SharePoint or custom software</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Practice-system integrations with accounting platforms</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Professional website and LinkedIn content that builds authority</span>
@@ -316,25 +316,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Tight budgets and volunteer-run IT</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Staff and volunteers sharing passwords and devices</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Low visibility for appeals and events</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Reporting to boards and funders</span>
@@ -345,25 +345,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Registration for Microsoft nonprofit grants and discounted licences</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Secure accounts for staff, with appropriate access for volunteers</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Donation-ready website and social campaigns</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Power BI dashboards for board and funder reporting</span>
@@ -392,25 +392,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Meeting Essential Eight maturity targets</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Accessibility requirements for public websites (WCAG)</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Legacy servers and applications</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Procurement requiring clear documentation</span>
@@ -421,25 +421,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Essential Eight assessments and uplift</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Accessible, fast websites built to WCAG guidelines</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Server maintenance and planned migration to Azure</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Clear scopes, documentation and reporting</span>
@@ -468,25 +468,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Card payments must meet PCI DSS requirements</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Out-of-date menus, prices and opening hours online</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Online orders re-typed into other systems</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Seasonal peaks in calls and messages</span>
@@ -497,25 +497,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Secure online stores using compliant payment gateways</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Local listing, social media and Google Shopping campaigns</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Integrations between store, stock, accounting and delivery</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Virtual customer care during busy periods</span>
@@ -544,25 +544,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Missed calls while on the tools</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Paper job sheets and photos lost in text messages</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Quotes slow to go out</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Relying on word of mouth alone</span>
@@ -573,25 +573,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Virtual mobile numbers and call answering</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Field service apps for jobs, photos and sign-off</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Quoting and job management software</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Local SEO and Google Ads for high-intent searches</span>
@@ -620,25 +620,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Manual data entry between systems</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Customers calling for delivery updates</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Multiple depots and time zones</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Ransomware risk to operations</span>
@@ -649,25 +649,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>API integrations between TMS, WMS and accounting</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Customer tracking portals</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>National and international toll-free numbers with IVR</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Managed security and tested backups</span>
@@ -696,25 +696,25 @@ export default function Industries() {
                 <h3>Common challenges</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Protecting student and family information</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Enrolment and attendance paperwork</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Communicating with families</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Shared devices across classrooms</span>
@@ -725,25 +725,25 @@ export default function Industries() {
                 <h3>How we help</h3>
                 <ul className="dots">
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Microsoft 365 and Teams for staff and learning</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Enrolment forms and portals</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Device management with Intune</span>
                   </li>
                   <li>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                       <path d="M5 12.5l4.5 4.5L19 7.5" />
                     </svg>
                     <span>Websites and social pages that attract enrolments</span>
@@ -763,7 +763,7 @@ export default function Industries() {
           </div>
           <div className="sec2 stg">
             <div style={{ transitionDelay: "0ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -773,7 +773,7 @@ export default function Industries() {
               </span>
             </div>
             <div style={{ transitionDelay: "70ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -785,7 +785,7 @@ export default function Industries() {
               </span>
             </div>
             <div style={{ transitionDelay: "140ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -795,7 +795,7 @@ export default function Industries() {
               </span>
             </div>
             <div style={{ transitionDelay: "210ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -805,7 +805,7 @@ export default function Industries() {
               </span>
             </div>
             <div style={{ transitionDelay: "280ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -815,7 +815,7 @@ export default function Industries() {
               </span>
             </div>
             <div style={{ transitionDelay: "350ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>

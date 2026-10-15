@@ -177,7 +177,7 @@ export default function Pricing() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -214,37 +214,37 @@ export default function Pricing() {
           <p className="lead">Marketing plans and Microsoft 365 licences, tailored to your business and quoted in writing.</p>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -281,49 +281,49 @@ export default function Pricing() {
               </p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Social Media
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   SEO
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Local Listing
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Website
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Google Ads
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Meta Ads
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Designing
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   AI Ads
@@ -342,31 +342,31 @@ export default function Pricing() {
               </p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Social Media
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   SEO
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Local Listing
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Website
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Designing
@@ -385,19 +385,19 @@ export default function Pricing() {
               </p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Social Media
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   SEO
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Local Listing
@@ -416,13 +416,13 @@ export default function Pricing() {
               </p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   Social Media
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   SEO
@@ -517,25 +517,25 @@ export default function Pricing() {
               <p className="qt">Price on quote · monthly or annual</p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Outlook, Word, Excel, PowerPoint on web and mobile</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Business email (50 GB mailbox)</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Microsoft Teams</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>1 TB OneDrive storage per user</span>
@@ -550,25 +550,25 @@ export default function Pricing() {
               <p className="qt">Price on quote · monthly or annual</p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Everything in Business Basic</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Desktop Office apps</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Microsoft 365 Copilot included</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Webinars and collaborative workspaces</span>
@@ -582,25 +582,25 @@ export default function Pricing() {
               <p className="qt">Price on quote · monthly or annual</p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Everything in Business Standard</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Microsoft Defender for Business</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Intune device management</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Entra ID identity and access protection</span>
@@ -614,25 +614,25 @@ export default function Pricing() {
               <p className="qt">Price on quote · monthly or annual</p>
               <ul>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Desktop Word, Excel, PowerPoint, Outlook</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>1 TB OneDrive storage per user</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Install on up to 5 PCs/Macs, 5 tablets, 5 phones</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>No business email or Teams</span>
@@ -1083,7 +1083,7 @@ export default function Pricing() {
           <div className="stg cards c4">
             <div className="card" style={{ transitionDelay: "0ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="9" />
                   <circle cx="12" cy="12" r="4" />
                   <path d="M5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6" />
@@ -1094,7 +1094,7 @@ export default function Pricing() {
             </div>
             <div className="card" style={{ transitionDelay: "70ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="16" rx="1" />
                   <path d="M3 9h18M7 13h6M7 16h4" />
                 </svg>
@@ -1104,7 +1104,7 @@ export default function Pricing() {
             </div>
             <div className="card" style={{ transitionDelay: "140ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="7" />
                   <path d="M20 20l-4-4M8 12l2-2 2 2 2-3" />
                 </svg>
@@ -1114,7 +1114,7 @@ export default function Pricing() {
             </div>
             <div className="card" style={{ transitionDelay: "210ms" }}>
               <span className="pi">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
                   <rect x="3" y="14" width="4" height="6" rx="1" />
                   <rect x="17" y="14" width="4" height="6" rx="1" />

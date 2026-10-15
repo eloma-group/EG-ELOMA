@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 import { Link } from 'react-router-dom'
 
 const iconProps = { viewBox: '0 0 48 48', fill: 'none', stroke: 'currentColor', strokeWidth: '2.4', strokeLinecap: 'round', strokeLinejoin: 'round' } as const
-const icon = (...d: string[]) => <svg {...iconProps}>{d.map(p => <path key={p} d={p} />)}</svg>
+const icon = (...d: string[]) => <svg aria-hidden="true" {...iconProps}>{d.map(p => <path key={p} d={p} />)}</svg>
 
 interface IndustryCopy {
   label: string
@@ -81,7 +81,7 @@ const tollFree = (name: string) => {
 }
 
 const searchIcon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <circle cx="11" cy="11" r="7" />
     <path d="M20 20l-4-4" />
   </svg>
@@ -173,7 +173,7 @@ export default function HeroStudio() {
         </span>
         <h1 id="hero-title">
           <span className="h1k">{'Websites, Software, SEO & Toll-Free Numbers · AU, US, Canada, UK & NZ'}</span>
-          {'See Your Business, '}
+          {' See Your Business, '}
           <span className="hl">Upgraded.</span>
         </h1>
         <p className="lead">
@@ -199,7 +199,7 @@ export default function HeroStudio() {
           <div className="ctas">
             <Link className="lbtn a" to="/contact" id="go">
               {'Get my free consultation '}
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
             </Link>
@@ -208,20 +208,20 @@ export default function HeroStudio() {
         </form>
         <div className="trust">
           <span>
-            <svg viewBox="0 0 32 32" fill="currentColor">
+            <svg aria-hidden="true" viewBox="0 0 32 32" fill="currentColor">
               <path d="M16 3l1.3 2.8 3 .3-2.3 2 .7 3-2.7-1.6-2.7 1.6.7-3-2.3-2 3-.3zM7 12l1 2.1 2.3.2-1.7 1.5.5 2.2L7 16.8 4.9 18l.5-2.2-1.7-1.5 2.3-.2zM25 13l1 2.1 2.3.2-1.7 1.5.5 2.2-2.1-1.2-2.1 1.2.5-2.2-1.7-1.5 2.3-.2zM16 22l1.1 2.3 2.5.3-1.9 1.6.6 2.5-2.3-1.3-2.3 1.3.6-2.5-1.9-1.6 2.5-.3z" />
             </svg>
             Australian owned
           </span>
           <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="9" />
               <path d="M8 12.5l2.7 2.7L16 10" />
             </svg>
             Microsoft Partner
           </span>
           <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
               <path d="M9 12l2 2 4-4" />
             </svg>
@@ -244,7 +244,7 @@ export default function HeroStudio() {
               <i />
               <i />
               <span className="url">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                   <rect x="5" y="11" width="14" height="10" rx="2" />
                   <path d="M8 11V8a4 4 0 0 1 8 0v3" />
                 </svg>
@@ -303,7 +303,7 @@ export default function HeroStudio() {
           </div>
           <div className="win w-mail">
             <span className="lab">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="M3 7l9 6 9-6" />
               </svg>
@@ -311,7 +311,7 @@ export default function HeroStudio() {
             </span>
             <div className="mrow">
               <span className="ic">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8">
                   <rect x="3" y="5" width="18" height="14" rx="2" />
                   <path d="M3 7l9 6 9-6" />
                 </svg>
@@ -330,7 +330,7 @@ export default function HeroStudio() {
           </div>
           <div className="win w-app">
             <span className="lab">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" />
               </svg>
               Custom software
@@ -363,7 +363,7 @@ export default function HeroStudio() {
           </div>
           <div className="win w-tf">
             <span className="lab">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
               </svg>
               Toll-free number

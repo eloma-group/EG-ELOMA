@@ -8,6 +8,8 @@ export const BUSINESS = {
   phone: { label: '1800 054 555', href: 'tel:1800054555' },
   email: 'connect@egeloma.com.au',
   address: '71 Gipps Street, Collingwood, Melbourne, VIC 3066, Australia',
+  // The same address split into parts, for structured data.
+  postal: { streetAddress: '71 Gipps Street', addressLocality: 'Collingwood', addressRegion: 'VIC', postalCode: '3066', addressCountry: 'AU' },
   state: 'Victoria',
 }
 

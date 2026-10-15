@@ -12,17 +12,20 @@ export interface PageMetaProps {
   jsonLd?: { '@graph'?: object[] }
 }
 
-// The company, added to every page. Pages point at it with { "@id": ORG_ID }.
+// The company, added to every page. ProfessionalService makes it a local business with an address for Google. Pages point at it with { "@id": ORG_ID }.
 const ORG_ID = SITE + '/#org'
 const ORG = {
-  '@type': 'Corporation',
+  '@type': ['Corporation', 'ProfessionalService'],
   '@id': ORG_ID,
   name: BUSINESS.name,
   url: SITE + '/',
   logo: SITE + '/assets/logo-mark-eloma.png',
   alternateName: 'EG Eloma | Microsoft, Software, Marketing & Cybersecurity',
   description: 'Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.',
-  address: { '@type': 'PostalAddress', addressCountry: 'AU' },
+  address: { '@type': 'PostalAddress', ...BUSINESS.postal },
+  telephone: BUSINESS.phone.label,
+  email: BUSINESS.email,
+  taxID: 'ABN ' + BUSINESS.abn,
   areaServed: ['Australia', 'United States', 'Canada', 'United Kingdom', 'New Zealand'].map(name => ({ '@type': 'Country', name })),
   sameAs: SOCIAL.map(s => s.href),
   contactPoint: [

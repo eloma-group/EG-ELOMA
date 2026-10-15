@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Cybersecurity | EG Eloma",
+  "title": "Cyber Security Services Melbourne | EG Eloma",
   "description": "Zero threats allowed. ASD Essential Eight aligned security, Microsoft Defender and 24/7 monitoring.",
   "crumb": "Cybersecurity",
   "parent": {
@@ -111,7 +111,7 @@ export default function Cybersecurity() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -146,7 +146,7 @@ export default function Cybersecurity() {
             <span>/</span>
             <Link to="/services#cloud">{"Cloud, Security & Support"}</Link>
           </p>
-          <h1>Cybersecurity</h1>
+          <h1>Cyber Security Services Melbourne</h1>
           <p className="lead">Zero threats allowed.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -154,37 +154,37 @@ export default function Cybersecurity() {
           </div>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -335,7 +335,7 @@ export default function Cybersecurity() {
               <h2 className="t">Benefits of Cybersecurity</h2>
               <ul className="bl stg">
                 <li style={{ transitionDelay: "0ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -344,7 +344,7 @@ export default function Cybersecurity() {
                   </div>
                 </li>
                 <li style={{ transitionDelay: "70ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -353,7 +353,7 @@ export default function Cybersecurity() {
                   </div>
                 </li>
                 <li style={{ transitionDelay: "140ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>
@@ -362,7 +362,7 @@ export default function Cybersecurity() {
                   </div>
                 </li>
                 <li style={{ transitionDelay: "210ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <div>

@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Microsoft Products, Licensing & Support | EG Eloma",
+  "title": "Microsoft 365 Partner Melbourne | EG Eloma",
   "description": "Microsoft 365, Teams, Copilot, Azure, Dynamics 365 and Power Platform, licensed, set up, secured and supported by EG Eloma. Nonprofit offers too.",
   "crumb": "Microsoft",
   "jsonLd": {
@@ -80,7 +80,7 @@ export default function Microsoft() {
       <PageMeta {...meta} />
       <div className="phero">
         <div className="orb" aria-hidden="true">
-          <svg viewBox="-640 -460 1280 920">
+          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
             <ellipse rx="470" ry="146" />
             <g transform="rotate(62)">
               <ellipse rx="470" ry="146" />
@@ -113,7 +113,7 @@ export default function Microsoft() {
             <span>/</span>
             <span>Microsoft</span>
           </p>
-          <h1>Everything Microsoft, managed for you</h1>
+          <h1>Microsoft 365 Partner Melbourne: Everything Microsoft, Managed for You</h1>
           <p className="lead">Licensing, setup, custom development and 24/7 support across the full Microsoft cloud.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -121,37 +121,37 @@ export default function Microsoft() {
           </div>
           <div className="tbar">
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Australian owned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Microsoft Partner
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               ASD Essential Eight aligned
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               24/7 support
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               Fixed written quotes
             </span>
             <span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
               5 countries
@@ -173,7 +173,7 @@ export default function Microsoft() {
             </p>
             <ul className="bl">
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
                 </svg>
                 <div>
@@ -182,7 +182,7 @@ export default function Microsoft() {
                 </div>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
                 </svg>
                 <div>
@@ -191,7 +191,7 @@ export default function Microsoft() {
                 </div>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                   <path d="M5 12.5l4.5 4.5L19 7.5" />
                 </svg>
                 <div>
@@ -516,7 +516,7 @@ export default function Microsoft() {
             <div className="stg cards c4">
               <div className="card" style={{ transitionDelay: "0ms" }}>
                 <span className="pi">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6">
                     <rect x="4" y="4" width="7" height="7" rx="1" />
                     <rect x="13" y="4" width="7" height="7" rx="1" />
                     <rect x="4" y="13" width="7" height="7" rx="1" />
@@ -530,7 +530,7 @@ export default function Microsoft() {
               </div>
               <div className="card" style={{ transitionDelay: "70ms" }}>
                 <span className="pi">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                     <path d="M9 12l2 2 4-4" />
                   </svg>
@@ -540,7 +540,7 @@ export default function Microsoft() {
               </div>
               <div className="card" style={{ transitionDelay: "140ms" }}>
                 <span className="pi">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5z" />
                   </svg>
                 </span>
@@ -549,7 +549,7 @@ export default function Microsoft() {
               </div>
               <div className="card" style={{ transitionDelay: "210ms" }}>
                 <span className="pi">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4z" />
                     <path d="M16.5 13.5v6M13.5 16.5h6" />
                   </svg>
@@ -601,37 +601,37 @@ export default function Microsoft() {
               </h2>
               <ul className="dl stg">
                 <li style={{ transitionDelay: "0ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Licence review and recommendation</span>
                 </li>
                 <li style={{ transitionDelay: "70ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Tenant setup or health check</span>
                 </li>
                 <li style={{ transitionDelay: "140ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Email, files and Teams migration</span>
                 </li>
                 <li style={{ transitionDelay: "210ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Security baseline (MFA, Defender, Intune)</span>
                 </li>
                 <li style={{ transitionDelay: "280ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Staff training and how-to guides</span>
                 </li>
                 <li style={{ transitionDelay: "350ms" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                     <path d="M5 12.5l4.5 4.5L19 7.5" />
                   </svg>
                   <span>Ongoing support and licence management</span>
@@ -729,7 +729,7 @@ export default function Microsoft() {
           </div>
           <div className="sec2 stg">
             <div style={{ transitionDelay: "0ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -739,7 +739,7 @@ export default function Microsoft() {
               </span>
             </div>
             <div style={{ transitionDelay: "70ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -749,7 +749,7 @@ export default function Microsoft() {
               </span>
             </div>
             <div style={{ transitionDelay: "140ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -759,7 +759,7 @@ export default function Microsoft() {
               </span>
             </div>
             <div style={{ transitionDelay: "210ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -769,7 +769,7 @@ export default function Microsoft() {
               </span>
             </div>
             <div style={{ transitionDelay: "280ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>
@@ -779,7 +779,7 @@ export default function Microsoft() {
               </span>
             </div>
             <div style={{ transitionDelay: "350ms" }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
                 <path d="M9 12l2 2 4-4" />
               </svg>

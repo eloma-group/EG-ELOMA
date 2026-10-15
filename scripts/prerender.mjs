@@ -50,7 +50,8 @@ for (const route of [...routes, '/404']) {
   let body = await render(route)
   let head = ''
   for (let m; (m = body.match(HEAD_TAG)); body = body.slice(m[0].length)) {
-    head += m[0].replace(/^<(\w+)/, '<$1 data-pre')
+    // <title> stays plain (marked by main.tsx before React starts) so the page source shows a bare <title> tag.
+    head += m[0].startsWith('<title>') ? m[0] : m[0].replace(/^<(\w+)/, '<$1 data-pre')
   }
   const html = deferScript(inlineCss(template, pageCss))
     .replace('<div id="root"></div>', `<div id="root">${body}</div>`)
