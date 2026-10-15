@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://egdigital.com.au/sitemap.xml
+Sitemap: https://egeloma.com.au/sitemap.xml

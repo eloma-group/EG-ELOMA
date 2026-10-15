@@ -1,4 +1,4 @@
-const SITE = 'https://egdigital.com.au'
+const SITE = 'https://egeloma.com.au'
 
 export interface PageMetaProps {
   title: string

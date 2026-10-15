@@ -12,10 +12,10 @@ const meta = {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://egdigital.com.au/#org",
+        "@id": "https://egeloma.com.au/#org",
         "name": "EG Eloma",
-        "url": "https://egdigital.com.au/",
-        "logo": "https://egdigital.com.au/logo.png",
+        "url": "https://egeloma.com.au/",
+        "logo": "https://egeloma.com.au/logo.png",
         "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
         "address": {
           "@type": "PostalAddress",
@@ -49,7 +49,7 @@ const meta = {
         "name": "IVR System",
         "description": "Professional phone menus that route every caller to the right person, fast.",
         "provider": {
-          "@id": "https://egdigital.com.au/#org"
+          "@id": "https://egeloma.com.au/#org"
         },
         "serviceType": "IVR System",
         "areaServed": [
@@ -74,7 +74,7 @@ const meta = {
             "name": "New Zealand"
           }
         ],
-        "url": "https://egdigital.com.au/ivr-system"
+        "url": "https://egeloma.com.au/ivr-system"
       },
       {
         "@type": "FAQPage",
@@ -136,19 +136,19 @@ const meta = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://egdigital.com.au/"
+            "item": "https://egeloma.com.au/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Products",
-            "item": "https://egdigital.com.au/services"
+            "item": "https://egeloma.com.au/services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "IVR System",
-            "item": "https://egdigital.com.au/ivr-system"
+            "item": "https://egeloma.com.au/ivr-system"
           }
         ]
       }

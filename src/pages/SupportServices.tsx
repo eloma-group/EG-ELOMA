@@ -12,10 +12,10 @@ const meta = {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://egdigital.com.au/#org",
+        "@id": "https://egeloma.com.au/#org",
         "name": "EG Eloma",
-        "url": "https://egdigital.com.au/",
-        "logo": "https://egdigital.com.au/logo.png",
+        "url": "https://egeloma.com.au/",
+        "logo": "https://egeloma.com.au/logo.png",
         "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
         "address": {
           "@type": "PostalAddress",
@@ -49,7 +49,7 @@ const meta = {
         "name": "Support Services",
         "description": "24/7 helpdesk and managed IT support with an average response under 15 minutes.",
         "provider": {
-          "@id": "https://egdigital.com.au/#org"
+          "@id": "https://egeloma.com.au/#org"
         },
         "serviceType": "Support Services",
         "areaServed": [
@@ -74,7 +74,7 @@ const meta = {
             "name": "New Zealand"
           }
         ],
-        "url": "https://egdigital.com.au/support-services"
+        "url": "https://egeloma.com.au/support-services"
       },
       {
         "@type": "FAQPage",
@@ -136,19 +136,19 @@ const meta = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://egdigital.com.au/"
+            "item": "https://egeloma.com.au/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Products",
-            "item": "https://egdigital.com.au/services"
+            "item": "https://egeloma.com.au/services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Support Services",
-            "item": "https://egdigital.com.au/support-services"
+            "item": "https://egeloma.com.au/support-services"
           }
         ]
       }

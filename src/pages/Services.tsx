@@ -11,10 +11,10 @@ const meta = {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://egdigital.com.au/#org",
+        "@id": "https://egeloma.com.au/#org",
         "name": "EG Eloma",
-        "url": "https://egdigital.com.au/",
-        "logo": "https://egdigital.com.au/logo.png",
+        "url": "https://egeloma.com.au/",
+        "logo": "https://egeloma.com.au/logo.png",
         "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
         "address": {
           "@type": "PostalAddress",
@@ -49,139 +49,139 @@ const meta = {
           {
             "@type": "ListItem",
             "position": 1,
-            "url": "https://egdigital.com.au/microsoft",
+            "url": "https://egeloma.com.au/microsoft",
             "name": "Microsoft Products"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "url": "https://egdigital.com.au/microsoft-licensing",
+            "url": "https://egeloma.com.au/microsoft-licensing",
             "name": "Microsoft Licensing"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "url": "https://egdigital.com.au/microsoft-development",
+            "url": "https://egeloma.com.au/microsoft-development",
             "name": "Microsoft Product Development"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "url": "https://egdigital.com.au/social-media",
+            "url": "https://egeloma.com.au/social-media",
             "name": "Social Media Management"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "url": "https://egdigital.com.au/seo",
+            "url": "https://egeloma.com.au/seo",
             "name": "Search Engine Optimisation (SEO)"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "url": "https://egdigital.com.au/local-listing",
+            "url": "https://egeloma.com.au/local-listing",
             "name": "Local Listing (Google Business Profile)"
           },
           {
             "@type": "ListItem",
             "position": 7,
-            "url": "https://egdigital.com.au/google-meta-ads",
+            "url": "https://egeloma.com.au/google-meta-ads",
             "name": "Google & Meta Ads"
           },
           {
             "@type": "ListItem",
             "position": 8,
-            "url": "https://egdigital.com.au/ppc",
+            "url": "https://egeloma.com.au/ppc",
             "name": "PPC (Pay-Per-Click)"
           },
           {
             "@type": "ListItem",
             "position": 9,
-            "url": "https://egdigital.com.au/design",
+            "url": "https://egeloma.com.au/design",
             "name": "Designing (Design Hub)"
           },
           {
             "@type": "ListItem",
             "position": 10,
-            "url": "https://egdigital.com.au/website-development",
+            "url": "https://egeloma.com.au/website-development",
             "name": "Website Development"
           },
           {
             "@type": "ListItem",
             "position": 11,
-            "url": "https://egdigital.com.au/software-development",
+            "url": "https://egeloma.com.au/software-development",
             "name": "Software Development"
           },
           {
             "@type": "ListItem",
             "position": 12,
-            "url": "https://egdigital.com.au/saas-development",
+            "url": "https://egeloma.com.au/saas-development",
             "name": "SaaS Development"
           },
           {
             "@type": "ListItem",
             "position": 13,
-            "url": "https://egdigital.com.au/app-development",
+            "url": "https://egeloma.com.au/app-development",
             "name": "App Development"
           },
           {
             "@type": "ListItem",
             "position": 14,
-            "url": "https://egdigital.com.au/api-integrations",
+            "url": "https://egeloma.com.au/api-integrations",
             "name": "API Integrations"
           },
           {
             "@type": "ListItem",
             "position": 15,
-            "url": "https://egdigital.com.au/toll-free-number",
+            "url": "https://egeloma.com.au/toll-free-number",
             "name": "Toll-Free Number"
           },
           {
             "@type": "ListItem",
             "position": 16,
-            "url": "https://egdigital.com.au/virtual-mobile-number",
+            "url": "https://egeloma.com.au/virtual-mobile-number",
             "name": "Virtual Mobile Number"
           },
           {
             "@type": "ListItem",
             "position": 17,
-            "url": "https://egdigital.com.au/landline-number",
+            "url": "https://egeloma.com.au/landline-number",
             "name": "Landline Number"
           },
           {
             "@type": "ListItem",
             "position": 18,
-            "url": "https://egdigital.com.au/ivr-system",
+            "url": "https://egeloma.com.au/ivr-system",
             "name": "IVR System"
           },
           {
             "@type": "ListItem",
             "position": 19,
-            "url": "https://egdigital.com.au/virtual-customer-care",
+            "url": "https://egeloma.com.au/virtual-customer-care",
             "name": "Virtual Customer Care Support"
           },
           {
             "@type": "ListItem",
             "position": 20,
-            "url": "https://egdigital.com.au/cybersecurity",
+            "url": "https://egeloma.com.au/cybersecurity",
             "name": "Cybersecurity"
           },
           {
             "@type": "ListItem",
             "position": 21,
-            "url": "https://egdigital.com.au/cloud-maintenance",
+            "url": "https://egeloma.com.au/cloud-maintenance",
             "name": "Cloud Maintenance"
           },
           {
             "@type": "ListItem",
             "position": 22,
-            "url": "https://egdigital.com.au/server-maintenance",
+            "url": "https://egeloma.com.au/server-maintenance",
             "name": "Server Maintenance"
           },
           {
             "@type": "ListItem",
             "position": 23,
-            "url": "https://egdigital.com.au/support-services",
+            "url": "https://egeloma.com.au/support-services",
             "name": "Support Services"
           }
         ]

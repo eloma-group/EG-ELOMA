@@ -11,10 +11,10 @@ const meta = {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://egdigital.com.au/#org",
+        "@id": "https://egeloma.com.au/#org",
         "name": "EG Eloma",
-        "url": "https://egdigital.com.au/",
-        "logo": "https://egdigital.com.au/logo.png",
+        "url": "https://egeloma.com.au/",
+        "logo": "https://egeloma.com.au/logo.png",
         "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
         "address": {
           "@type": "PostalAddress",
@@ -46,9 +46,9 @@ const meta = {
       {
         "@type": "Blog",
         "name": "EG Eloma Blog",
-        "url": "https://egdigital.com.au/blog",
+        "url": "https://egeloma.com.au/blog",
         "publisher": {
-          "@id": "https://egdigital.com.au/#org"
+          "@id": "https://egeloma.com.au/#org"
         }
       }
     ]

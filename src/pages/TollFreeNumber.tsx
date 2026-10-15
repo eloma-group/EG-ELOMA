@@ -12,10 +12,10 @@ const meta = {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://egdigital.com.au/#org",
+        "@id": "https://egeloma.com.au/#org",
         "name": "EG Eloma",
-        "url": "https://egdigital.com.au/",
-        "logo": "https://egdigital.com.au/logo.png",
+        "url": "https://egeloma.com.au/",
+        "logo": "https://egeloma.com.au/logo.png",
         "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
         "address": {
           "@type": "PostalAddress",
@@ -49,7 +49,7 @@ const meta = {
         "name": "Toll-Free Number",
         "description": "1300, 1800, 1-800 and 0800 numbers that make it easy for customers to call.",
         "provider": {
-          "@id": "https://egdigital.com.au/#org"
+          "@id": "https://egeloma.com.au/#org"
         },
         "serviceType": "Toll-Free Number",
         "areaServed": [
@@ -74,7 +74,7 @@ const meta = {
             "name": "New Zealand"
           }
         ],
-        "url": "https://egdigital.com.au/toll-free-number"
+        "url": "https://egeloma.com.au/toll-free-number"
       },
       {
         "@type": "FAQPage",
@@ -136,19 +136,19 @@ const meta = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://egdigital.com.au/"
+            "item": "https://egeloma.com.au/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Products",
-            "item": "https://egdigital.com.au/services"
+            "item": "https://egeloma.com.au/services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Toll-Free Number",
-            "item": "https://egdigital.com.au/toll-free-number"
+            "item": "https://egeloma.com.au/toll-free-number"
           }
         ]
       }
