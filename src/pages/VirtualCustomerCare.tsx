@@ -10,7 +10,7 @@ const meta = {
   "crumb": "Virtual Customer Care Support",
   "parent": {
     "name": "Products",
-    "path": "/services"
+    "path": "/products"
   },
   "jsonLd": {
     "@context": "https://schema.org",
@@ -137,20 +137,20 @@ export default function VirtualCustomerCare() {
             </circle>
           </svg>
         </div>
-        <Header active="/services" />
+        <Header active="/products" />
         <section className="wrap pc">
           <p className="crumb">
             <Link to="/">Home</Link>
             <span>/</span>
-            <Link to="/services">Products</Link>
+            <Link to="/products">Products</Link>
             <span>/</span>
-            <Link to="/services#communications">Business Communications</Link>
+            <Link to="/products#communications">Business Communications</Link>
           </p>
           <h1>Virtual Customer Care Support</h1>
           <p className="lead">Your customers looked after, even when you're busy.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
           <div className="tbar">
             <span>
@@ -425,7 +425,7 @@ export default function VirtualCustomerCare() {
           <p>Talk to our Business Communications team about virtual customer care support for your organisation.</p>
           <div className="cta">
             <Link className="btn w" to="/contact?service=Virtual+Customer+Care+Support">Get a quote</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>

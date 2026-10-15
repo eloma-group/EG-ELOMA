@@ -11,7 +11,7 @@ const SITE_LOCKED = false
 
 // Every file in ./pages becomes a route: Home.tsx -> "/", WebsiteDevelopment.tsx -> "/website-development".
 const modules = SITE_LOCKED
-  ? import.meta.glob<{ default: ComponentType }>(['./pages/Home.tsx', './pages/Services.tsx', './pages/Microsoft.tsx'])
+  ? import.meta.glob<{ default: ComponentType }>(['./pages/Home.tsx', './pages/Products.tsx', './pages/Microsoft.tsx'])
   : import.meta.glob<{ default: ComponentType }>('./pages/*.tsx')
 
 const slugFor = (file: string) => {
@@ -47,12 +47,18 @@ function PageShell({ children }: { children: ReactNode }) {
   return children
 }
 
-// Old static URLs (/seo.html, /index.html) redirect to the clean routes; any other URL is a 404.
+// Pages that moved to a new URL: old path -> new path. The hosts answer these with a 301 (scripts/prerender.mjs
+// writes them for Azure; public/.htaccess, public/web.config and vercel.json list them too).
+export const RENAMED: Record<string, string> = { '/services': '/products', '/pricing': '/plans', '/about': '/company' }
+
+// Old static URLs (/seo.html, /index.html) and renamed pages redirect to the clean routes; any other URL is a 404.
 function Fallback() {
   const { pathname, search, hash } = useLocation()
   const m = pathname.match(/^\/([a-z0-9-]+)\.html$/)
+  const to = m ? (m[1] === 'index' ? '/' : '/' + m[1]) : pathname
+  if (RENAMED[to]) return <Navigate to={RENAMED[to] + search + hash} replace />
   if (!m) return <PageShell>{SITE_LOCKED ? <ComingSoon /> : <NotFound />}</PageShell>
-  return <Navigate to={(m[1] === 'index' ? '/' : '/' + m[1]) + search + hash} replace />
+  return <Navigate to={to + search + hash} replace />
 }
 
 export default function App() {

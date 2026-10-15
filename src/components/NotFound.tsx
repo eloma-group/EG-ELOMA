@@ -3,12 +3,12 @@ import Header from './Header'
 import Footer from './Footer'
 
 const POPULAR = [
-  { to: '/services', label: 'Services' },
+  { to: '/products', label: 'Services' },
   { to: '/microsoft', label: 'Microsoft' },
-  { to: '/pricing', label: 'Plans' },
+  { to: '/plans', label: 'Plans' },
   { to: '/industries', label: 'Industries' },
   { to: '/blog', label: 'Blog' },
-  { to: '/about', label: 'Company' },
+  { to: '/company', label: 'Company' },
 ]
 
 // Shown for every URL that is not a page (typos, removed pages). Prerendered to dist/404.html,

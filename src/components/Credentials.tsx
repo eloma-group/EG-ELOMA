@@ -49,7 +49,7 @@ export default function Credentials({ className }: { className: string }) {
           </ul>
           <p className="affn">
             {'Memberships and support do not imply endorsement of our services. '}
-            <Link to="/about#commitments">About our memberships</Link>
+            <Link to="/company#commitments">About our memberships</Link>
           </p>
         </div>
       </div>

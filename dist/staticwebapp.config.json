@@ -6,8 +6,33 @@
       "statusCode": 301
     },
     {
+      "route": "/services",
+      "redirect": "/products",
+      "statusCode": 301
+    },
+    {
+      "route": "/services.html",
+      "redirect": "/products",
+      "statusCode": 301
+    },
+    {
+      "route": "/pricing",
+      "redirect": "/plans",
+      "statusCode": 301
+    },
+    {
+      "route": "/pricing.html",
+      "redirect": "/plans",
+      "statusCode": 301
+    },
+    {
+      "route": "/about",
+      "redirect": "/company",
+      "statusCode": 301
+    },
+    {
       "route": "/about.html",
-      "redirect": "/about",
+      "redirect": "/company",
       "statusCode": 301
     },
     {
@@ -28,6 +53,11 @@
     {
       "route": "/cloud-maintenance.html",
       "redirect": "/cloud-maintenance",
+      "statusCode": 301
+    },
+    {
+      "route": "/company.html",
+      "redirect": "/company",
       "statusCode": 301
     },
     {
@@ -86,18 +116,23 @@
       "statusCode": 301
     },
     {
+      "route": "/plans.html",
+      "redirect": "/plans",
+      "statusCode": 301
+    },
+    {
       "route": "/ppc.html",
       "redirect": "/ppc",
       "statusCode": 301
     },
     {
-      "route": "/pricing.html",
-      "redirect": "/pricing",
+      "route": "/privacy.html",
+      "redirect": "/privacy",
       "statusCode": 301
     },
     {
-      "route": "/privacy.html",
-      "redirect": "/privacy",
+      "route": "/products.html",
+      "redirect": "/products",
       "statusCode": 301
     },
     {
@@ -113,11 +148,6 @@
     {
       "route": "/server-maintenance.html",
       "redirect": "/server-maintenance",
-      "statusCode": 301
-    },
-    {
-      "route": "/services.html",
-      "redirect": "/services",
       "statusCode": 301
     },
     {
@@ -161,10 +191,6 @@
       "statusCode": 301
     },
     {
-      "route": "/about",
-      "rewrite": "/about.html"
-    },
-    {
       "route": "/api-integrations",
       "rewrite": "/api-integrations.html"
     },
@@ -179,6 +205,10 @@
     {
       "route": "/cloud-maintenance",
       "rewrite": "/cloud-maintenance.html"
+    },
+    {
+      "route": "/company",
+      "rewrite": "/company.html"
     },
     {
       "route": "/contact",
@@ -225,16 +255,20 @@
       "rewrite": "/microsoft-licensing.html"
     },
     {
+      "route": "/plans",
+      "rewrite": "/plans.html"
+    },
+    {
       "route": "/ppc",
       "rewrite": "/ppc.html"
     },
     {
-      "route": "/pricing",
-      "rewrite": "/pricing.html"
-    },
-    {
       "route": "/privacy",
       "rewrite": "/privacy.html"
+    },
+    {
+      "route": "/products",
+      "rewrite": "/products.html"
     },
     {
       "route": "/saas-development",
@@ -247,10 +281,6 @@
     {
       "route": "/server-maintenance",
       "rewrite": "/server-maintenance.html"
-    },
-    {
-      "route": "/services",
-      "rewrite": "/services.html"
     },
     {
       "route": "/social-media",

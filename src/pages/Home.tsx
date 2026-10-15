@@ -168,7 +168,7 @@ export default function Home() {
                 23 products in five groups, delivered and supported by one team. Pick one service or let us manage everything.
               </p>
             </div>
-            <Link className="more" to="/services">
+            <Link className="more" to="/products">
               {"All products "}
               <span aria-hidden="true">→</span>
             </Link>
@@ -184,7 +184,7 @@ export default function Home() {
                 </svg>
               </span>
               <h3>
-                <Link to="/services#microsoft">{"Microsoft & Licensing"}</Link>
+                <Link to="/products#microsoft">{"Microsoft & Licensing"}</Link>
               </h3>
               <p>Every Microsoft product, licensed, built on and supported.</p>
               <div className="pl">
@@ -201,7 +201,7 @@ export default function Home() {
                 </svg>
               </span>
               <h3>
-                <Link to="/services#marketing">{"Marketing & Growth"}</Link>
+                <Link to="/products#marketing">{"Marketing & Growth"}</Link>
               </h3>
               <p>Get found, get chosen and keep customers coming back.</p>
               <div className="pl">
@@ -220,7 +220,7 @@ export default function Home() {
                 </svg>
               </span>
               <h3>
-                <Link to="/services#development">Development</Link>
+                <Link to="/products#development">Development</Link>
               </h3>
               <p>Websites, apps, SaaS and integrations, built to scale.</p>
               <div className="pl">
@@ -238,7 +238,7 @@ export default function Home() {
                 </svg>
               </span>
               <h3>
-                <Link to="/services#communications">Business Communications</Link>
+                <Link to="/products#communications">Business Communications</Link>
               </h3>
               <p>Numbers, call flows and customer care that never miss a call.</p>
               <div className="pl">
@@ -257,7 +257,7 @@ export default function Home() {
                 </svg>
               </span>
               <h3>
-                <Link to="/services#cloud">{"Cloud, Security & Support"}</Link>
+                <Link to="/products#cloud">{"Cloud, Security & Support"}</Link>
               </h3>
               <p>Protected, maintained and supported around the clock.</p>
               <div className="pl">
@@ -469,13 +469,13 @@ export default function Home() {
               <h2>Simple plans for growth</h2>
               <p className="sub">Bundle marketing services into one monthly plan, or choose a single service.</p>
             </div>
-            <Link className="more" to="/pricing">
+            <Link className="more" to="/plans">
               {"Compare all plans "}
               <span aria-hidden="true">→</span>
             </Link>
           </div>
           <div className="stg cards c4 plan-cards">
-            <Link className="card feat-c" to="/pricing" style={{ transitionDelay: "0ms" }}>
+            <Link className="card feat-c" to="/plans" style={{ transitionDelay: "0ms" }}>
               <p className="k">Plan 01 · Most complete</p>
               <h3>All-in-One Plan</h3>
               <p>Social Media · SEO · Local Listing · Website · Google Ads · Meta Ads · Designing · AI Ads</p>
@@ -484,7 +484,7 @@ export default function Home() {
                 <span>→</span>
               </span>
             </Link>
-            <Link className="card" to="/pricing" style={{ transitionDelay: "70ms" }}>
+            <Link className="card" to="/plans" style={{ transitionDelay: "70ms" }}>
               <p className="k">Plan 02</p>
               <h3>Business Plan</h3>
               <p>Social Media · SEO · Local Listing · Website · Designing</p>
@@ -493,7 +493,7 @@ export default function Home() {
                 <span>→</span>
               </span>
             </Link>
-            <Link className="card" to="/pricing" style={{ transitionDelay: "140ms" }}>
+            <Link className="card" to="/plans" style={{ transitionDelay: "140ms" }}>
               <p className="k">Plan 03</p>
               <h3>Growth Plan</h3>
               <p>Social Media · SEO · Local Listing</p>
@@ -502,7 +502,7 @@ export default function Home() {
                 <span>→</span>
               </span>
             </Link>
-            <Link className="card" to="/pricing" style={{ transitionDelay: "210ms" }}>
+            <Link className="card" to="/plans" style={{ transitionDelay: "210ms" }}>
               <p className="k">Plan 04</p>
               <h3>Starter Plan</h3>
               <p>Social Media · SEO</p>
@@ -630,7 +630,7 @@ export default function Home() {
           <p>Book a free consultation. A specialist will recommend the right products for you.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
         </section>
       </main>

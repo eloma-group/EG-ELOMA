@@ -1,5 +1,10 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/services", "destination": "/products", "permanent": true },
+    { "source": "/pricing", "destination": "/plans", "permanent": true },
+    { "source": "/about", "destination": "/company", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

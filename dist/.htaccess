@@ -8,6 +8,11 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
+  # Renamed pages -> their new URLs (keep in sync with RENAMED in src/App.tsx).
+  RewriteRule ^services(\.html)?$ /products [R=301,L]
+  RewriteRule ^pricing(\.html)?$ /plans [R=301,L]
+  RewriteRule ^about(\.html)?$ /company [R=301,L]
+
   # Old static-site links (/index.html, /seo.html ...) -> clean URLs, 301 so Google updates its index.
   # THE_REQUEST only matches what the browser asked for, so the internal rewrite to index.html below never loops.
   RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]

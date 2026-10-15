@@ -17,12 +17,12 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Products',
     links: [
-      { to: '/services#microsoft', label: 'Microsoft & Licensing' },
-      { to: '/services#marketing', label: 'Marketing & Growth' },
-      { to: '/services#development', label: 'Development' },
-      { to: '/services#communications', label: 'Business Communications' },
-      { to: '/services#cloud', label: 'Cloud, Security & Support' },
-      { to: '/services', label: 'All products' },
+      { to: '/products#microsoft', label: 'Microsoft & Licensing' },
+      { to: '/products#marketing', label: 'Marketing & Growth' },
+      { to: '/products#development', label: 'Development' },
+      { to: '/products#communications', label: 'Business Communications' },
+      { to: '/products#cloud', label: 'Cloud, Security & Support' },
+      { to: '/products', label: 'All products' },
     ],
   },
   {
@@ -39,8 +39,8 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Company',
     links: [
-      { to: '/about', label: 'About EG Eloma' },
-      { to: '/pricing', label: 'Plans & quotes' },
+      { to: '/company', label: 'About EG Eloma' },
+      { to: '/plans', label: 'Plans & quotes' },
       { to: '/industries', label: 'Industries' },
       { to: '/blog', label: 'Blog' },
       { to: '/contact', label: 'Contact' },

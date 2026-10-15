@@ -4,12 +4,12 @@ import { BUSINESS } from '../siteInfo'
 
 const NAV = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Products' },
+  { to: '/products', label: 'Products' },
   { to: '/microsoft', label: 'Microsoft' },
-  { to: '/pricing', label: 'Plans' },
+  { to: '/plans', label: 'Plans' },
   { to: '/industries', label: 'Industries' },
   { to: '/blog', label: 'Blog' },
-  { to: '/about', label: 'Company' },
+  { to: '/company', label: 'Company' },
   { to: '/contact', label: 'Contact' },
 ]
 

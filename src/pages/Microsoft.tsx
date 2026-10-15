@@ -117,7 +117,7 @@ export default function Microsoft() {
           <p className="lead">Licensing, setup, custom development and 24/7 support across the full Microsoft cloud.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
           <div className="tbar">
             <span>
@@ -211,7 +211,7 @@ export default function Microsoft() {
               Compare what each Microsoft 365 plan includes on our plans page, then ask for a quote. We often combine plans so each person has exactly what they need.
             </p>
             <div className="cta" style={{ justifyContent: "flex-start", marginTop: "22px" }}>
-              <Link className="btn w" to="/pricing#microsoft">Compare Microsoft 365 plans</Link>
+              <Link className="btn w" to="/plans#microsoft">Compare Microsoft 365 plans</Link>
               <Link className="btn d" to="/contact?service=Microsoft+Licensing">Request a licence quote</Link>
             </div>
           </div>
@@ -836,7 +836,7 @@ export default function Microsoft() {
           <p>Get a free licence review and a clear, plain-English recommendation.</p>
           <div className="cta">
             <Link className="btn w" to="/contact?service=Microsoft+Licensing">Free licence review</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>

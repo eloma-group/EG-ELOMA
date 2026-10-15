@@ -10,7 +10,7 @@ const meta = {
   "crumb": "App Development",
   "parent": {
     "name": "Products",
-    "path": "/services"
+    "path": "/products"
   },
   "jsonLd": {
     "@context": "https://schema.org",
@@ -137,20 +137,20 @@ export default function AppDevelopment() {
             </circle>
           </svg>
         </div>
-        <Header active="/services" />
+        <Header active="/products" />
         <section className="wrap pc">
           <p className="crumb">
             <Link to="/">Home</Link>
             <span>/</span>
-            <Link to="/services">Products</Link>
+            <Link to="/products">Products</Link>
             <span>/</span>
-            <Link to="/services#development">Development</Link>
+            <Link to="/products#development">Development</Link>
           </p>
           <h1>App Development</h1>
           <p className="lead">Mobile apps your customers will actually use.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
           <div className="tbar">
             <span>
@@ -425,7 +425,7 @@ export default function AppDevelopment() {
           <p>Talk to our Development team about app development for your organisation.</p>
           <div className="cta">
             <Link className="btn w" to="/contact?service=App+Development">Get a quote</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>

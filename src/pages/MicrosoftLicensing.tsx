@@ -10,7 +10,7 @@ const meta = {
   "crumb": "Microsoft Licensing",
   "parent": {
     "name": "Products",
-    "path": "/services"
+    "path": "/products"
   },
   "jsonLd": {
     "@context": "https://schema.org",
@@ -137,20 +137,20 @@ export default function MicrosoftLicensing() {
             </circle>
           </svg>
         </div>
-        <Header active="/services" />
+        <Header active="/products" />
         <section className="wrap pc">
           <p className="crumb">
             <Link to="/">Home</Link>
             <span>/</span>
-            <Link to="/services">Products</Link>
+            <Link to="/products">Products</Link>
             <span>/</span>
-            <Link to="/services#microsoft">{"Microsoft & Licensing"}</Link>
+            <Link to="/products#microsoft">{"Microsoft & Licensing"}</Link>
           </p>
           <h1>Microsoft Licensing</h1>
           <p className="lead">Pay only for the Microsoft licences you actually need.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
           <div className="tbar">
             <span>
@@ -461,7 +461,7 @@ export default function MicrosoftLicensing() {
           <p>{"Talk to our Microsoft & Licensing team about microsoft licensing for your organisation."}</p>
           <div className="cta">
             <Link className="btn w" to="/contact?service=Microsoft+Licensing">Get a quote</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>

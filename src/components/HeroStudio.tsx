@@ -203,7 +203,7 @@ export default function HeroStudio() {
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
             </Link>
-            <Link className="lbtn b" to="/pricing">View plans</Link>
+            <Link className="lbtn b" to="/plans">View plans</Link>
           </div>
         </form>
         <div className="trust">

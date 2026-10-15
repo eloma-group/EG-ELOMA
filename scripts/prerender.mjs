@@ -8,7 +8,7 @@ const root = fileURLToPath(new URL('..', import.meta.url))
 const dist = root + 'dist/'
 const ssrDir = root + 'dist-ssr/'
 
-const { render, routes } = await import(pathToFileURL(ssrDir + 'entry-server.js').href)
+const { render, routes, RENAMED } = await import(pathToFileURL(ssrDir + 'entry-server.js').href)
 const template = readFileSync(dist + 'index.html', 'utf8')
 
 // The whole stylesheet is small (~15 KB gzipped), so it goes inline: no render-blocking request.
@@ -66,6 +66,8 @@ const pageRoutes = routes.filter(r => r !== '/')
 writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
   routes: [
     { route: '/index.html', redirect: '/', statusCode: 301 },
+    // Renamed pages: old URL (and its .html form) -> new URL.
+    ...Object.entries(RENAMED).flatMap(([from, to]) => [from, from + '.html'].map(route => ({ route, redirect: to, statusCode: 301 }))),
     ...pageRoutes.map(r => ({ route: r + '.html', redirect: r, statusCode: 301 })),
     ...pageRoutes.map(r => ({ route: r, rewrite: r + '.html' })),
     { route: '/assets/*', headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },

@@ -10,7 +10,7 @@ const meta = {
   "crumb": "Designing (Design Hub)",
   "parent": {
     "name": "Products",
-    "path": "/services"
+    "path": "/products"
   },
   "jsonLd": {
     "@context": "https://schema.org",
@@ -137,20 +137,20 @@ export default function Design() {
             </circle>
           </svg>
         </div>
-        <Header active="/services" />
+        <Header active="/products" />
         <section className="wrap pc">
           <p className="crumb">
             <Link to="/">Home</Link>
             <span>/</span>
-            <Link to="/services">Products</Link>
+            <Link to="/products">Products</Link>
             <span>/</span>
-            <Link to="/services#marketing">{"Marketing & Growth"}</Link>
+            <Link to="/products#marketing">{"Marketing & Growth"}</Link>
           </p>
           <h1>Designing (Design Hub)</h1>
           <p className="lead">Professional design that makes your brand look the part.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
           <div className="tbar">
             <span>
@@ -430,7 +430,7 @@ export default function Design() {
           <p>{"Talk to our Marketing & Growth team about designing for your organisation."}</p>
           <div className="cta">
             <Link className="btn w" to="/contact?service=Designing+(Design+Hub)">Get a quote</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>

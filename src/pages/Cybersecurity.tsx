@@ -10,7 +10,7 @@ const meta = {
   "crumb": "Cybersecurity",
   "parent": {
     "name": "Products",
-    "path": "/services"
+    "path": "/products"
   },
   "jsonLd": {
     "@context": "https://schema.org",
@@ -137,20 +137,20 @@ export default function Cybersecurity() {
             </circle>
           </svg>
         </div>
-        <Header active="/services" />
+        <Header active="/products" />
         <section className="wrap pc">
           <p className="crumb">
             <Link to="/">Home</Link>
             <span>/</span>
-            <Link to="/services">Products</Link>
+            <Link to="/products">Products</Link>
             <span>/</span>
-            <Link to="/services#cloud">{"Cloud, Security & Support"}</Link>
+            <Link to="/products#cloud">{"Cloud, Security & Support"}</Link>
           </p>
           <h1>Cyber Security Services Melbourne</h1>
           <p className="lead">Zero threats allowed.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
-            <Link className="btn d" to="/pricing">View plans</Link>
+            <Link className="btn d" to="/plans">View plans</Link>
           </div>
           <div className="tbar">
             <span>
@@ -455,7 +455,7 @@ export default function Cybersecurity() {
           <p>{"Talk to our Cloud, Security & Support team about cybersecurity for your organisation."}</p>
           <div className="cta">
             <Link className="btn w" to="/contact?service=Cybersecurity">Get a quote</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>

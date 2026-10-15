@@ -110,7 +110,7 @@ export default function Blog() {
           <p>Book a free consultation and talk to a specialist.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a consultation</Link>
-            <Link className="btn d" to="/services">All products</Link>
+            <Link className="btn d" to="/products">All products</Link>
           </div>
         </section>
       </main>
