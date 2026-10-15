@@ -7,43 +7,14 @@ import Footer from '../components/Footer'
 const meta = {
   "title": "Virtual Mobile Number | EG Eloma",
   "description": "A business mobile number without a second phone. Business mobile numbers that ring on any phone or app, with SMS included.",
+  "crumb": "Virtual Mobile Number",
+  "parent": {
+    "name": "Products",
+    "path": "/services"
+  },
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      },
       {
         "@type": "Service",
         "name": "Virtual Mobile Number",
@@ -126,29 +97,6 @@ const meta = {
               "@type": "Answer",
               "text": "Yes, depending on the setup."
             }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://egeloma.com.au/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Products",
-            "item": "https://egeloma.com.au/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Virtual Mobile Number",
-            "item": "https://egeloma.com.au/virtual-mobile-number"
           }
         ]
       }

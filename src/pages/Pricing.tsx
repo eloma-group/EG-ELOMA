@@ -7,43 +7,10 @@ import Footer from '../components/Footer'
 const meta = {
   "title": "Marketing Plans & Microsoft 365 Quotes | EG Eloma",
   "description": "Compare EG Eloma marketing plans and Microsoft 365 licences, from single services to All-in-One. Every plan is tailored and quoted in writing.",
+  "crumb": "Plans & Quotes",
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      },
       {
         "@type": "OfferCatalog",
         "name": "EG Eloma marketing plans",

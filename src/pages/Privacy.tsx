@@ -7,45 +7,7 @@ import { BUSINESS, LEGAL_UPDATED } from '../siteInfo'
 const meta = {
   "title": "Privacy Policy | EG Eloma",
   "description": "How EG Eloma collects, uses, shares and protects personal information under the Australian Privacy Act, including cookies, Google services and your rights.",
-  "jsonLd": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      }
-    ]
-  },
+  "crumb": "Privacy Policy",
   "path": "/privacy"
 }
 

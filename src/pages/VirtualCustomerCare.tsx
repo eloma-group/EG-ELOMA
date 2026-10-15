@@ -7,43 +7,14 @@ import Footer from '../components/Footer'
 const meta = {
   "title": "Virtual Customer Care Support | EG Eloma",
   "description": "Your customers looked after, even when you're busy. Trained virtual agents answering calls, chats and emails in your business name.",
+  "crumb": "Virtual Customer Care Support",
+  "parent": {
+    "name": "Products",
+    "path": "/services"
+  },
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      },
       {
         "@type": "Service",
         "name": "Virtual Customer Care Support",
@@ -126,29 +97,6 @@ const meta = {
               "@type": "Answer",
               "text": "Call recordings and reports are available."
             }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://egeloma.com.au/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Products",
-            "item": "https://egeloma.com.au/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Virtual Customer Care Support",
-            "item": "https://egeloma.com.au/virtual-customer-care"
           }
         ]
       }

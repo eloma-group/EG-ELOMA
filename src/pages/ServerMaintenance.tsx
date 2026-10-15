@@ -7,43 +7,14 @@ import Footer from '../components/Footer'
 const meta = {
   "title": "Server Maintenance | EG Eloma",
   "description": "Servers that stay up, stay patched and stay secure. On-premise and cloud servers patched, monitored, backed up and supported.",
+  "crumb": "Server Maintenance",
+  "parent": {
+    "name": "Products",
+    "path": "/services"
+  },
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      },
       {
         "@type": "Service",
         "name": "Server Maintenance",
@@ -126,29 +97,6 @@ const meta = {
               "@type": "Answer",
               "text": "We'll assess cost, performance and risk and give a clear recommendation."
             }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://egeloma.com.au/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Products",
-            "item": "https://egeloma.com.au/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Server Maintenance",
-            "item": "https://egeloma.com.au/server-maintenance"
           }
         ]
       }

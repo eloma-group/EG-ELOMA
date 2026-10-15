@@ -7,43 +7,14 @@ import Footer from '../components/Footer'
 const meta = {
   "title": "API Integrations | EG Eloma",
   "description": "Make your systems talk to each other. Connect your CRM, accounting, eCommerce, payments and Microsoft systems.",
+  "crumb": "API Integrations",
+  "parent": {
+    "name": "Products",
+    "path": "/services"
+  },
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      },
       {
         "@type": "Service",
         "name": "API Integrations",
@@ -126,29 +97,6 @@ const meta = {
               "@type": "Answer",
               "text": "We monitor and update integrations as part of support."
             }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://egeloma.com.au/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Products",
-            "item": "https://egeloma.com.au/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "API Integrations",
-            "item": "https://egeloma.com.au/api-integrations"
           }
         ]
       }

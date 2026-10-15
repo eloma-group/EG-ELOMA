@@ -7,43 +7,14 @@ import Footer from '../components/Footer'
 const meta = {
   "title": "Social Media Management | EG Eloma",
   "description": "Show up consistently on social, without doing it yourself. Content, design, posting and community management across every platform.",
+  "crumb": "Social Media Management",
+  "parent": {
+    "name": "Products",
+    "path": "/services"
+  },
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      },
       {
         "@type": "Service",
         "name": "Social Media Management",
@@ -126,29 +97,6 @@ const meta = {
               "@type": "Answer",
               "text": "Yes, through our Google & Meta Ads service or the All-in-One plan."
             }
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://egeloma.com.au/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Products",
-            "item": "https://egeloma.com.au/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Social Media Management",
-            "item": "https://egeloma.com.au/social-media"
           }
         ]
       }

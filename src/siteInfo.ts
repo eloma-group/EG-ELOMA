@@ -1,3 +1,6 @@
+// Live site address, used for canonical URLs and structured data.
+export const SITE = 'https://egeloma.com.au'
+
 // Business details shown in the header, footer and legal pages. Change them here only.
 export const BUSINESS = {
   name: 'EG Eloma',
@@ -7,6 +10,14 @@ export const BUSINESS = {
   address: '71 Gipps Street, Collingwood, Melbourne, VIC 3066, Australia',
   state: 'Victoria',
 }
+
+// Social profiles linked from the footer.
+export const SOCIAL = [
+  { label: 'Instagram', href: 'https://www.instagram.com/egeloma.au/' },
+  { label: 'Facebook', href: 'https://www.facebook.com/egeloma.au' },
+  { label: 'Threads', href: 'https://www.threads.net/@egeloma.au' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/egeloma-au/' },
+] as const
 
 // Date shown on the Privacy Policy and Terms of Use pages.
 export const LEGAL_UPDATED = '14 October 2026'

@@ -1,15 +1,55 @@
-const SITE = 'https://egeloma.com.au'
+import { BUSINESS, SITE, SOCIAL } from '../siteInfo'
+
+type Crumb = { name: string; path: string }
 
 export interface PageMetaProps {
   title: string
   description: string
   path: string
-  jsonLd?: object
+  // Name of this page in the breadcrumb trail (Home > parent > crumb). Not used on the home page.
+  crumb?: string
+  parent?: Crumb
+  jsonLd?: { '@graph'?: object[] }
 }
 
+// The company, added to every page. Pages point at it with { "@id": ORG_ID }.
+const ORG_ID = SITE + '/#org'
+const ORG = {
+  '@type': 'Corporation',
+  '@id': ORG_ID,
+  name: BUSINESS.name,
+  url: SITE + '/',
+  logo: SITE + '/assets/logo-mark-eloma.png',
+  alternateName: 'EG Eloma | Microsoft, Software, Marketing & Cybersecurity',
+  description: 'Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.',
+  address: { '@type': 'PostalAddress', addressCountry: 'AU' },
+  areaServed: ['Australia', 'United States', 'Canada', 'United Kingdom', 'New Zealand'].map(name => ({ '@type': 'Country', name })),
+  sameAs: SOCIAL.map(s => s.href),
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: BUSINESS.phone.href.replace('tel:', ''),
+      contactType: 'customer service',
+      email: BUSINESS.email,
+      areaServed: 'AU',
+      availableLanguage: 'en',
+    },
+  ],
+}
+
+const breadcrumbs = (trail: Crumb[]) => ({
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: SITE + c.path })),
+})
+
 // React 19 hoists <title>, <meta> and <link> into <head>.
-export default function PageMeta({ title, description, path, jsonLd }: PageMetaProps) {
+export default function PageMeta({ title, description, path, crumb, parent, jsonLd }: PageMetaProps) {
   const url = SITE + path
+  const trail = path !== '/' && crumb ? [{ name: 'Home', path: '/' }, ...(parent ? [parent] : []), { name: crumb, path }] : null
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [ORG, ...(jsonLd?.['@graph'] ?? []), ...(trail ? [breadcrumbs(trail)] : [])],
+  }
   return (
     <>
       <title>{title}</title>
@@ -18,7 +58,7 @@ export default function PageMeta({ title, description, path, jsonLd }: PageMetaP
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      {jsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
     </>
   )
 }

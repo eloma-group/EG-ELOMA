@@ -7,45 +7,7 @@ import { BUSINESS, LEGAL_UPDATED } from '../siteInfo'
 const meta = {
   "title": "Website Terms of Use | EG Eloma",
   "description": "The terms that apply when you use the EG Eloma website, including acceptable use, intellectual property, the Australian Consumer Law and governing law.",
-  "jsonLd": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://egeloma.com.au/#org",
-        "name": "EG Eloma",
-        "url": "https://egeloma.com.au/",
-        "logo": "https://egeloma.com.au/logo.png",
-        "description": "Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
-          }
-        ]
-      }
-    ]
-  },
+  "crumb": "Website Terms of Use",
   "path": "/terms"
 }
 
