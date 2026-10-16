@@ -76,6 +76,8 @@ console.log('wrote sitemap.xml with', routes.length, 'URLs')
 // Azure Static Web Apps ignores .htaccess/web.config: it reads staticwebapp.config.json instead.
 const pageRoutes = routes.filter(r => r !== '/')
 writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
+  // /seo/ -> /seo (301), so every page has one URL.
+  trailingSlash: 'never',
   routes: [
     { route: '/index.html', redirect: '/', statusCode: 301 },
     // Renamed pages: old URL (and its .html form) -> new URL.
