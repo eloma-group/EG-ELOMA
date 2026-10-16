@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Software Development | EG Eloma",
+  "title": "Custom Software Development Melbourne | EG Eloma",
   "description": "Software built around how your business actually works. Custom business software, portals and automation built around your workflow.",
   "crumb": "Software Development",
   "parent": {
@@ -146,7 +146,7 @@ export default function SoftwareDevelopment() {
             <span>/</span>
             <Link to="/products#development">Development</Link>
           </p>
-          <h1>Software Development</h1>
+          <h1>Custom Software Development Melbourne</h1>
           <p className="lead">Software built around how your business actually works.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

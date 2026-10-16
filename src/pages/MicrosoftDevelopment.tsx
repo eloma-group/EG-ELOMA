@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Microsoft Product Development | EG Eloma",
+  "title": "Power Apps & SharePoint Development Melbourne | EG Eloma",
   "description": "Turn the Microsoft tools you already own into custom business systems. Custom solutions on Power Apps, SharePoint, Teams, Dynamics 365 and Copilot.",
   "crumb": "Microsoft Product Development",
   "parent": {
@@ -146,7 +146,7 @@ export default function MicrosoftDevelopment() {
             <span>/</span>
             <Link to="/products#microsoft">{"Microsoft & Licensing"}</Link>
           </p>
-          <h1>Microsoft Product Development</h1>
+          <h1>{"Power Apps, SharePoint & Microsoft Development Melbourne"}</h1>
           <p className="lead">Turn the Microsoft tools you already own into custom business systems.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

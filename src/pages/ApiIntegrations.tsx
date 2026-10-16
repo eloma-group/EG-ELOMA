@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "API Integrations | EG Eloma",
+  "title": "API Integration Services Melbourne | EG Eloma",
   "description": "Make your systems talk to each other. Connect your CRM, accounting, eCommerce, payments and Microsoft systems.",
   "crumb": "API Integrations",
   "parent": {
@@ -146,7 +146,7 @@ export default function ApiIntegrations() {
             <span>/</span>
             <Link to="/products#development">Development</Link>
           </p>
-          <h1>API Integrations</h1>
+          <h1>API Integration Services Melbourne</h1>
           <p className="lead">Make your systems talk to each other.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

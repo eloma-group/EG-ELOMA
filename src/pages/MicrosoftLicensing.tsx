@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Microsoft Licensing | EG Eloma",
+  "title": "Microsoft 365 Licensing Melbourne | EG Eloma",
   "description": "Pay only for the Microsoft licences you actually need. The right Microsoft licences at the right price, with billing and renewals handled.",
   "crumb": "Microsoft Licensing",
   "parent": {
@@ -146,7 +146,7 @@ export default function MicrosoftLicensing() {
             <span>/</span>
             <Link to="/products#microsoft">{"Microsoft & Licensing"}</Link>
           </p>
-          <h1>Microsoft Licensing</h1>
+          <h1>Microsoft 365 Licensing Melbourne</h1>
           <p className="lead">Pay only for the Microsoft licences you actually need.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

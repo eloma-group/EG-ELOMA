@@ -383,6 +383,7 @@ export default function Seo() {
                 <Link to="/local-listing">Local Listing</Link>
                 <Link to="/website-development">Website Development</Link>
                 <Link to="/google-meta-ads">{"Google & Meta Ads"}</Link>
+                <Link to="/ppc">PPC (Pay-Per-Click)</Link>
               </div>
             </div>
           </div>

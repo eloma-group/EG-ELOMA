@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Landline Number | EG Eloma",
+  "title": "Business Landline Numbers Melbourne | EG Eloma",
   "description": "A local number for every city you serve. Local landline numbers on cloud phone systems, with no copper line needed.",
   "crumb": "Landline Number",
   "parent": {
@@ -146,7 +146,7 @@ export default function LandlineNumber() {
             <span>/</span>
             <Link to="/products#communications">Business Communications</Link>
           </p>
-          <h1>Landline Number</h1>
+          <h1>Business Landline Numbers Melbourne</h1>
           <p className="lead">A local number for every city you serve.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -378,6 +378,7 @@ export default function LandlineNumber() {
                 <Link to="/toll-free-number">Toll-Free Number</Link>
                 <Link to="/ivr-system">IVR System</Link>
                 <Link to="/microsoft">Microsoft Products</Link>
+                <Link to="/virtual-mobile-number">Virtual Mobile Number</Link>
               </div>
             </div>
           </div>

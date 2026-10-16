@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "SaaS Development | EG Eloma",
+  "title": "SaaS Development Melbourne | EG Eloma",
   "description": "From idea to a subscription product your customers pay for. Multi-tenant SaaS platforms with subscriptions, user management and cloud hosting.",
   "crumb": "SaaS Development",
   "parent": {
@@ -146,7 +146,7 @@ export default function SaasDevelopment() {
             <span>/</span>
             <Link to="/products#development">Development</Link>
           </p>
-          <h1>SaaS Development</h1>
+          <h1>SaaS Development Melbourne</h1>
           <p className="lead">From idea to a subscription product your customers pay for.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

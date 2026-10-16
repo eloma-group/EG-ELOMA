@@ -47,6 +47,7 @@ const deferScript = (html) =>
 
 // '/404' is not a page, so it renders the "Page not found" screen: written to 404.html, which every host
 // serves (with a 404 status) for URLs that are not a page.
+const noindex = new Set()
 for (const route of [...routes, '/404']) {
   let body = await render(route)
   let head = ''
@@ -54,7 +55,10 @@ for (const route of [...routes, '/404']) {
     // <title> stays plain (marked by main.tsx before React starts) so the page source shows a bare <title> tag.
     head += m[0].startsWith('<title>') ? m[0] : m[0].replace(/^<(\w+)/, '<$1 data-pre')
   }
-  const html = deferScript(inlineCss(template, pageCss))
+  // A page with its own robots tag (the 404 page's noindex) replaces the site-wide one in index.html.
+  if (/name="robots" content="[^"]*noindex/.test(head)) noindex.add(route)
+  const base = head.includes('name="robots"') ? template.replace(/<meta name="robots"[^>]*>\n?/, '') : template
+  const html = deferScript(inlineCss(base, pageCss))
     .replace('<div id="root"></div>', `<div id="root">${body}</div>`)
     .replace('</head>', `${head}\n</head>`)
   const file = route === '/' ? 'index.html' : route.slice(1) + '.html'
@@ -62,16 +66,17 @@ for (const route of [...routes, '/404']) {
   console.log('prerendered', route.padEnd(28), '->', file, (html.length / 1024).toFixed(1) + ' KB')
 }
 
-// sitemap.xml lists every page, dated by the last commit that changed its file in src/pages
+// sitemap.xml lists every indexable page (not noindex ones), dated by the last commit that changed its file in src/pages
 // (today if the file has uncommitted changes or no history yet).
 const today = new Date().toISOString().slice(0, 10)
 const git = (...args) => { try { return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim() } catch { return '' } }
 const lastmod = (file) => (git('status', '--porcelain', '--', file) ? today : git('log', '-1', '--format=%cs', '--', file) || today)
+const sitemapRoutes = ['/', ...routes.filter(r => r !== '/')].filter(r => !noindex.has(r))
 writeFileSync(dist + 'sitemap.xml',
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  ['/', ...routes.filter(r => r !== '/')].map(r => `  <url><loc>${SITE}${r}</loc><lastmod>${lastmod(routeFiles[r])}</lastmod></url>\n`).join('') +
+  sitemapRoutes.map(r => `  <url><loc>${SITE}${r}</loc><lastmod>${lastmod(routeFiles[r])}</lastmod></url>\n`).join('') +
   '</urlset>\n')
-console.log('wrote sitemap.xml with', routes.length, 'URLs')
+console.log('wrote sitemap.xml with', sitemapRoutes.length, 'URLs; left out (noindex):', [...noindex].join(' '))
 
 // Azure Static Web Apps ignores .htaccess/web.config: it reads staticwebapp.config.json instead.
 writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({

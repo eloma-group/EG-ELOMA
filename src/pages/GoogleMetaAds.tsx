@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Google & Meta Ads | EG Eloma",
+  "title": "Google Ads & Facebook Ads Agency Melbourne | EG Eloma",
   "description": "Ads that bring enquiries, not just clicks. Google Search, Performance Max, Facebook and Instagram ads managed for leads.",
   "crumb": "Google & Meta Ads",
   "parent": {
@@ -146,7 +146,7 @@ export default function GoogleMetaAds() {
             <span>/</span>
             <Link to="/products#marketing">{"Marketing & Growth"}</Link>
           </p>
-          <h1>{"Google & Meta Ads"}</h1>
+          <h1>{"Google Ads & Facebook Ads Management Melbourne"}</h1>
           <p className="lead">Ads that bring enquiries, not just clicks.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -383,6 +383,7 @@ export default function GoogleMetaAds() {
                 <Link to="/ppc">PPC</Link>
                 <Link to="/social-media">Social Media Management</Link>
                 <Link to="/design">Designing</Link>
+                <Link to="/local-listing">Local Listing (Google Business Profile)</Link>
               </div>
             </div>
           </div>

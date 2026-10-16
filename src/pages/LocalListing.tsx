@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Local Listing (Google Business Profile) | EG Eloma",
+  "title": "Google Business Profile Management Melbourne | EG Eloma",
   "description": "Be the first business customers see on Google Maps. Appear in 'near me' searches and on Google Maps with a fully managed listing.",
   "crumb": "Local Listing (Google Business Profile)",
   "parent": {
@@ -146,7 +146,7 @@ export default function LocalListing() {
             <span>/</span>
             <Link to="/products#marketing">{"Marketing & Growth"}</Link>
           </p>
-          <h1>Local Listing (Google Business Profile)</h1>
+          <h1>Google Business Profile Management Melbourne</h1>
           <p className="lead">Be the first business customers see on Google Maps.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -383,6 +383,7 @@ export default function LocalListing() {
                 <Link to="/seo">Search Engine Optimisation</Link>
                 <Link to="/social-media">Social Media Management</Link>
                 <Link to="/website-development">Website Development</Link>
+                <Link to="/ppc">PPC (Pay-Per-Click)</Link>
               </div>
             </div>
           </div>

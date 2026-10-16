@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Server Maintenance | EG Eloma",
+  "title": "Server Maintenance & Support Melbourne | EG Eloma",
   "description": "Servers that stay up, stay patched and stay secure. On-premise and cloud servers patched, monitored, backed up and supported.",
   "crumb": "Server Maintenance",
   "parent": {
@@ -146,7 +146,7 @@ export default function ServerMaintenance() {
             <span>/</span>
             <Link to="/products#cloud">{"Cloud, Security & Support"}</Link>
           </p>
-          <h1>Server Maintenance</h1>
+          <h1>{"Server Maintenance & Support Melbourne"}</h1>
           <p className="lead">Servers that stay up, stay patched and stay secure.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

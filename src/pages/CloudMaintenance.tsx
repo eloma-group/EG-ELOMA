@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Cloud Maintenance | EG Eloma",
+  "title": "Cloud Maintenance & Azure Support Melbourne | EG Eloma",
   "description": "Your cloud, kept healthy, secure and cost-efficient. Azure and Microsoft 365 environments monitored, updated, optimised and backed up.",
   "crumb": "Cloud Maintenance",
   "parent": {
@@ -146,7 +146,7 @@ export default function CloudMaintenance() {
             <span>/</span>
             <Link to="/products#cloud">{"Cloud, Security & Support"}</Link>
           </p>
-          <h1>Cloud Maintenance</h1>
+          <h1>{"Cloud Maintenance & Azure Support Melbourne"}</h1>
           <p className="lead">Your cloud, kept healthy, secure and cost-efficient.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -378,6 +378,7 @@ export default function CloudMaintenance() {
                 <Link to="/server-maintenance">Server Maintenance</Link>
                 <Link to="/cybersecurity">Cybersecurity</Link>
                 <Link to="/support-services">Support Services</Link>
+                <Link to="/microsoft-licensing">Microsoft Licensing</Link>
               </div>
             </div>
           </div>

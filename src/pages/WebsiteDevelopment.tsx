@@ -383,6 +383,7 @@ export default function WebsiteDevelopment() {
                 <Link to="/seo">Search Engine Optimisation</Link>
                 <Link to="/cloud-maintenance">Cloud Maintenance</Link>
                 <Link to="/design">Designing</Link>
+                <Link to="/local-listing">Local Listing (Google Business Profile)</Link>
               </div>
             </div>
           </div>

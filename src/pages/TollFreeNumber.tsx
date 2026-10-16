@@ -378,6 +378,7 @@ export default function TollFreeNumber() {
                 <Link to="/ivr-system">IVR System</Link>
                 <Link to="/virtual-mobile-number">Virtual Mobile Number</Link>
                 <Link to="/virtual-customer-care">Virtual Customer Care Support</Link>
+                <Link to="/landline-number">Landline Number</Link>
               </div>
             </div>
           </div>

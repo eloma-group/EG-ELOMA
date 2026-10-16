@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Designing (Design Hub) | EG Eloma",
+  "title": "Logo, Branding & Graphic Design Melbourne | EG Eloma",
   "description": "Professional design that makes your brand look the part. Logos, branding, social graphics, flyers, brochures and ad creative.",
   "crumb": "Designing (Design Hub)",
   "parent": {
@@ -146,7 +146,7 @@ export default function Design() {
             <span>/</span>
             <Link to="/products#marketing">{"Marketing & Growth"}</Link>
           </p>
-          <h1>Designing (Design Hub)</h1>
+          <h1>{"Logo, Branding & Graphic Design Melbourne"}</h1>
           <p className="lead">Professional design that makes your brand look the part.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

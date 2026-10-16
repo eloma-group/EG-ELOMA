@@ -172,7 +172,8 @@ export default function HeroStudio() {
           Try It With Your Business Name
         </span>
         <h1 id="hero-title">
-          <span className="h1k">{'Websites, Software, SEO & Toll-Free Numbers · AU, US, Canada, UK & NZ'}</span>
+          <span className="h1k">{'Melbourne Websites, Software, SEO & Toll-Free Numbers · AU, US, Canada, UK & NZ'}</span>
+          <span className="sr">{': '}</span>
           {' See Your Business, '}
           <span className="hl">Upgraded.</span>
         </h1>
