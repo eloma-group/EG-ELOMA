@@ -22,6 +22,8 @@ jobs:
         with:
           submodules: true
           lfs: false
+          # Full history, so the build can date each page in sitemap.xml by its last commit.
+          fetch-depth: 0
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
