@@ -90,7 +90,16 @@ writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
     { route: '/assets/*', headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
   ],
   responseOverrides: { 404: { rewrite: '/404.html', statusCode: 404 } },
-  globalHeaders: { 'Cache-Control': 'no-cache', 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin' },
+  globalHeaders: {
+    'Cache-Control': 'no-cache',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    // Other sites cannot show these pages in a frame (clickjacking); X-Frame-Options covers older browsers.
+    'Content-Security-Policy': "frame-ancestors 'self'",
+    'X-Frame-Options': 'SAMEORIGIN',
+    // The site uses none of these browser features, so no script on it can ask for them.
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+  },
   mimeTypes: { '.woff2': 'font/woff2', '.webmanifest': 'application/manifest+json' },
 }, null, 2))
 
