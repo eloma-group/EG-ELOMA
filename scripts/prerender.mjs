@@ -74,16 +74,14 @@ writeFileSync(dist + 'sitemap.xml',
 console.log('wrote sitemap.xml with', routes.length, 'URLs')
 
 // Azure Static Web Apps ignores .htaccess/web.config: it reads staticwebapp.config.json instead.
-const pageRoutes = routes.filter(r => r !== '/')
 writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
-  // /seo/ -> /seo (301), so every page has one URL.
+  // Azure maps the clean URLs itself: /seo serves seo.html, and /seo.html and /seo/ 301 to /seo.
+  // (Explicit /seo -> seo.html rewrites would also catch /seo/ and serve it as a duplicate page.)
   trailingSlash: 'never',
   routes: [
     { route: '/index.html', redirect: '/', statusCode: 301 },
     // Renamed pages: old URL (and its .html form) -> new URL.
     ...Object.entries(RENAMED).flatMap(([from, to]) => [from, from + '.html'].map(route => ({ route, redirect: to, statusCode: 301 }))),
-    ...pageRoutes.map(r => ({ route: r + '.html', redirect: r, statusCode: 301 })),
-    ...pageRoutes.map(r => ({ route: r, rewrite: r + '.html' })),
     { route: '/assets/*', headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
   ],
   responseOverrides: { 404: { rewrite: '/404.html', statusCode: 404 } },
