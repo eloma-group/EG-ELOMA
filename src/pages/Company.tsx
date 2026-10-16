@@ -9,7 +9,23 @@ const meta = {
   "title": "About EG Eloma | Australian-Owned Tech Partner",
   "description": "Australian-owned EG Eloma brings Microsoft, software, marketing, communications and cybersecurity together in one team, serving AU, US, CA, UK and NZ.",
   "crumb": "Company",
-  "path": "/company"
+  "path": "/company",
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "url": "https://egeloma.com.au/company",
+        "name": "About EG Eloma",
+        "about": {
+          "@id": "https://egeloma.com.au/#org"
+        },
+        "mainEntity": {
+          "@id": "https://egeloma.com.au/#org"
+        }
+      }
+    ]
+  }
 }
 
 export default function Company() {

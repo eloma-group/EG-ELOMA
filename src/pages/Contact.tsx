@@ -14,6 +14,14 @@ const meta = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "ContactPage",
+        "url": "https://egeloma.com.au/contact",
+        "name": "Contact EG Eloma",
+        "about": {
+          "@id": "https://egeloma.com.au/#org"
+        }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
