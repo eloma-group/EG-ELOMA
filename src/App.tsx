@@ -2,17 +2,10 @@ import { lazy, Suspense, useEffect, useLayoutEffect, type ComponentType, type Re
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useReveal } from './hooks/useReveal'
 import { trackPageView } from './pixel'
-import ComingSoon from './components/ComingSoon'
 import NotFound from './components/NotFound'
 
-// While true, only the pages listed in the locked glob are published; every other URL shows "Coming soon".
-// The locked pages are left out of the build entirely. Set to false to publish all pages.
-const SITE_LOCKED = false
-
 // Every file in ./pages becomes a route: Home.tsx -> "/", WebsiteDevelopment.tsx -> "/website-development".
-const modules = SITE_LOCKED
-  ? import.meta.glob<{ default: ComponentType }>(['./pages/Home.tsx', './pages/Products.tsx', './pages/Microsoft.tsx'])
-  : import.meta.glob<{ default: ComponentType }>('./pages/*.tsx')
+const modules = import.meta.glob<{ default: ComponentType }>('./pages/*.tsx')
 
 const slugFor = (file: string) => {
   const name = file.match(/\.\/pages\/(.+)\.tsx$/)![1]
@@ -60,7 +53,7 @@ function Fallback() {
   const m = pathname.match(/^\/([a-z0-9-]+)\.html$/)
   const to = m ? (m[1] === 'index' ? '/' : '/' + m[1]) : pathname
   if (RENAMED[to]) return <Navigate to={RENAMED[to] + search + hash} replace />
-  if (!m) return <PageShell>{SITE_LOCKED ? <ComingSoon /> : <NotFound />}</PageShell>
+  if (!m) return <PageShell><NotFound /></PageShell>
   return <Navigate to={to + search + hash} replace />
 }
 
