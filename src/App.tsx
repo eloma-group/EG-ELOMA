@@ -20,10 +20,13 @@ const slugFor = (file: string) => {
   return name.replace(/^P(?=\d)/, '').replace(/(?<=[a-z0-9])(?=[A-Z])|(?<=[a-z])(?=\d)/g, '-').toLowerCase()
 }
 
-const pages = Object.entries(modules).map(([file, load]) => ({ path: '/' + slugFor(file), load, Page: lazy(load) }))
+const pages = Object.entries(modules).map(([file, load]) => ({ path: '/' + slugFor(file), file, load, Page: lazy(load) }))
 
 // Every published URL, used to prerender each page to static HTML at build time.
 export const routes = pages.map(p => p.path)
+
+// Source file of each URL ("/seo" -> "src/pages/Seo.tsx"), used for the sitemap's lastmod dates.
+export const routeFiles: Record<string, string> = Object.fromEntries(pages.map(p => [p.path, 'src' + p.file.slice(1)]))
 
 // Loads the page module for a URL before hydrating, so the prerendered HTML is reused straight away.
 export const preloadRoute = (pathname: string) => pages.find(p => p.path === pathname)?.load()

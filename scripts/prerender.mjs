@@ -2,13 +2,14 @@
 // (and search engines see the full content) before any JavaScript runs.
 // "/" -> dist/index.html, "/seo" -> dist/seo.html (servers map /seo to seo.html, see public/.htaccess).
 import { readFileSync, writeFileSync, rmSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const root = fileURLToPath(new URL('..', import.meta.url))
 const dist = root + 'dist/'
 const ssrDir = root + 'dist-ssr/'
 
-const { render, routes, RENAMED } = await import(pathToFileURL(ssrDir + 'entry-server.js').href)
+const { render, routes, routeFiles, RENAMED, SITE } = await import(pathToFileURL(ssrDir + 'entry-server.js').href)
 const template = readFileSync(dist + 'index.html', 'utf8')
 
 // The whole stylesheet is small (~15 KB gzipped), so it goes inline: no render-blocking request.
@@ -60,6 +61,17 @@ for (const route of [...routes, '/404']) {
   writeFileSync(dist + file, html)
   console.log('prerendered', route.padEnd(28), '->', file, (html.length / 1024).toFixed(1) + ' KB')
 }
+
+// sitemap.xml lists every page, dated by the last commit that changed its file in src/pages
+// (today if the file has uncommitted changes or no history yet).
+const today = new Date().toISOString().slice(0, 10)
+const git = (...args) => { try { return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim() } catch { return '' } }
+const lastmod = (file) => (git('status', '--porcelain', '--', file) ? today : git('log', '-1', '--format=%cs', '--', file) || today)
+writeFileSync(dist + 'sitemap.xml',
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  ['/', ...routes.filter(r => r !== '/')].map(r => `  <url><loc>${SITE}${r}</loc><lastmod>${lastmod(routeFiles[r])}</lastmod></url>\n`).join('') +
+  '</urlset>\n')
+console.log('wrote sitemap.xml with', routes.length, 'URLs')
 
 // Azure Static Web Apps ignores .htaccess/web.config: it reads staticwebapp.config.json instead.
 const pageRoutes = routes.filter(r => r !== '/')
