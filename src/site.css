@@ -385,7 +385,9 @@ h1,h2,h3,p{margin:0}
 .portal .lbtn.a{background:#fff;color:#071628}
 .portal .lbtn.b{background:#153A60;border-color:#153A60}
 .portal h1 .hl{background:linear-gradient(92deg,#FFFFFF 0%,#A9AFC6 100%);-webkit-background-clip:text;background-clip:text}
-@media (max-width:1060px){.orbits{left:-20%;right:-20%;top:30%;opacity:.7}}
+/* Top is set from the screen width, not as a % of the hero: the hero grows while the page is still loading,
+   and a %-based top made the orbits jump (layout shift). Matches the old 30% to within ~50px at every width. */
+@media (max-width:1060px){.orbits{left:-20%;right:-20%;top:max(400px,calc(680px - 30vw));opacity:.7}}
 @media (prefers-reduced-motion:reduce){.orbits animateMotion{display:none}}
 
 /* Credentials under the form */

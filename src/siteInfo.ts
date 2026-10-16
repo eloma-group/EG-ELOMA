@@ -22,7 +22,7 @@ export const BUSINESS = {
 export const SOCIAL = [
   { label: 'Instagram', href: 'https://www.instagram.com/egeloma.au/' },
   { label: 'Facebook', href: 'https://www.facebook.com/egeloma.au' },
-  { label: 'Threads', href: 'https://www.threads.net/@egeloma.au' },
+  { label: 'Threads', href: 'https://www.threads.com/@egeloma.au' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/egeloma-au/' },
 ] as const
 
