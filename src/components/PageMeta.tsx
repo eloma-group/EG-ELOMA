@@ -2,7 +2,7 @@ import { BUSINESS, SITE, SOCIAL } from '../siteInfo'
 
 type Crumb = { name: string; path: string }
 
-export interface PageMetaProps {
+interface PageMetaProps {
   title: string
   description: string
   path: string
