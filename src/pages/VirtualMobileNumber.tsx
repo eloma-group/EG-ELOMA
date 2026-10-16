@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Virtual Mobile Number | EG Eloma",
+  "title": "Virtual Mobile Numbers for Australian Businesses | EG Eloma",
   "description": "A business mobile number without a second phone. Business mobile numbers that ring on any phone or app, with SMS included.",
   "crumb": "Virtual Mobile Number",
   "parent": {
@@ -146,7 +146,7 @@ export default function VirtualMobileNumber() {
             <span>/</span>
             <Link to="/products#communications">Business Communications</Link>
           </p>
-          <h1>Virtual Mobile Number</h1>
+          <h1>Virtual Mobile Numbers for Australian Businesses</h1>
           <p className="lead">A business mobile number without a second phone.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

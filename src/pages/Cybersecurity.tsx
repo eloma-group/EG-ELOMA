@@ -378,6 +378,7 @@ export default function Cybersecurity() {
                 <Link to="/cloud-maintenance">Cloud Maintenance</Link>
                 <Link to="/server-maintenance">Server Maintenance</Link>
                 <Link to="/support-services">Support Services</Link>
+                <Link to="/microsoft-licensing">Microsoft Licensing</Link>
               </div>
             </div>
           </div>

@@ -10,6 +10,8 @@ interface PageMetaProps {
   crumb?: string
   parent?: Crumb
   jsonLd?: { '@graph'?: object[] }
+  // Keep the page out of search results and the sitemap (links on it are still followed).
+  noindex?: boolean
 }
 
 // Products by group, as on the Products page: the company's offer catalog in structured data.
@@ -66,7 +68,7 @@ const breadcrumbs = (trail: Crumb[]) => ({
 })
 
 // React 19 hoists <title>, <meta> and <link> into <head>.
-export default function PageMeta({ title, description, path, crumb, parent, jsonLd }: PageMetaProps) {
+export default function PageMeta({ title, description, path, crumb, parent, jsonLd, noindex }: PageMetaProps) {
   const url = SITE + path
   const trail = path !== '/' && crumb ? [{ name: 'Home', path: '/' }, ...(parent ? [parent] : []), { name: crumb, path }] : null
   const graph = {
@@ -77,6 +79,7 @@ export default function PageMeta({ title, description, path, crumb, parent, json
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {noindex && <meta name="robots" content="noindex, follow" />}
       <link rel="canonical" href={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

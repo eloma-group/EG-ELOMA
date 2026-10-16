@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "PPC (Pay-Per-Click) | EG Eloma",
+  "title": "PPC Management Melbourne: Pay-Per-Click | EG Eloma",
   "description": "Every click accountable. Every dollar tracked. Pay-per-click campaigns on Google, Microsoft Ads, LinkedIn, YouTube and Shopping.",
   "crumb": "PPC (Pay-Per-Click)",
   "parent": {
@@ -146,7 +146,7 @@ export default function Ppc() {
             <span>/</span>
             <Link to="/products#marketing">{"Marketing & Growth"}</Link>
           </p>
-          <h1>PPC (Pay-Per-Click)</h1>
+          <h1>PPC Management Melbourne</h1>
           <p className="lead">Every click accountable. Every dollar tracked.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -378,6 +378,7 @@ export default function Ppc() {
                 <Link to="/google-meta-ads">{"Google & Meta Ads"}</Link>
                 <Link to="/website-development">Website Development</Link>
                 <Link to="/seo">Search Engine Optimisation</Link>
+                <Link to="/local-listing">Local Listing (Google Business Profile)</Link>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Support Services | EG Eloma",
+  "title": "24/7 IT Support & Helpdesk Melbourne | EG Eloma",
   "description": "Real people. Fast answers. 24/7. 24/7 helpdesk and managed IT support with an average response under 15 minutes.",
   "crumb": "Support Services",
   "parent": {
@@ -146,7 +146,7 @@ export default function SupportServices() {
             <span>/</span>
             <Link to="/products#cloud">{"Cloud, Security & Support"}</Link>
           </p>
-          <h1>Support Services</h1>
+          <h1>{"24/7 IT Support & Helpdesk Melbourne"}</h1>
           <p className="lead">Real people. Fast answers. 24/7.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -378,6 +378,7 @@ export default function SupportServices() {
                 <Link to="/cybersecurity">Cybersecurity</Link>
                 <Link to="/cloud-maintenance">Cloud Maintenance</Link>
                 <Link to="/virtual-customer-care">Virtual Customer Care Support</Link>
+                <Link to="/microsoft-licensing">Microsoft Licensing</Link>
               </div>
             </div>
           </div>

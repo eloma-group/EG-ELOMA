@@ -20,7 +20,9 @@ const meta = {
       }
     ]
   },
-  "path": "/blog"
+  "path": "/blog",
+  // No posts yet: kept out of Google and the sitemap until the first articles are published.
+  "noindex": true
 }
 
 export default function Blog() {

@@ -10,16 +10,19 @@
 <meta property="og:image" content="https://egeloma.com.au/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/assets/favicon-eloma.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<!-- Meta Pixel Code (fbq queues events at once; fbevents.js is fetched after the page has loaded so it never delays the first paint) -->
+<!-- Meta Pixel Code (fbq queues events at once; fbevents.js is fetched on the first scroll, tap, click or key press,
+     or 3.5 s after the page has loaded, so it never competes with loading the page) -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];function l(){t=b.createElement(e);t.async=!0;
+n.queue=[];var d,E=['scroll','pointerdown','keydown','touchstart'];function l(){if(d)return;d=1;
+E.forEach(function(x){f.removeEventListener(x,l,true)});t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}
-if(b.readyState==='complete')setTimeout(l);else f.addEventListener('load',function(){setTimeout(l)})}(window, document,'script',
+E.forEach(function(x){f.addEventListener(x,l,{capture:true,passive:true,once:true})});
+function w(){setTimeout(l,3500)}if(b.readyState==='complete')w();else f.addEventListener('load',w)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '4397938067133138');
 fbq('track', 'PageView');

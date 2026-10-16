@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "App Development | EG Eloma",
+  "title": "App Development Melbourne: iOS & Android | EG Eloma",
   "description": "Mobile apps your customers will actually use. iOS, Android and cross-platform mobile apps, designed, built and published.",
   "crumb": "App Development",
   "parent": {
@@ -146,7 +146,7 @@ export default function AppDevelopment() {
             <span>/</span>
             <Link to="/products#development">Development</Link>
           </p>
-          <h1>App Development</h1>
+          <h1>App Development Melbourne</h1>
           <p className="lead">Mobile apps your customers will actually use.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -378,6 +378,7 @@ export default function AppDevelopment() {
                 <Link to="/software-development">Software Development</Link>
                 <Link to="/api-integrations">API Integrations</Link>
                 <Link to="/saas-development">SaaS Development</Link>
+                <Link to="/design">Designing (Design Hub)</Link>
               </div>
             </div>
           </div>

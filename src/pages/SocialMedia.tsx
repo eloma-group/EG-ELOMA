@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const meta = {
-  "title": "Social Media Management | EG Eloma",
+  "title": "Social Media Management Melbourne | EG Eloma",
   "description": "Show up consistently on social, without doing it yourself. Content, design, posting and community management across every platform.",
   "crumb": "Social Media Management",
   "parent": {
@@ -146,7 +146,7 @@ export default function SocialMedia() {
             <span>/</span>
             <Link to="/products#marketing">{"Marketing & Growth"}</Link>
           </p>
-          <h1>Social Media Management</h1>
+          <h1>Social Media Management Melbourne</h1>
           <p className="lead">Show up consistently on social, without doing it yourself.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
@@ -383,6 +383,7 @@ export default function SocialMedia() {
                 <Link to="/design">Designing</Link>
                 <Link to="/google-meta-ads">{"Google & Meta Ads"}</Link>
                 <Link to="/seo">Search Engine Optimisation</Link>
+                <Link to="/ppc">PPC (Pay-Per-Click)</Link>
               </div>
             </div>
           </div>
