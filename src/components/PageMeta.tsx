@@ -21,20 +21,21 @@ const PRODUCT_GROUPS: [group: string, products: [name: string, path: string][]][
   ['Cloud, Security & Support', [['Cybersecurity', '/cybersecurity'], ['Cloud Maintenance', '/cloud-maintenance'], ['Server Maintenance', '/server-maintenance'], ['Support Services', '/support-services']]],
 ]
 
-// The company, added to every page. ProfessionalService makes it a local business with an address for Google. Pages point at it with { "@id": ORG_ID }.
+// The company, added to every page. Pages point at it with { "@id": ORG_ID }.
+// A plain Organization: schema.org has deprecated ProfessionalService, and audits flag it (and mixed types) as errors.
 const ORG_ID = SITE + '/#org'
 const PHONE = '+61-' + BUSINESS.phone.label.replace(/ /g, '-')
 const ORG = {
-  '@type': ['Corporation', 'ProfessionalService'],
+  '@type': 'Organization',
   '@id': ORG_ID,
   name: BUSINESS.name,
+  parentOrganization: { '@type': 'Organization', name: BUSINESS.parent },
   alternateName: 'EG Eloma | Microsoft, Software, Marketing & Cybersecurity',
   url: SITE + '/',
   logo: { '@type': 'ImageObject', '@id': SITE + '/#logo', url: SITE + '/assets/logo-mark-eloma.png', contentUrl: SITE + '/assets/logo-mark-eloma.png', width: 149, height: 120, caption: BUSINESS.name },
   image: { '@type': 'ImageObject', url: SITE + '/og-image.png', width: 1200, height: 630 },
   description: 'Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.',
   address: { '@type': 'PostalAddress', ...BUSINESS.postal },
-  hasMap: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(BUSINESS.address),
   telephone: PHONE,
   email: BUSINESS.email,
   taxID: 'ABN ' + BUSINESS.abn,
