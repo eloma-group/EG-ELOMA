@@ -20,7 +20,7 @@ const meta = {
         "name": "App Development",
         "description": "iOS, Android and cross-platform mobile apps, designed, built and published.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "App Development",
         "areaServed": [

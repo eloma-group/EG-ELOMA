@@ -18,10 +18,10 @@ const meta = {
         "url": "https://egeloma.com.au/company",
         "name": "About EG Eloma",
         "about": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "mainEntity": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         }
       }
     ]

@@ -20,7 +20,7 @@ const meta = {
         "name": "Search Engine Optimisation (SEO)",
         "description": "Rank higher on Google for the searches that bring you customers.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Search Engine Optimisation (SEO)",
         "areaServed": [

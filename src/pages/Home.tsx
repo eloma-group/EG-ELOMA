@@ -19,7 +19,7 @@ const meta = {
         "url": "https://egeloma.com.au/",
         "name": "EG Eloma",
         "publisher": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         }
       },
       {

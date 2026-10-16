@@ -20,7 +20,7 @@ const meta = {
         "name": "Microsoft Product Development",
         "description": "Custom solutions on Power Apps, SharePoint, Teams, Dynamics 365 and Copilot.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Microsoft Product Development",
         "areaServed": [

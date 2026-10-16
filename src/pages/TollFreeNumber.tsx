@@ -20,7 +20,7 @@ const meta = {
         "name": "Toll-Free Number",
         "description": "1300, 1800, 1-800 and 0800 numbers that make it easy for customers to call.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Toll-Free Number",
         "areaServed": [

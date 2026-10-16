@@ -20,7 +20,7 @@ const meta = {
         "name": "PPC (Pay-Per-Click)",
         "description": "Pay-per-click campaigns on Google, Microsoft Ads, LinkedIn, YouTube and Shopping.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "PPC (Pay-Per-Click)",
         "areaServed": [

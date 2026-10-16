@@ -20,7 +20,7 @@ const meta = {
         "name": "IVR System",
         "description": "Professional phone menus that route every caller to the right person, fast.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "IVR System",
         "areaServed": [

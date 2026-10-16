@@ -20,7 +20,7 @@ const meta = {
         "name": "Software Development",
         "description": "Custom business software, portals and automation built around your workflow.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Software Development",
         "areaServed": [

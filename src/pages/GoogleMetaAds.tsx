@@ -20,7 +20,7 @@ const meta = {
         "name": "Google & Meta Ads",
         "description": "Google Search, Performance Max, Facebook and Instagram ads managed for leads.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Google & Meta Ads",
         "areaServed": [

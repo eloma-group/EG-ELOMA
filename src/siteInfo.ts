@@ -4,8 +4,11 @@ export const SITE = 'https://egeloma.com.au'
 // Business details shown in the header, footer and legal pages. Change them here only.
 export const BUSINESS = {
   name: 'EG Eloma',
+  // Registered company name, as on the ABN Lookup (abr.business.gov.au).
+  legalName: 'EG Digital Australia Pty Ltd',
+  formerName: 'EG Digital',
   // The group EG Eloma belongs to.
-  parent: 'Eloma Group',
+  parent: { name: 'Eloma Group', url: 'https://elomagroup.com.au/' },
   abn: '76 693 175 012',
   phone: { label: '1800 054 555', href: 'tel:1800054555' },
   email: 'connect@egeloma.com.au',

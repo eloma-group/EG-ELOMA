@@ -20,7 +20,7 @@ const meta = {
         "name": "Cloud Maintenance",
         "description": "Azure and Microsoft 365 environments monitored, updated, optimised and backed up.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Cloud Maintenance",
         "areaServed": [

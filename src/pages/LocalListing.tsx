@@ -20,7 +20,7 @@ const meta = {
         "name": "Local Listing (Google Business Profile)",
         "description": "Appear in 'near me' searches and on Google Maps with a fully managed listing.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Local Listing (Google Business Profile)",
         "areaServed": [

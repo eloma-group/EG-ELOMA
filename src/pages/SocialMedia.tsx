@@ -20,7 +20,7 @@ const meta = {
         "name": "Social Media Management",
         "description": "Content, design, posting and community management across every platform.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Social Media Management",
         "areaServed": [

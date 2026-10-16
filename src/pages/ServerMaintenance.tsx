@@ -20,7 +20,7 @@ const meta = {
         "name": "Server Maintenance",
         "description": "On-premise and cloud servers patched, monitored, backed up and supported.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Server Maintenance",
         "areaServed": [

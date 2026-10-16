@@ -20,7 +20,7 @@ const meta = {
         "name": "SaaS Development",
         "description": "Multi-tenant SaaS platforms with subscriptions, user management and cloud hosting.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "SaaS Development",
         "areaServed": [

@@ -20,7 +20,7 @@ const meta = {
         "name": "Designing (Design Hub)",
         "description": "Logos, branding, social graphics, flyers, brochures and ad creative.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Designing (Design Hub)",
         "areaServed": [

@@ -15,7 +15,7 @@ const meta = {
         "name": "EG Eloma Blog",
         "url": "https://egeloma.com.au/blog",
         "publisher": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         }
       }
     ]

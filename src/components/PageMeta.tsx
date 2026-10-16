@@ -21,24 +21,24 @@ const PRODUCT_GROUPS: [group: string, products: [name: string, path: string][]][
   ['Cloud, Security & Support', [['Cybersecurity', '/cybersecurity'], ['Cloud Maintenance', '/cloud-maintenance'], ['Server Maintenance', '/server-maintenance'], ['Support Services', '/support-services']]],
 ]
 
-// The company, added to every page. Pages point at it with { "@id": ORG_ID }.
-// A plain Organization: schema.org has deprecated ProfessionalService, and audits flag it (and mixed types) as errors.
-const ORG_ID = SITE + '/#org'
+// The company, added to every page. ProfessionalService makes it a local business with an address for Google. Pages point at it with { "@id": ORG_ID }.
+const ORG_ID = SITE + '/#organization'
 const PHONE = '+61-' + BUSINESS.phone.label.replace(/ /g, '-')
 const ORG = {
-  '@type': 'Organization',
+  '@type': 'ProfessionalService',
   '@id': ORG_ID,
   name: BUSINESS.name,
-  parentOrganization: { '@type': 'Organization', name: BUSINESS.parent },
-  alternateName: 'EG Eloma | Microsoft, Software, Marketing & Cybersecurity',
+  alternateName: BUSINESS.formerName,
+  legalName: BUSINESS.legalName,
   url: SITE + '/',
   logo: { '@type': 'ImageObject', '@id': SITE + '/#logo', url: SITE + '/assets/logo-mark-eloma.png', contentUrl: SITE + '/assets/logo-mark-eloma.png', width: 149, height: 120, caption: BUSINESS.name },
-  image: { '@type': 'ImageObject', url: SITE + '/og-image.png', width: 1200, height: 630 },
-  description: 'Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity services.',
-  address: { '@type': 'PostalAddress', ...BUSINESS.postal },
+  image: SITE + '/og-image.png',
+  description: 'Australian-owned Microsoft, software, marketing, business communications and cybersecurity partner based in Melbourne.',
   telephone: PHONE,
   email: BUSINESS.email,
-  taxID: 'ABN ' + BUSINESS.abn,
+  taxID: BUSINESS.abn,
+  address: { '@type': 'PostalAddress', ...BUSINESS.postal },
+  parentOrganization: { '@type': 'Organization', ...BUSINESS.parent },
   identifier: { '@type': 'PropertyValue', propertyID: 'ABN', value: BUSINESS.abn.replace(/ /g, '') },
   areaServed: ['Australia', 'United States', 'Canada', 'United Kingdom', 'New Zealand'].map(name => ({ '@type': 'Country', name })),
   sameAs: SOCIAL.map(s => s.href),

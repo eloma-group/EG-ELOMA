@@ -20,7 +20,7 @@ const meta = {
         "name": "Virtual Mobile Number",
         "description": "Business mobile numbers that ring on any phone or app, with SMS included.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Virtual Mobile Number",
         "areaServed": [

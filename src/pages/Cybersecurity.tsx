@@ -20,7 +20,7 @@ const meta = {
         "name": "Cybersecurity",
         "description": "ASD Essential Eight aligned security, Microsoft Defender and 24/7 monitoring.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Cybersecurity",
         "areaServed": [

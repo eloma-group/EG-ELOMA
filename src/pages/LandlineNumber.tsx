@@ -20,7 +20,7 @@ const meta = {
         "name": "Landline Number",
         "description": "Local landline numbers on cloud phone systems, with no copper line needed.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Landline Number",
         "areaServed": [

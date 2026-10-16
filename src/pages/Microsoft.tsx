@@ -15,7 +15,7 @@ const meta = {
         "@type": "Service",
         "name": "Microsoft products, licensing and support",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "areaServed": [
           {

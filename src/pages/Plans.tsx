@@ -20,7 +20,7 @@ const meta = {
             "name": "All-in-One Plan",
             "description": "Social Media + SEO + Local Listing + Website + Google Ads + Meta Ads + Designing + AI Ads",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -28,7 +28,7 @@ const meta = {
             "name": "Business Plan",
             "description": "Social Media + SEO + Local Listing + Website + Designing",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -36,7 +36,7 @@ const meta = {
             "name": "Growth Plan",
             "description": "Social Media + SEO + Local Listing",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -44,7 +44,7 @@ const meta = {
             "name": "Starter Plan",
             "description": "Social Media + SEO",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -52,7 +52,7 @@ const meta = {
             "name": "Post & Grow",
             "description": "Social Media",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -60,7 +60,7 @@ const meta = {
             "name": "Rank Up",
             "description": "SEO",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -68,7 +68,7 @@ const meta = {
             "name": "Near Me",
             "description": "Local Listing",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -76,7 +76,7 @@ const meta = {
             "name": "My Website",
             "description": "Website",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -84,7 +84,7 @@ const meta = {
             "name": "Ad Power",
             "description": "Google Ads + Meta Ads",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           },
           {
@@ -92,7 +92,7 @@ const meta = {
             "name": "Design Hub",
             "description": "Designing",
             "seller": {
-              "@id": "https://egeloma.com.au/#org"
+              "@id": "https://egeloma.com.au/#organization"
             }
           }
         ]

@@ -20,7 +20,7 @@ const meta = {
         "name": "API Integrations",
         "description": "Connect your CRM, accounting, eCommerce, payments and Microsoft systems.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "API Integrations",
         "areaServed": [

@@ -20,7 +20,7 @@ const meta = {
         "name": "Virtual Customer Care Support",
         "description": "Trained virtual agents answering calls, chats and emails in your business name.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Virtual Customer Care Support",
         "areaServed": [

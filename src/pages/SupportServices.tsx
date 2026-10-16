@@ -20,7 +20,7 @@ const meta = {
         "name": "Support Services",
         "description": "24/7 helpdesk and managed IT support with an average response under 15 minutes.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Support Services",
         "areaServed": [

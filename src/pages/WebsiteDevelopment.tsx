@@ -20,7 +20,7 @@ const meta = {
         "name": "Website Development",
         "description": "Fast, mobile-first websites and online stores built to rank and convert.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Website Development",
         "areaServed": [

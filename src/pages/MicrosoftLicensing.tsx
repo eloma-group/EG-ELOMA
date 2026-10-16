@@ -20,7 +20,7 @@ const meta = {
         "name": "Microsoft Licensing",
         "description": "The right Microsoft licences at the right price, with billing and renewals handled.",
         "provider": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         },
         "serviceType": "Microsoft Licensing",
         "areaServed": [

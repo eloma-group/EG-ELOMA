@@ -18,7 +18,7 @@ const meta = {
         "url": "https://egeloma.com.au/contact",
         "name": "Contact EG Eloma",
         "about": {
-          "@id": "https://egeloma.com.au/#org"
+          "@id": "https://egeloma.com.au/#organization"
         }
       },
       {
