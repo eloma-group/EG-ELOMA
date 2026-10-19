@@ -171,12 +171,11 @@ export default function HeroStudio() {
           <b>Live</b>
           Try It With Your Business Name
         </span>
-        <h1 id="hero-title">
-          <span className="h1k">{'Melbourne IT, Microsoft & Digital Marketing Partner'}</span>
-          <span className="sr">{': '}</span>
-          {' See Your Business, '}
+        <h1 id="hero-title" className="h1k">{'Melbourne IT, Microsoft & Digital Marketing Partner'}</h1>
+        <p className="htag">
+          {'See Your Business, '}
           <span className="hl">Upgraded.</span>
-        </h1>
+        </p>
         <p className="lead">
           Type your business name and see the website, Google listing, software and phone number we would build for you.
         </p>

@@ -256,11 +256,11 @@ h1,h2,h3,p{margin:0}
 .g{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(32px,4.5vw,72px);align-items:center;padding-block:clamp(40px,6vw,80px) clamp(44px,5vw,72px)}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;font-weight:400;color:var(--dim);padding:6px 14px 6px 8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03)}
 .eyebrow b{font:400 11.5px var(--sans);color:#04211C;background:var(--mint);border-radius:999px;padding:3px 9px}
-.lhero h1{margin-top:22px;font:400 clamp(44px,5.4vw,84px)/1 var(--sans);letter-spacing:-.045em}
+.lhero h1,.lhero .htag{margin-top:22px;font:400 clamp(44px,5.4vw,84px)/1 var(--sans);letter-spacing:-.045em}
 /* Read by search engines and screen readers, not shown (e.g. the separator between the two parts of the home H1) */
 .sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .h1k{display:block;font:400 clamp(14px,1.05vw,16px)/1.4 var(--sans);letter-spacing:0;color:var(--dim);margin-bottom:14px}
-.lhero h1 .hl{background:linear-gradient(92deg,#8E91FF 0%,var(--mint) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lhero h1 .hl,.lhero .htag .hl{background:linear-gradient(92deg,#8E91FF 0%,var(--mint) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lhero .lead{margin-top:22px;font-size:clamp(17px,1.3vw,19px);color:var(--dim);max-width:48ch;line-height:1.6}
 
 .maker{margin-top:30px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:14px}
@@ -384,7 +384,7 @@ h1,h2,h3,p{margin:0}
 .portal .maker input,.portal .maker select{background-color:#0A1D33}
 .portal .lbtn.a{background:#fff;color:#071628}
 .portal .lbtn.b{background:#153A60;border-color:#153A60}
-.portal h1 .hl{background:linear-gradient(92deg,#FFFFFF 0%,#A9AFC6 100%);-webkit-background-clip:text;background-clip:text}
+.portal h1 .hl,.portal .htag .hl{background:linear-gradient(92deg,#FFFFFF 0%,#A9AFC6 100%);-webkit-background-clip:text;background-clip:text}
 /* Top is set from the screen width, not as a % of the hero: the hero grows while the page is still loading,
    and a %-based top made the orbits jump (layout shift). Matches the old 30% to within ~50px at every width. */
 @media (max-width:1060px){.orbits{left:-20%;right:-20%;top:max(400px,calc(680px - 30vw));opacity:.7}}
@@ -965,7 +965,7 @@ main>.s:not(.first),main>.final,footer{content-visibility:auto;contain-intrinsic
 /* Type scale matched to bivry.com.au: font sizes only, families and weights unchanged.
    Display 44-80, section titles 34-56, card titles 17-20, lead 17-21, body 14-16, labels 11-13. */
 body{font-size:clamp(14px,1.05vw,16px)}
-h1,.pc h1,.lhero h1{font-size:clamp(44px,5.5vw,80px)}
+h1,.pc h1,.lhero h1,.lhero .htag{font-size:clamp(44px,5.5vw,80px)}
 .sh h2,.final h2,.ov h2,.secx h2{font-size:clamp(34px,4vw,56px)}
 .help h2{font-size:clamp(26px,3vw,40px)}
 .twocol h2.t,.prose h2,.case h3,.plan h3{font-size:clamp(24px,2vw,30px)}
@@ -983,7 +983,7 @@ h1,.pc h1,.lhero h1{font-size:clamp(44px,5.5vw,80px)}
 .tm,.affn,.pn,.case .note2{font-size:12px}
 /* Exact sizes measured on bivry.com.au at 1440px: hero 74, section 58, card title 17, lead 18, body 14, nav 15 */
 body{font-size:14px}
-h1,.pc h1,.lhero h1{font-size:clamp(40px,5.2vw,74px)}
+h1,.pc h1,.lhero h1,.lhero .htag{font-size:clamp(40px,5.2vw,74px)}
 .sh h2,.final h2,.ov h2,.secx h2{font-size:clamp(32px,4vw,58px)}
 .lead,.pc .lead,.lhero .lead,.sh p.sub,.final p,.ov p,.secx .sub,.case .res,.prose,.help p{font-size:clamp(15px,1.25vw,18px)}
 .card h3,.flow b,.proc b,.fl b,.bl b,.probs b,.plans b,.steps b,.sec2 b,.list b,.prom .card h3,.mtab h3,.prose h3,.faq summary,.faq2 summary,.rel a,.aff b.sm,.own h2{font-size:17px}
@@ -993,7 +993,7 @@ h1,.pc h1,.lhero h1{font-size:clamp(40px,5.2vw,74px)}
 .statband b{font-size:clamp(26px,2.6vw,38px)}
 .plan .price{font-size:20px}
 /* All headings about 15% smaller */
-h1,.pc h1,.lhero h1{font-size:clamp(36px,4.4vw,62px)}
+h1,.pc h1,.lhero h1,.lhero .htag{font-size:clamp(36px,4.4vw,62px)}
 .sh h2,.final h2,.ov h2,.secx h2{font-size:clamp(28px,3.4vw,48px)}
 .help h2{font-size:clamp(22px,2.5vw,34px)}
 .twocol h2.t,.prose h2,.case h3,.plan h3{font-size:clamp(20px,1.7vw,25px)}
@@ -1005,7 +1005,7 @@ h1,.pc h1,.lhero h1{font-size:clamp(36px,4.4vw,62px)}
 
 
 /* Headings a touch shorter (~12% smaller) */
-h1,.pc h1,.lhero h1{font-size:clamp(36px,4.6vw,64px)}
+h1,.pc h1,.lhero h1,.lhero .htag{font-size:clamp(36px,4.6vw,64px)}
 .sh h2,.final h2,.ov h2,.secx h2{font-size:clamp(28px,3.4vw,50px)}
 .help h2{font-size:clamp(23px,2.6vw,35px)}
 .twocol h2.t,.prose h2,.case h3,.plan h3{font-size:clamp(21px,1.8vw,26px)}
@@ -1034,6 +1034,9 @@ h1,.pc h1,.lhero h1{font-size:clamp(36px,4.6vw,64px)}
 
 /* One heading style everywhere, matched to the Home "Everything in one place, running smoothly." title:
    Geist 500, tight -.035em tracking, 1.1 line height. Overrides inline styles. Small uppercase labels keep their own style. */
-:is(h1,h2,h3,h4,h5,h6):not(.fgrid h4,.fgrid h2.fh){font-family:var(--sans)!important;font-weight:500!important;letter-spacing:-.035em!important;line-height:1.1!important;text-transform:capitalize!important}
+.lhero .htag,:is(h1,h2,h3,h4,h5,h6):not(.fgrid h4,.fgrid h2.fh){font-family:var(--sans)!important;font-weight:500!important;letter-spacing:-.035em!important;line-height:1.1!important;text-transform:capitalize!important}
 h2:not(.fgrid h2.fh,.own h2,.ctwo h2){font-size:clamp(26px,2.7vw,39px)!important}
 :is(h3,h4,h5,h6):not(.fgrid h4,.fgrid h2.fh){letter-spacing:-.02em!important;line-height:1.2!important}
+/* Home hero: the H1 is the keyword line; the big "See Your Business, Upgraded." line under it is a paragraph styled like a heading. */
+#hero-title.h1k{margin-top:22px;font:400 clamp(14px,1.05vw,16px)/1.4 var(--sans)!important;letter-spacing:0!important}
+.lhero .htag{margin-top:0}
