@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import GeoNote from '../components/GeoNote'
+import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Microsoft 365 Licensing Melbourne | EG Eloma",
@@ -27,22 +29,6 @@ const meta = {
           {
             "@type": "Country",
             "name": "Australia"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Country",
-            "name": "Canada"
-          },
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "New Zealand"
           }
         ],
         "url": "https://egeloma.com.au/microsoft-licensing"
@@ -148,6 +134,7 @@ export default function MicrosoftLicensing() {
           </p>
           <h1>Microsoft 365 Licensing Melbourne</h1>
           <p className="lead">Pay only for the Microsoft licences you actually need.</p>
+          <GeoNote />
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
             <Link className="btn d" to="/plans">View plans</Link>
@@ -187,7 +174,7 @@ export default function MicrosoftLicensing() {
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
-              5 countries
+              Australia only
             </span>
           </div>
         </section>
@@ -414,6 +401,7 @@ export default function MicrosoftLicensing() {
             </div>
           </div>
         </section>
+        <RelatedReading posts={['/blog-microsoft-365-plans-compared', '/blog-copilot-readiness', '/blog-microsoft-nonprofit']} />
         <section className="s rv">
           <div className="twocol">
             <div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "API Integration Services Melbourne | EG Eloma",
@@ -382,6 +383,7 @@ export default function ApiIntegrations() {
             </div>
           </div>
         </section>
+        <RelatedReading posts={['/blog-core-web-vitals', '/blog-saas-mvp-planning']} />
         <section className="s rv">
           <div className="twocol">
             <div>

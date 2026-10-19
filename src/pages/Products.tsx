@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import GeoNote from '../components/GeoNote'
 
 const meta = {
   "title": "Products & Services | EG Eloma",
@@ -328,6 +329,7 @@ export default function Products() {
               <p className="sub">
                 Microsoft runs the modern workplace: email, files, meetings, security and business apps. Set up well, it saves hours every week and protects your data. Set up badly, it costs money and creates risk. We make sure you get the full value of every licence you pay for.
               </p>
+              <GeoNote short />
             </div>
           </div>
           <div className="stg cards c3">

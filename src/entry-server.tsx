@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { prerender } from 'react-dom/static'
 import { StaticRouter } from 'react-router-dom'
 import App, { RENAMED, routeFiles, routes } from './App'
-import { SITE } from './siteInfo'
+import { COUNTRIES, SITE } from './siteInfo'
 
-export { RENAMED, routeFiles, routes, SITE }
+export { COUNTRIES, RENAMED, routeFiles, routes, SITE }
 
 // Renders one route to HTML at build time (see scripts/prerender.mjs).
 export async function render(url: string) {

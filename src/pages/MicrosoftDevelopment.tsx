@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Power Apps & SharePoint Development Melbourne | EG Eloma",
@@ -384,6 +385,7 @@ export default function MicrosoftDevelopment() {
             </div>
           </div>
         </section>
+        <RelatedReading posts={['/blog-microsoft-365-plans-compared', '/blog-copilot-readiness', '/blog-microsoft-nonprofit']} />
         <section className="s rv">
           <div className="twocol">
             <div>

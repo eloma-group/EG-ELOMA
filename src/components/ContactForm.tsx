@@ -2,11 +2,12 @@ import { useState, type FormEvent } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { track } from '../pixel'
 
-// Consultation request form. ?service= or ?plan= preselects the matching product.
+// Consultation request form. ?service= or ?plan= preselects the matching product, ?country= the country.
 export default function ContactForm() {
   const [params] = useSearchParams()
   const [sent, setSent] = useState(false)
   const preset = params.get('service') || params.get('plan') || ''
+  const country = params.get('country') || ''
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -44,7 +45,7 @@ export default function ContactForm() {
       <div className="row">
         <label>
           Country
-          <select name="country">
+          <select name="country" key={country} defaultValue={country || undefined}>
             <option>Australia</option>
             <option>United States</option>
             <option>Canada</option>

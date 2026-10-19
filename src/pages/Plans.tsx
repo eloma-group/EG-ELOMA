@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import GeoNote from '../components/GeoNote'
 
 const meta = {
   "title": "Marketing Plans & Microsoft 365 Quotes | EG Eloma",
@@ -212,6 +213,7 @@ export default function Plans() {
           </p>
           <h1>Plans that grow with you</h1>
           <p className="lead">Marketing plans and Microsoft 365 licences, tailored to your business and quoted in writing.</p>
+          <GeoNote />
           <div className="tbar">
             <span>
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">

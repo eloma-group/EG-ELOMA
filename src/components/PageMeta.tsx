@@ -1,4 +1,5 @@
-import { BUSINESS, SITE, SOCIAL } from '../siteInfo'
+import { useEffect } from 'react'
+import { BUSINESS, COUNTRIES, SITE, SOCIAL } from '../siteInfo'
 
 type Crumb = { name: string; path: string }
 
@@ -12,6 +13,8 @@ interface PageMetaProps {
   jsonLd?: { '@graph'?: object[] }
   // Keep the page out of search results and the sitemap (links on it are still followed).
   noindex?: boolean
+  // Language and region of the page (country pages): sets <html lang> and og:locale.
+  locale?: string
 }
 
 // Products by group, as on the Products page: the company's offer catalog in structured data.
@@ -62,18 +65,27 @@ const ORG = {
   },
 }
 
+// The site itself, on the home page.
+const WEBSITE = { '@type': 'WebSite', '@id': SITE + '/#website', url: SITE + '/', name: BUSINESS.name, publisher: { '@id': ORG_ID }, inLanguage: 'en-AU' }
+
+// The home page (for everyone) and the country pages are alternate versions of each other for search engines.
+const ALTERNATES = [{ lang: 'x-default', path: '/' }, ...COUNTRIES.map(c => ({ lang: c.lang, path: c.path }))]
+
 const breadcrumbs = (trail: Crumb[]) => ({
   '@type': 'BreadcrumbList',
   itemListElement: trail.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: SITE + c.path })),
 })
 
 // React 19 hoists <title>, <meta> and <link> into <head>.
-export default function PageMeta({ title, description, path, crumb, parent, jsonLd, noindex }: PageMetaProps) {
+export default function PageMeta({ title, description, path, crumb, parent, jsonLd, noindex, locale = 'en-AU' }: PageMetaProps) {
+  useEffect(() => {
+    document.documentElement.lang = locale
+  }, [locale])
   const url = SITE + path
   const trail = path !== '/' && crumb ? [{ name: 'Home', path: '/' }, ...(parent ? [parent] : []), { name: crumb, path }] : null
   const graph = {
     '@context': 'https://schema.org',
-    '@graph': [ORG, ...(jsonLd?.['@graph'] ?? []), ...(trail ? [breadcrumbs(trail)] : [])],
+    '@graph': [ORG, ...(path === '/' ? [WEBSITE] : []), ...(jsonLd?.['@graph'] ?? []), ...(trail ? [breadcrumbs(trail)] : [])],
   }
   return (
     <>
@@ -81,6 +93,8 @@ export default function PageMeta({ title, description, path, crumb, parent, json
       <meta name="description" content={description} />
       {noindex && <meta name="robots" content="noindex, follow" />}
       <link rel="canonical" href={url} />
+      {ALTERNATES.some(a => a.path === path) && ALTERNATES.map(a => <link key={a.lang} rel="alternate" hrefLang={a.lang} href={SITE + a.path} />)}
+      <meta property="og:locale" content={locale.replace('-', '_')} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />

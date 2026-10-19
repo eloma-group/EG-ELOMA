@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import Credentials from '../components/Credentials'
 import HeroStudio from '../components/HeroStudio'
 import CountUp from '../components/CountUp'
+import { COUNTRIES } from '../siteInfo'
 
 const meta = {
   "title": "EG Eloma | Microsoft, Software, Marketing & Cybersecurity",
@@ -38,7 +39,7 @@ const meta = {
             "name": "Which countries do you work in?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Australia, the United States, Canada, the United Kingdom and New Zealand."
+              "text": "Australia, the United States, Canada, the United Kingdom and New Zealand. Each country has its own page, local phone numbers and quotes in local currency."
             }
           },
           {
@@ -159,6 +160,35 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="s  rv" id="countries">
+          <div className="sh">
+            <div>
+              <p className="ey">Countries we serve</p>
+              <h2>Local service in five countries</h2>
+              <p className="sub">
+                Each country has its own page with local phone numbers, services matched to local rules and search habits, and quotes in local currency.
+              </p>
+            </div>
+          </div>
+          <div className="stg cards c3 ctyc">
+            {COUNTRIES.map((c, i) => (
+              <Link key={c.code} className="card hov" to={c.path} hrefLang={c.lang} style={{ transitionDelay: i * 70 + "ms" }}>
+                <p className="k">{c.code} · {c.currency}</p>
+                <h3>{c.name}</h3>
+                <p>{c.blurb}</p>
+                <span className="go">
+                  {`Explore ${c.name} `}
+                  <span>→</span>
+                </span>
+              </Link>
+            ))}
+            <div className="card cta-card" style={{ transitionDelay: COUNTRIES.length * 70 + "ms" }}>
+              <h3>Selling across borders?</h3>
+              <p>Get local numbers, local SEO and one support team in every country you sell to.</p>
+              <Link className="btn w" to="/contact">Book a free consultation</Link>
+            </div>
+          </div>
+        </section>
         <section className="s  rv" id="products">
           <div className="sh">
             <div>
@@ -186,7 +216,7 @@ export default function Home() {
               <h3>
                 <Link to="/products#microsoft">{"Microsoft & Licensing"}</Link>
               </h3>
-              <p>Every Microsoft product, licensed, built on and supported.</p>
+              <p>Microsoft licensing in Australia, Microsoft development in all five countries.</p>
               <div className="pl">
                 <Link to="/microsoft">Microsoft Products</Link>
                 <Link to="/microsoft-licensing">Microsoft Licensing</Link>
@@ -453,7 +483,7 @@ export default function Home() {
                 Microsoft for Nonprofits
               </p>
               <h2 style={{ marginTop: "10px", font: "400 clamp(22px,2.4vw,34px)/1.15 var(--sans)", letterSpacing: "-.03em" }}>
-                Are you a charity or not-for-profit?
+                Are you an Australian charity or not-for-profit?
               </h2>
               <p style={{ marginTop: "12px", color: "var(--dim)", fontSize: "clamp(15px,1.25vw,18px)", maxWidth: "60ch" }}>
                 You may qualify for free Microsoft 365 Business Basic, discounted Business Premium and an annual Azure credit grant. We handle eligibility, registration and setup.
@@ -602,7 +632,15 @@ export default function Home() {
               </details>
               <details>
                 <summary>Which countries do you work in?</summary>
-                <p>Australia, the United States, Canada, the United Kingdom and New Zealand.</p>
+                <p>
+                  {COUNTRIES.map((c, i) => (
+                    <span key={c.code}>
+                      {i === 0 ? '' : i === COUNTRIES.length - 1 ? ' and ' : ', '}
+                      <Link to={c.path} style={{ textDecoration: "underline", textUnderlineOffset: "3px" }}>{c.name}</Link>
+                    </span>
+                  ))}
+                  . Each country has its own page, local phone numbers and quotes in local currency.
+                </p>
               </details>
               <details>
                 <summary>Which industries do you work with?</summary>

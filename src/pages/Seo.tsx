@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "SEO Services Melbourne | EG Eloma",
@@ -419,6 +420,7 @@ export default function Seo() {
             </div>
           </div>
         </section>
+        <RelatedReading posts={['/blog-local-seo-checklist', '/blog-google-vs-meta-ads']} />
         <section className="s rv">
           <div className="twocol">
             <div>

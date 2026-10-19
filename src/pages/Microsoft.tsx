@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import GeoNote from '../components/GeoNote'
 
 const meta = {
   "title": "Microsoft 365 Partner Melbourne | EG Eloma",
@@ -115,6 +116,7 @@ export default function Microsoft() {
           </p>
           <h1>Microsoft 365 Partner Melbourne: Everything Microsoft, Managed for You</h1>
           <p className="lead">Licensing, setup, custom development and 24/7 support across the full Microsoft cloud.</p>
+          <GeoNote />
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>
             <Link className="btn d" to="/plans">View plans</Link>
@@ -505,7 +507,7 @@ export default function Microsoft() {
                 <p className="ey">Microsoft for Nonprofits</p>
                 <h2>Microsoft grants and discounts for nonprofits</h2>
                 <p className="sub">
-                  Charities, community groups and not-for-profits can access free and heavily discounted Microsoft products. We help you register, choose the right offers, set everything up and keep it secure.
+                  Charities, community groups and not-for-profits can access free and heavily discounted Microsoft products. We help Australian organisations register, choose the right offers, set everything up and keep it secure.
                 </p>
               </div>
               <Link className="more" to="/contact?service=Microsoft+for+Nonprofits">

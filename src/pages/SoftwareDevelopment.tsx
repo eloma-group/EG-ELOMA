@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Custom Software Development Melbourne | EG Eloma",
@@ -412,6 +413,7 @@ export default function SoftwareDevelopment() {
             </div>
           </div>
         </section>
+        <RelatedReading posts={['/blog-core-web-vitals', '/blog-saas-mvp-planning']} />
         <section className="s rv">
           <div className="twocol">
             <div>

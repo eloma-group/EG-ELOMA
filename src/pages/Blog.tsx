@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Orb from '../components/Orb'
+import { POSTS, formatDate } from '../blog'
+import { SITE } from '../siteInfo'
 
 const meta = {
   "title": "Blog: Microsoft, Security & Marketing Tips | EG Eloma",
@@ -16,47 +19,24 @@ const meta = {
         "url": "https://egeloma.com.au/blog",
         "publisher": {
           "@id": "https://egeloma.com.au/#organization"
-        }
+        },
+        "blogPost": POSTS.map(p => ({ "@type": "BlogPosting", "headline": p.title, "url": SITE + p.path, "datePublished": p.date }))
       }
     ]
   },
-  "path": "/blog",
-  // No posts yet: kept out of Google and the sitemap until the first articles are published.
-  "noindex": true
+  "path": "/blog"
 }
+
+const TRUST = ['Australian owned', 'Microsoft Partner', 'ASD Essential Eight aligned', '24/7 support', 'Fixed written quotes', '5 countries']
+const CATEGORIES = [...new Set(POSTS.map(p => p.category))].sort()
+const [featured] = POSTS
 
 export default function Blog() {
   return (
     <>
       <PageMeta {...meta} />
       <div className="phero">
-        <div className="orb" aria-hidden="true">
-          <svg aria-hidden="true" viewBox="-640 -460 1280 920">
-            <ellipse rx="470" ry="146" />
-            <g transform="rotate(62)">
-              <ellipse rx="470" ry="146" />
-            </g>
-            <g transform="rotate(-62)">
-              <ellipse rx="470" ry="146" />
-            </g>
-            <circle r="6">
-              <animateMotion dur="30s" repeatCount="indefinite" path="M470 0A470 146 0 1 1 -470 0A470 146 0 1 1 470 0" />
-            </circle>
-            <g transform="rotate(62)">
-              <circle r="5.5">
-                <animateMotion dur="36s" begin="-10s" repeatCount="indefinite" path="M-470 0A470 146 0 1 1 470 0A470 146 0 1 1 -470 0" />
-              </circle>
-            </g>
-            <g transform="rotate(-62)">
-              <circle r="6">
-                <animateMotion dur="42s" begin="-20s" repeatCount="indefinite" path="M470 0A470 146 0 1 0 -470 0A470 146 0 1 0 470 0" />
-              </circle>
-            </g>
-            <circle r="5">
-              <animateMotion dur="30s" begin="-15s" repeatCount="indefinite" path="M470 0A470 146 0 1 1 -470 0A470 146 0 1 1 470 0" />
-            </circle>
-          </svg>
-        </div>
+        <Orb />
         <Header active="/blog" />
         <section className="wrap pc">
           <p className="crumb">
@@ -67,46 +47,61 @@ export default function Blog() {
           <h1>{"Insights & guides"}</h1>
           <p className="lead">Practical, plain-English advice on Microsoft, security, marketing, communications and software.</p>
           <div className="tbar">
-            <span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
-              Australian owned
-            </span>
-            <span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
-              Microsoft Partner
-            </span>
-            <span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
-              ASD Essential Eight aligned
-            </span>
-            <span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
-              24/7 support
-            </span>
-            <span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
-              Fixed written quotes
-            </span>
-            <span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                <path d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
-              5 countries
-            </span>
+            {TRUST.map(t => (
+              <span key={t}>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>
+                {t}
+              </span>
+            ))}
           </div>
         </section>
       </div>
       <main className="wrap">
+        <section className="s first rv">
+          <div className="bfeat">
+            <div>
+              <p className="ey" style={{ font: "400 12px var(--mono)", letterSpacing: ".08em", textTransform: "uppercase", color: "var(--mint)" }}>
+                Featured · {featured.category}
+              </p>
+              <h2 style={{ marginTop: "10px" }}>{featured.title}</h2>
+              <p>{featured.description}</p>
+              <div className="cta" style={{ justifyContent: "flex-start", marginTop: "22px" }}>
+                <Link className="btn w" to={featured.path}>Read article</Link>
+              </div>
+            </div>
+            <div className="chipset">
+              {CATEGORIES.map(c => <span key={c}>{c}</span>)}
+            </div>
+          </div>
+        </section>
+        <section className="s rv">
+          <div className="sh">
+            <div>
+              <p className="ey">Blog</p>
+              <h2>Latest articles</h2>
+              <p className="sub">{POSTS.length} practical guides, newest first.</p>
+            </div>
+          </div>
+          <div className="stg cards c3 bcards">
+            {POSTS.map((p, i) => (
+              <Link key={p.path} className="card" to={p.path} style={{ transitionDelay: Math.min(i, 10) * 70 + "ms" }}>
+                <p className="meta">
+                  <span>{p.category}</span>
+                  <span>{formatDate(p.date)}</span>
+                  <span>{p.minutes} min read</span>
+                </p>
+                <h3>{p.title}</h3>
+                <p>{p.description}</p>
+                <span className="go">
+                  {"Read article "}
+                  <span>→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
         <section className="final rv">
           <h2>Have a question we haven't covered?</h2>
           <p>Book a free consultation and talk to a specialist.</p>

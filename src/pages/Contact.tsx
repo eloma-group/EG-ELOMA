@@ -431,7 +431,13 @@ export default function Contact() {
               </tbody>
             </table>
           </div>
-          <p className="affn">Phone, email and office address: [to be added before launch].</p>
+          <p className="affn">
+            {"Email "}
+            <a href={'mailto:' + BUSINESS.email}>{BUSINESS.email}</a>
+            {" (all countries) · Phone "}
+            <a href={BUSINESS.phone.href}>{BUSINESS.phone.label}</a>
+            {` (Australia) · ${BUSINESS.address} · ABN ${BUSINESS.abn}`}
+          </p>
         </section>
         <section className="s  rv">
           <div className="sh">

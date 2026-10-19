@@ -1,34 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://egeloma.com.au/</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/api-integrations</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/app-development</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/cloud-maintenance</loc><lastmod>2026-10-16</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://egeloma.com.au/</loc><lastmod>2026-10-19</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://egeloma.com.au/"/><xhtml:link rel="alternate" hreflang="en-AU" href="https://egeloma.com.au/australia"/><xhtml:link rel="alternate" hreflang="en-US" href="https://egeloma.com.au/united-states"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://egeloma.com.au/canada"/><xhtml:link rel="alternate" hreflang="en-GB" href="https://egeloma.com.au/united-kingdom"/><xhtml:link rel="alternate" hreflang="en-NZ" href="https://egeloma.com.au/new-zealand"/></url>
+  <url><loc>https://egeloma.com.au/api-integrations</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/app-development</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/australia</loc><lastmod>2026-10-19</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://egeloma.com.au/"/><xhtml:link rel="alternate" hreflang="en-AU" href="https://egeloma.com.au/australia"/><xhtml:link rel="alternate" hreflang="en-US" href="https://egeloma.com.au/united-states"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://egeloma.com.au/canada"/><xhtml:link rel="alternate" hreflang="en-GB" href="https://egeloma.com.au/united-kingdom"/><xhtml:link rel="alternate" hreflang="en-NZ" href="https://egeloma.com.au/new-zealand"/></url>
+  <url><loc>https://egeloma.com.au/blog</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-1300-vs-1800-numbers</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-choose-it-support</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-copilot-readiness</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-core-web-vitals</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-essential-eight-guide</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-google-vs-meta-ads</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-local-seo-checklist</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-microsoft-365-plans-compared</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-microsoft-nonprofit</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-notifiable-data-breaches</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-saas-mvp-planning</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/blog-teams-phone</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/canada</loc><lastmod>2026-10-19</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://egeloma.com.au/"/><xhtml:link rel="alternate" hreflang="en-AU" href="https://egeloma.com.au/australia"/><xhtml:link rel="alternate" hreflang="en-US" href="https://egeloma.com.au/united-states"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://egeloma.com.au/canada"/><xhtml:link rel="alternate" hreflang="en-GB" href="https://egeloma.com.au/united-kingdom"/><xhtml:link rel="alternate" hreflang="en-NZ" href="https://egeloma.com.au/new-zealand"/></url>
+  <url><loc>https://egeloma.com.au/cloud-maintenance</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://egeloma.com.au/company</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/contact</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/cybersecurity</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/design</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/google-meta-ads</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://egeloma.com.au/contact</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/cybersecurity</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/design</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/google-meta-ads</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://egeloma.com.au/industries</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://egeloma.com.au/ivr-system</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/landline-number</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/local-listing</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/microsoft</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/microsoft-development</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/microsoft-licensing</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/plans</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/ppc</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://egeloma.com.au/ivr-system</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/landline-number</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/local-listing</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/microsoft</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/microsoft-development</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/microsoft-licensing</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/new-zealand</loc><lastmod>2026-10-19</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://egeloma.com.au/"/><xhtml:link rel="alternate" hreflang="en-AU" href="https://egeloma.com.au/australia"/><xhtml:link rel="alternate" hreflang="en-US" href="https://egeloma.com.au/united-states"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://egeloma.com.au/canada"/><xhtml:link rel="alternate" hreflang="en-GB" href="https://egeloma.com.au/united-kingdom"/><xhtml:link rel="alternate" hreflang="en-NZ" href="https://egeloma.com.au/new-zealand"/></url>
+  <url><loc>https://egeloma.com.au/plans</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/ppc</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://egeloma.com.au/privacy</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://egeloma.com.au/products</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://egeloma.com.au/saas-development</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/seo</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/server-maintenance</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/social-media</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/software-development</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/support-services</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://egeloma.com.au/products</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/saas-development</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/seo</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/server-maintenance</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/social-media</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/software-development</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/support-services</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://egeloma.com.au/terms</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://egeloma.com.au/toll-free-number</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/virtual-customer-care</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/virtual-mobile-number</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://egeloma.com.au/website-development</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://egeloma.com.au/toll-free-number</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/united-kingdom</loc><lastmod>2026-10-19</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://egeloma.com.au/"/><xhtml:link rel="alternate" hreflang="en-AU" href="https://egeloma.com.au/australia"/><xhtml:link rel="alternate" hreflang="en-US" href="https://egeloma.com.au/united-states"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://egeloma.com.au/canada"/><xhtml:link rel="alternate" hreflang="en-GB" href="https://egeloma.com.au/united-kingdom"/><xhtml:link rel="alternate" hreflang="en-NZ" href="https://egeloma.com.au/new-zealand"/></url>
+  <url><loc>https://egeloma.com.au/united-states</loc><lastmod>2026-10-19</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://egeloma.com.au/"/><xhtml:link rel="alternate" hreflang="en-AU" href="https://egeloma.com.au/australia"/><xhtml:link rel="alternate" hreflang="en-US" href="https://egeloma.com.au/united-states"/><xhtml:link rel="alternate" hreflang="en-CA" href="https://egeloma.com.au/canada"/><xhtml:link rel="alternate" hreflang="en-GB" href="https://egeloma.com.au/united-kingdom"/><xhtml:link rel="alternate" hreflang="en-NZ" href="https://egeloma.com.au/new-zealand"/></url>
+  <url><loc>https://egeloma.com.au/virtual-customer-care</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/virtual-mobile-number</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://egeloma.com.au/website-development</loc><lastmod>2026-10-19</lastmod></url>
 </urlset>

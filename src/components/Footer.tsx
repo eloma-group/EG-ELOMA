@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { PHONE, PORTAL_URL } from './Header'
-import { BUSINESS, SOCIAL } from '../siteInfo'
+import { PHONE, PORTAL_URL, showsPhone } from './Header'
+import { BUSINESS, COUNTRIES, SOCIAL, type CountryCode } from '../siteInfo'
 
 const { email: EMAIL, abn: ABN, address: ADDRESS } = BUSINESS
 
@@ -37,6 +37,10 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
     ],
   },
   {
+    title: 'Countries',
+    links: COUNTRIES.map(c => ({ to: c.path, label: c.name })),
+  },
+  {
     title: 'Company',
     links: [
       { to: '/company', label: 'About EG Eloma' },
@@ -49,7 +53,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   },
 ]
 
-export default function Footer() {
+export default function Footer({ country }: { country?: CountryCode }) {
   return (
     <footer>
       <div className="wrap fgrid">
@@ -65,12 +69,14 @@ export default function Footer() {
             Australian-owned technology partner for Microsoft, software, marketing, communications, cloud and cybersecurity. Serving Australia, the United States, Canada, the United Kingdom and New Zealand.
           </p>
           <address className="fcon">
-            <a href={PHONE.href}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
-              </svg>
-              {PHONE.label}
-            </a>
+            {showsPhone(country) && (
+              <a href={PHONE.href}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
+                </svg>
+                {PHONE.label} (Australia)
+              </a>
+            )}
             <a href={'mailto:' + EMAIL}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -125,7 +131,15 @@ export default function Footer() {
       </div>
       <div className="fbot">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap', paddingBlock: '22px' }}>
-          <p className="k">© EG Eloma · Australian owned · AU · US · CA · UK · NZ</p>
+          <p className="k">
+            © EG Eloma · Australian owned
+            {COUNTRIES.map(c => (
+              <span key={c.code}>
+                {' · '}
+                <Link to={c.path} hrefLang={c.lang}>{c.code}</Link>
+              </span>
+            ))}
+          </p>
           <nav aria-label="Legal" style={{ display: 'flex', gap: '22px' }}>
             <Link className="k" to="/privacy">Privacy</Link>
             <Link className="k" to="/terms">Terms</Link>

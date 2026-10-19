@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL('..', import.meta.url))
 const dist = root + 'dist/'
 const ssrDir = root + 'dist-ssr/'
 
-const { render, routes, routeFiles, RENAMED, SITE } = await import(pathToFileURL(ssrDir + 'entry-server.js').href)
+const { render, routes, routeFiles, RENAMED, SITE, COUNTRIES } = await import(pathToFileURL(ssrDir + 'entry-server.js').href)
 const template = readFileSync(dist + 'index.html', 'utf8')
 
 // The whole stylesheet is small (~15 KB gzipped), so it goes inline: no render-blocking request.
@@ -58,7 +58,10 @@ for (const route of [...routes, '/404']) {
   // A page with its own robots tag (the 404 page's noindex) replaces the site-wide one in index.html.
   if (/name="robots" content="[^"]*noindex/.test(head)) noindex.add(route)
   const base = head.includes('name="robots"') ? template.replace(/<meta name="robots"[^>]*>\n?/, '') : template
+  // <html lang> follows the page's og:locale (en_US on the United States page), en-AU otherwise.
+  const lang = (head.match(/property="og:locale" content="([a-z]{2})_([A-Z]{2})"/) || [, 'en', 'AU']).slice(1).join('-')
   const html = deferScript(inlineCss(base, pageCss))
+    .replace(/<html lang="[^"]*">/, `<html lang="${lang}">`)
     .replace('<div id="root"></div>', `<div id="root">${body}</div>`)
     .replace('</head>', `${head}\n</head>`)
   const file = route === '/' ? 'index.html' : route.slice(1) + '.html'
@@ -72,9 +75,14 @@ const today = new Date().toISOString().slice(0, 10)
 const git = (...args) => { try { return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim() } catch { return '' } }
 const lastmod = (file) => (git('status', '--porcelain', '--', file) ? today : git('log', '-1', '--format=%cs', '--', file) || today)
 const sitemapRoutes = ['/', ...routes.filter(r => r !== '/')].filter(r => !noindex.has(r))
+// The home page and the country pages list each other as language/region alternates (hreflang).
+const alternates = [['x-default', '/'], ...COUNTRIES.map(c => [c.lang, c.path])]
+const altLinks = (r) => alternates.some(([, p]) => p === r)
+  ? alternates.map(([lang, p]) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${SITE}${p}"/>`).join('')
+  : ''
 writeFileSync(dist + 'sitemap.xml',
-  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  sitemapRoutes.map(r => `  <url><loc>${SITE}${r}</loc><lastmod>${lastmod(routeFiles[r])}</lastmod></url>\n`).join('') +
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' +
+  sitemapRoutes.map(r => `  <url><loc>${SITE}${r}</loc><lastmod>${lastmod(routeFiles[r])}</lastmod>${altLinks(r)}</url>\n`).join('') +
   '</urlset>\n')
 console.log('wrote sitemap.xml with', sitemapRoutes.length, 'URLs; left out (noindex):', [...noindex].join(' '))
 

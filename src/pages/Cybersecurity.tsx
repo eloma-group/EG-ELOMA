@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Cyber Security Services Melbourne | EG Eloma",
@@ -413,6 +414,7 @@ export default function Cybersecurity() {
             </div>
           </div>
         </section>
+        <RelatedReading posts={['/blog-notifiable-data-breaches', '/blog-essential-eight-guide']} />
         <section className="s rv">
           <div className="twocol">
             <div>
