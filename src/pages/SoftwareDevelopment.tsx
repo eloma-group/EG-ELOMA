@@ -7,7 +7,7 @@ import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Custom Software Development Melbourne | EG Eloma",
-  "description": "Software built around how your business actually works. Custom business software, portals and automation built around your workflow.",
+  "description": "Custom software development for Melbourne businesses. We design, build and support bespoke systems that fit the way you work.",
   "crumb": "Software Development",
   "parent": {
     "name": "Products",

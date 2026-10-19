@@ -6,8 +6,8 @@ import Footer from '../components/Footer'
 import RelatedReading from '../components/RelatedReading'
 
 const meta = {
-  "title": "Cloud Maintenance & Azure Support Melbourne | EG Eloma",
-  "description": "Your cloud, kept healthy, secure and cost-efficient. Azure and Microsoft 365 environments monitored, updated, optimised and backed up.",
+  "title": "Cloud Management Services Melbourne | EG Eloma",
+  "description": "Cloud management and Azure managed services for Melbourne businesses. Monitoring, cost control and secure, reliable cloud infrastructure.",
   "crumb": "Cloud Maintenance",
   "parent": {
     "name": "Products",

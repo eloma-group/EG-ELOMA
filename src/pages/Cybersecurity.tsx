@@ -7,7 +7,7 @@ import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Cyber Security Services Melbourne | EG Eloma",
-  "description": "Zero threats allowed. ASD Essential Eight aligned security, Microsoft Defender and 24/7 monitoring.",
+  "description": "Essential Eight-aligned cyber security for Australian businesses: Microsoft Defender, 24/7 monitoring and incident response from a Melbourne team.",
   "crumb": "Cybersecurity",
   "parent": {
     "name": "Products",
@@ -147,7 +147,7 @@ export default function Cybersecurity() {
             <span>/</span>
             <Link to="/products#cloud">{"Cloud, Security & Support"}</Link>
           </p>
-          <h1>Cyber Security Services Melbourne</h1>
+          <h1>Cyber Security Services for Melbourne Businesses</h1>
           <p className="lead">Zero threats allowed.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

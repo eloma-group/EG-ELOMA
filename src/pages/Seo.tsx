@@ -7,7 +7,7 @@ import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "SEO Services Melbourne | EG Eloma",
-  "description": "Get found on Google by customers who are ready to buy. Rank higher on Google for the searches that bring you customers.",
+  "description": "SEO services for Melbourne and Australian businesses: technical fixes, content and local SEO that bring enquiries, not just traffic. Free SEO audit.",
   "crumb": "Search Engine Optimisation (SEO)",
   "parent": {
     "name": "Products",

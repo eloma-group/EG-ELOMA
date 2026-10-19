@@ -9,8 +9,8 @@ import CountUp from '../components/CountUp'
 import { COUNTRIES } from '../siteInfo'
 
 const meta = {
-  "title": "EG Eloma | Microsoft, Software, Marketing & Cybersecurity",
-  "description": "Australian-owned EG Eloma: Microsoft 365, websites, software, SEO, ads, toll-free numbers, cloud and cybersecurity for businesses in AU, US, CA, UK and NZ.",
+  "title": "IT, Microsoft & Digital Marketing Melbourne | EG Eloma",
+  "description": "Melbourne team for Microsoft 365, websites, software, SEO, ads, 1300 numbers and cyber security. One Australian partner. Book a free consult.",
   "jsonLd": {
     "@context": "https://schema.org",
     "@graph": [

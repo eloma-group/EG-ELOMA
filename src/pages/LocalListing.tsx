@@ -7,7 +7,7 @@ import RelatedReading from '../components/RelatedReading'
 
 const meta = {
   "title": "Google Business Profile Management Melbourne | EG Eloma",
-  "description": "Be the first business customers see on Google Maps. Appear in 'near me' searches and on Google Maps with a fully managed listing.",
+  "description": "Google Business Profile setup and management for Melbourne businesses. Show up in local search and Google Maps and get more enquiries.",
   "crumb": "Local Listing (Google Business Profile)",
   "parent": {
     "name": "Products",
