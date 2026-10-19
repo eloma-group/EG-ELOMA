@@ -211,7 +211,7 @@ export default function Plans() {
             <span>/</span>
             <span>{"Plans & quotes"}</span>
           </p>
-          <h1>Plans that grow with you</h1>
+          <h1>Marketing Plans & Microsoft 365 Licence Pricing</h1>
           <p className="lead">Marketing plans and Microsoft 365 licences, tailored to your business and quoted in writing.</p>
           <GeoNote />
           <div className="tbar">

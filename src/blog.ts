@@ -14,12 +14,12 @@ export type Post = {
 
 // The side card and closing call to action shown on articles, by topic.
 export const POST_CTAS = {
-  phone: { aside: ['Choosing a business number?', "We'll help you pick a number and set up call routing."], final: ['Make your business easy to call', 'Get a memorable number with routing that suits your team.'], service: '/toll-free-number' },
-  support: { aside: ['Need better IT support?', 'Ask how our 24/7 helpdesk and client portal work.'], final: ['Get IT support that prevents problems', 'Book a call about managed support for your team.'], service: '/support-services' },
-  microsoft: { aside: ['Unsure which plan fits?', 'We review your users and recommend the right Microsoft 365 mix.'], final: ['Get your Microsoft licences right', 'A licence review often finds savings and security gaps in the same hour.'], service: '/microsoft-licensing' },
-  product: { aside: ['Have a product idea?', 'Talk through your idea and get a scoped first version.'], final: ['Plan your first release', 'Book a product workshop to define your MVP.'], service: '/saas-development' },
-  security: { aside: ['Want an Essential Eight check?', 'We assess your current controls and show what to fix first.'], final: ['Close your biggest security gaps', 'Start with an Essential Eight assessment of your systems.'], service: '/cybersecurity' },
-  marketing: { aside: ['Want more local enquiries?', "We'll review your Google presence and suggest quick wins."], final: ['Turn searches into customers', 'Ask for a marketing review of your website and listings.'], service: '/seo' },
+  phone: { aside: ['Choosing a business number?', "We'll help you pick a number and set up call routing."], final: ['Make your business easy to call', 'Get a memorable number with routing that suits your team.'], service: '/toll-free-number', serviceName: 'Business phone numbers' },
+  support: { aside: ['Need better IT support?', 'Ask how our 24/7 helpdesk and client portal work.'], final: ['Get IT support that prevents problems', 'Book a call about managed support for your team.'], service: '/support-services', serviceName: 'Managed IT support' },
+  microsoft: { aside: ['Unsure which plan fits?', 'We review your users and recommend the right Microsoft 365 mix.'], final: ['Get your Microsoft licences right', 'A licence review often finds savings and security gaps in the same hour.'], service: '/microsoft-licensing', serviceName: 'Microsoft 365 licensing' },
+  product: { aside: ['Have a product idea?', 'Talk through your idea and get a scoped first version.'], final: ['Plan your first release', 'Book a product workshop to define your MVP.'], service: '/saas-development', serviceName: 'SaaS development' },
+  security: { aside: ['Want an Essential Eight check?', 'We assess your current controls and show what to fix first.'], final: ['Close your biggest security gaps', 'Start with an Essential Eight assessment of your systems.'], service: '/cybersecurity', serviceName: 'Cyber security services' },
+  marketing: { aside: ['Want more local enquiries?', "We'll review your Google presence and suggest quick wins."], final: ['Turn searches into customers', 'Ask for a marketing review of your website and listings.'], service: '/seo', serviceName: 'SEO services' },
 } as const
 
 export const POSTS: Post[] = [

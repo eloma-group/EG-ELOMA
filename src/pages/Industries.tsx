@@ -84,7 +84,7 @@ export default function Industries() {
             <span>/</span>
             <span>Industries</span>
           </p>
-          <h1>We serve every industry</h1>
+          <h1>IT & Digital Marketing Services for Every Industry</h1>
           <p className="lead">
             The same Microsoft, software, marketing, communications and security expertise, tailored to how your sector works.
           </p>

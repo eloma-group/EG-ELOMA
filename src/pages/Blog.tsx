@@ -44,7 +44,7 @@ export default function Blog() {
             <span>/</span>
             <span>Blog</span>
           </p>
-          <h1>{"Insights & guides"}</h1>
+          <h1>{"IT, Microsoft & Marketing Insights and Guides"}</h1>
           <p className="lead">Practical, plain-English advice on Microsoft, security, marketing, communications and software.</p>
           <div className="tbar">
             {TRUST.map(t => (

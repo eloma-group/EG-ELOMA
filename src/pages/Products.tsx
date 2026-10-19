@@ -235,7 +235,7 @@ export default function Products() {
             <span>/</span>
             <span>Products</span>
           </p>
-          <h1>Every product your business needs</h1>
+          <h1>IT, Microsoft, Marketing & Communications Products</h1>
           <p className="lead">
             23 products across Microsoft, marketing, development, communications, cloud and security, from one Australian-owned partner.
           </p>

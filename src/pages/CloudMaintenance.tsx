@@ -384,7 +384,7 @@ export default function CloudMaintenance() {
             </div>
           </div>
         </section>
-        <RelatedReading posts={['/blog-notifiable-data-breaches', '/blog-essential-eight-guide']} />
+        <RelatedReading posts={['/blog-notifiable-data-breaches', '/blog-essential-eight-guide', '/blog-choose-it-support']} />
         <section className="s rv">
           <div className="twocol">
             <div>

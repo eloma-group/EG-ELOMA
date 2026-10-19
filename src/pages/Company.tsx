@@ -67,7 +67,7 @@ export default function Company() {
             <span>/</span>
             <span>Company</span>
           </p>
-          <h1>One partner for everything digital</h1>
+          <h1>About EG Eloma, Your Melbourne Technology Partner</h1>
           <p className="lead">Australian owned and operated, serving clients across five countries.</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a free consultation</Link>

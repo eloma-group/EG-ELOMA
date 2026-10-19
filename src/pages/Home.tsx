@@ -39,7 +39,7 @@ const meta = {
             "name": "Which countries do you work in?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Australia, the United States, Canada, the United Kingdom and New Zealand. Each country has its own page, local phone numbers and quotes in local currency."
+              "text": "Australia, United States, Canada, United Kingdom and New Zealand. Each country has its own page, local phone numbers and quotes in local currency."
             }
           },
           {

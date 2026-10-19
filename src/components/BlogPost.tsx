@@ -92,7 +92,7 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
           <p>{cta.final[1]}</p>
           <div className="cta">
             <Link className="btn w" to="/contact">Book a consultation</Link>
-            <Link className="btn d" to={cta.service}>Related service</Link>
+            <Link className="btn d" to={cta.service}>{cta.serviceName}</Link>
           </div>
         </section>
       </main>
