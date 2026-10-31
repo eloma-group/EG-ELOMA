@@ -37,7 +37,7 @@ const ORG = {
   legalName: BUSINESS.legalName,
   url: SITE + '/',
   logo: { '@type': 'ImageObject', '@id': SITE + '/#logo', url: SITE + '/assets/logo-mark-eloma.png', contentUrl: SITE + '/assets/logo-mark-eloma.png', width: 149, height: 120, caption: BUSINESS.name },
-  image: SITE + '/og-image.png',
+  image: SITE + '/og-image.png?v=2',
   description: 'Australian-owned Microsoft, software, marketing, business communications and cybersecurity partner based in Melbourne.',
   telephone: PHONE,
   email: BUSINESS.email,

@@ -31,7 +31,7 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
           dateModified: post.date,
           author: { '@type': 'Organization', name: BUSINESS.name, url: SITE + '/' },
           publisher: { '@id': SITE + '/#organization' },
-          image: SITE + '/og-image.png',
+          image: SITE + '/og-image.png?v=2',
           mainEntityOfPage: SITE + path,
         },
       ],
