@@ -5,7 +5,6 @@ const STARS = ['translate(60 42) scale(1.05)', 'translate(47 58) scale(.9)', 'tr
 const COUNTRIES = ['Australia', 'United States', 'Canada', 'United Kingdom', 'New Zealand']
 const AFFILIATIONS = [
   { name: 'Australian Signals Directorate', note: 'Member', small: true, long: true },
-  { name: 'United Nations', note: 'Member', small: true, long: true },
   { name: 'Women’s Empowerment Principles (WEPs)', note: 'Member', small: true, long: true },
   { name: 'Australian Red Cross Lifeblood', note: 'Proud Member', small: true, long: true },
 ]

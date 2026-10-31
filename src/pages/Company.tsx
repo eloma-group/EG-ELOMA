@@ -220,20 +220,13 @@ export default function Company() {
               </p>
             </div>
             <div className="card" style={{ transitionDelay: "70ms" }}>
-              <p className="k">United Nations Global Compact</p>
-              <h3>Participant</h3>
-              <p>
-                We support the UN Global Compact's Ten Principles on human rights, labour, environment and anti-corruption, and report on our progress.
-              </p>
-            </div>
-            <div className="card" style={{ transitionDelay: "140ms" }}>
               <p className="k">Women's Empowerment Principles (WEPs)</p>
               <h3>Signatory</h3>
               <p>
-                We have signed the Women's Empowerment Principles, established by UN Women and the UN Global Compact, committing to gender equality in our workplace and community.
+                We have signed the Women's Empowerment Principles, committing to gender equality in our workplace and community.
               </p>
             </div>
-            <div className="card" style={{ transitionDelay: "210ms" }}>
+            <div className="card" style={{ transitionDelay: "140ms" }}>
               <p className="k">Australian Red Cross Lifeblood</p>
               <h3>Proud Member</h3>
               <p>We support the humanitarian work of Australian Red Cross Lifeblood.</p>
