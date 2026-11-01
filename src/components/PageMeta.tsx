@@ -33,7 +33,7 @@ const ORG = {
   '@type': 'ProfessionalService',
   '@id': ORG_ID,
   name: BUSINESS.name,
-  alternateName: BUSINESS.formerName,
+  alternateName: [BUSINESS.formerName, 'egeloma', 'EG Eloma Australia'],
   legalName: BUSINESS.legalName,
   url: SITE + '/',
   logo: { '@type': 'ImageObject', '@id': SITE + '/#logo', url: SITE + '/assets/logo-mark-eloma.png', contentUrl: SITE + '/assets/logo-mark-eloma.png', width: 149, height: 120, caption: BUSINESS.name },
@@ -65,8 +65,8 @@ const ORG = {
   },
 }
 
-// The site itself, on the home page.
-const WEBSITE = { '@type': 'WebSite', '@id': SITE + '/#website', url: SITE + '/', name: BUSINESS.name, publisher: { '@id': ORG_ID }, inLanguage: 'en-AU' }
+// The site itself, on the home page. Google can use alternateName as the site name in search results.
+const WEBSITE = { '@type': 'WebSite', '@id': SITE + '/#website', url: SITE + '/', name: BUSINESS.name, alternateName: ['egeloma', 'egeloma.com.au'], publisher: { '@id': ORG_ID }, inLanguage: 'en-AU' }
 
 // The home page (for everyone) and the country pages are alternate versions of each other for search engines.
 const ALTERNATES = [{ lang: 'x-default', path: '/' }, ...COUNTRIES.map(c => ({ lang: c.lang, path: c.path }))]
