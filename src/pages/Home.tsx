@@ -15,15 +15,6 @@ const meta = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "WebSite",
-        "@id": "https://egeloma.com.au/#website",
-        "url": "https://egeloma.com.au/",
-        "name": "EG Eloma",
-        "publisher": {
-          "@id": "https://egeloma.com.au/#organization"
-        }
-      },
-      {
         "@type": "FAQPage",
         "mainEntity": [
           {
