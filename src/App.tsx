@@ -44,7 +44,7 @@ function PageShell({ children }: { children: ReactNode }) {
 }
 
 // Pages that moved to a new URL: old path -> new path. The hosts answer these with a 301 (scripts/prerender.mjs
-// writes them for Azure; public/.htaccess, public/web.config and vercel.json list them too).
+// writes them for Azure; public/.htaccess and public/web.config list them too).
 export const RENAMED: Record<string, string> = { '/services': '/products', '/pricing': '/plans', '/about': '/company' }
 
 // Old static URLs (/seo.html, /index.html) and renamed pages redirect to the clean routes; any other URL is a 404.
