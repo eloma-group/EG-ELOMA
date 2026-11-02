@@ -21,6 +21,7 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
     path,
     crumb: post.title,
     parent: { name: 'Blog', path: '/blog' },
+    image: post.image && { url: SITE + post.image.src + '.jpg', alt: post.image.alt },
     jsonLd: {
       '@graph': [
         {

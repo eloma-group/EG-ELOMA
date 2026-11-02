@@ -12,7 +12,7 @@ export type Post = {
   cta: keyof typeof POST_CTAS
   // Written by a named person (shown instead of "By EG Eloma").
   author?: { name: string; role: string }
-  // Cover image under the intro, from public/assets/blog/ (.webp shown on the page, .jpg in structured data).
+  // Cover image under the intro, from public/assets/blog/ (.webp shown on the page; .jpg, cropped to 1200 x 630, is the share image).
   image?: { src: string; alt: string; width: number; height: number }
 }
 

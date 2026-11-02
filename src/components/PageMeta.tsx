@@ -15,6 +15,8 @@ interface PageMetaProps {
   noindex?: boolean
   // Language and region of the page (country pages): sets <html lang> and og:locale.
   locale?: string
+  // Share image for this page (1200 x 630), replacing the site-wide og-image.png from index.html.
+  image?: { url: string; alt: string }
 }
 
 // Products by group, as on the Products page: the company's offer catalog in structured data.
@@ -77,7 +79,7 @@ const breadcrumbs = (trail: Crumb[]) => ({
 })
 
 // React 19 hoists <title>, <meta> and <link> into <head>.
-export default function PageMeta({ title, description, path, crumb, parent, jsonLd, noindex, locale = 'en-AU' }: PageMetaProps) {
+export default function PageMeta({ title, description, path, crumb, parent, jsonLd, noindex, locale = 'en-AU', image }: PageMetaProps) {
   useEffect(() => {
     document.documentElement.lang = locale
   }, [locale])
@@ -98,6 +100,14 @@ export default function PageMeta({ title, description, path, crumb, parent, json
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
+      {image && (
+        <>
+          <meta property="og:image" content={image.url} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={image.alt} />
+        </>
+      )}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />

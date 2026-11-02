@@ -57,7 +57,9 @@ for (const route of [...routes, '/404']) {
   }
   // A page with its own robots tag (the 404 page's noindex) replaces the site-wide one in index.html.
   if (/name="robots" content="[^"]*noindex/.test(head)) noindex.add(route)
-  const base = head.includes('name="robots"') ? template.replace(/<meta name="robots"[^>]*>\n?/, '') : template
+  let base = head.includes('name="robots"') ? template.replace(/<meta name="robots"[^>]*>\n?/, '') : template
+  // Likewise a page with its own share image (blog posts with a cover) replaces the site-wide og:image tags.
+  if (head.includes('property="og:image"')) base = base.replace(/<meta property="og:image[^>]*>/g, '')
   // <html lang> follows the page's og:locale (en_US on the United States page), en-AU otherwise.
   const lang = (head.match(/property="og:locale" content="([a-z]{2})_([A-Z]{2})"/) || [, 'en', 'AU']).slice(1).join('-')
   const html = deferScript(inlineCss(base, pageCss))
