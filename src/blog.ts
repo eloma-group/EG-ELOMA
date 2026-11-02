@@ -10,6 +10,10 @@ export type Post = {
   date: string
   minutes: number
   cta: keyof typeof POST_CTAS
+  // Written by a named person (shown instead of "By EG Eloma").
+  author?: { name: string; role: string }
+  // Cover image under the intro, from public/assets/blog/ (.webp shown on the page, .jpg in structured data).
+  image?: { src: string; alt: string; width: number; height: number }
 }
 
 // The side card and closing call to action shown on articles, by topic.
@@ -23,6 +27,7 @@ export const POST_CTAS = {
 } as const
 
 export const POSTS: Post[] = [
+  { path: '/blog-google-ai-answers-guide', title: "How to Appear in Google's AI Answers: A Plain-English Guide for Melbourne Businesses", short: "How to Appear in Google's AI Answers", description: "Does your business need special tricks to show in Google's AI Overviews and AI Mode? Google says no. Here is a plain checklist for Melbourne businesses.", category: 'Marketing', date: '2026-11-02', minutes: 5, cta: 'marketing', author: { name: 'Arpita Negi', role: 'Content Writer' }, image: { src: '/assets/blog/google-ai-answers', alt: "Search bar reading Google's AI Answers, linked to a digital human head made of network lines", width: 1200, height: 647 } },
   { path: '/blog-notifiable-data-breaches', title: 'The Notifiable Data Breaches scheme: what Australian businesses need to know', short: 'Notifiable Data Breaches Scheme Explained', description: 'Who the NDB scheme applies to, what counts as an eligible data breach, and how to prepare before something goes wrong.', category: 'Cybersecurity', date: '2026-10-09', minutes: 6, cta: 'security' },
   { path: '/blog-microsoft-365-plans-compared', title: 'Microsoft 365 Business Basic vs Standard vs Premium: which plan is right for you?', short: 'Microsoft 365 Basic vs Standard vs Premium', description: 'A plain-English comparison of Microsoft 365 business plans, and how to choose the right mix for each user.', category: 'Microsoft', date: '2026-10-06', minutes: 6, cta: 'microsoft' },
   { path: '/blog-copilot-readiness', title: 'Getting your business ready for Microsoft 365 Copilot', short: 'Getting Ready for Microsoft 365 Copilot', description: 'Copilot works with the files and emails your people can already access, so tidy permissions and good data habits come first.', category: 'Microsoft', date: '2026-10-02', minutes: 5, cta: 'microsoft' },

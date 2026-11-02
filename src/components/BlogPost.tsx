@@ -29,9 +29,11 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
           description: post.description,
           datePublished: post.date,
           dateModified: post.date,
-          author: { '@type': 'Organization', name: BUSINESS.name, url: SITE + '/' },
+          author: post.author
+            ? { '@type': 'Person', name: post.author.name, jobTitle: post.author.role, worksFor: { '@id': SITE + '/#organization' } }
+            : { '@type': 'Organization', name: BUSINESS.name, url: SITE + '/' },
           publisher: { '@id': SITE + '/#organization' },
-          image: SITE + '/og-image.png?v=2',
+          image: post.image ? SITE + post.image.src + '.jpg' : SITE + '/og-image.png?v=2',
           mainEntityOfPage: SITE + path,
         },
       ],
@@ -65,7 +67,7 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
             ))}
           </div>
           <p className="ameta">
-            <span>By {BUSINESS.name}</span>
+            <span>By {post.author ? `${post.author.name}, ${post.author.role}` : BUSINESS.name}</span>
             <span>{formatDate(post.date)}</span>
             <span>{post.minutes} min read</span>
           </p>
@@ -74,7 +76,12 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
       <main className="wrap">
         <section className="s first">
           <div className="bart">
-            <article className="prose rv">{children}</article>
+            <article className="prose rv">
+              {post.image && (
+                <img className="bcover" src={post.image.src + '.webp'} alt={post.image.alt} width={post.image.width} height={post.image.height} fetchPriority="high" />
+              )}
+              {children}
+            </article>
             <aside className="aside">
               <div className="card">
                 <h3>{cta.aside[0]}</h3>
