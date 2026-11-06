@@ -420,7 +420,7 @@ export default function Seo() {
             </div>
           </div>
         </section>
-        <RelatedReading posts={['/blog-local-seo-checklist', '/blog-google-vs-meta-ads']} />
+        <RelatedReading posts={['/blog-google-ai-answers-guide', '/blog-local-seo-checklist', '/blog-google-vs-meta-ads']} />
         <section className="s rv">
           <div className="twocol">
             <div>

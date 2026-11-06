@@ -384,7 +384,7 @@ export default function Ppc() {
             </div>
           </div>
         </section>
-        <RelatedReading posts={['/blog-local-seo-checklist', '/blog-google-vs-meta-ads']} />
+        <RelatedReading posts={['/blog-black-friday-ads-plan', '/blog-google-vs-meta-ads', '/blog-local-seo-checklist']} />
         <section className="s rv">
           <div className="twocol">
             <div>

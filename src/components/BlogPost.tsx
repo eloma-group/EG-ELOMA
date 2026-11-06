@@ -5,7 +5,8 @@ import Header from './Header'
 import Footer from './Footer'
 import Orb from './Orb'
 import GeoNote from './GeoNote'
-import { POST_CTAS, formatDate, postByPath } from '../blog'
+import RelatedReading from './RelatedReading'
+import { POSTS, POST_CTAS, formatDate, postByPath } from '../blog'
 import { BUSINESS, SITE } from '../siteInfo'
 
 const TRUST = ['Australian owned', 'Microsoft Partner', 'ASD Essential Eight aligned', '24/7 support', 'Fixed written quotes', '5 countries']
@@ -15,6 +16,9 @@ const TRUST = ['Australian owned', 'Microsoft Partner', 'ASD Essential Eight ali
 export default function BlogPost({ path, geoNote, children }: { path: string; geoNote?: boolean; children: ReactNode }) {
   const post = postByPath(path)
   const cta = POST_CTAS[post.cta]
+  // Up to three other articles: same category first, then the newest.
+  const others = POSTS.filter(p => p.path !== path)
+  const related = [...others.filter(p => p.category === post.category), ...others.filter(p => p.category !== post.category)].slice(0, 3).map(p => p.path)
   const meta = {
     title: `${post.short} | EG Eloma`,
     description: post.description,
@@ -92,6 +96,7 @@ export default function BlogPost({ path, geoNote, children }: { path: string; ge
             </aside>
           </div>
         </section>
+        <RelatedReading posts={related} />
         <p className="rv" style={{ marginTop: '48px' }}>
           <Link className="more" to="/blog">← All articles</Link>
         </p>
