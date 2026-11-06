@@ -814,6 +814,10 @@ a.card:hover .go span{transform:translateX(4px)}
 .prose a{color:var(--mint);text-decoration:underline;text-underline-offset:3px}
 .prose .bcover{display:block;width:100%;height:auto;margin:0 0 32px;border-radius:16px}
 .prose a.btn{text-decoration:none}
+.prose .ptable{width:100%;margin:0 0 26px;border-collapse:collapse;font-size:.9em}
+.prose .ptable th,.prose .ptable td{padding:12px 14px;border-bottom:1px solid var(--line2);text-align:left;vertical-align:top}
+.prose .ptable th{font:400 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
+.prose .ptable td:first-child{white-space:nowrap;color:#fff}
 .card p.k{font:400 11.5px/1.4 var(--mono)!important;letter-spacing:.08em;color:var(--dim)}
 .npw{padding:clamp(28px,3.5vw,52px);border-radius:24px;border:1px solid rgba(45,184,140,.35);background:radial-gradient(70% 90% at 100% 0%,rgba(45,184,140,.16),transparent 60%),rgba(255,255,255,.025)}
 .npw .proc{margin-top:40px}
