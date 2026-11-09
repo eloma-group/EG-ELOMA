@@ -1,0 +1,10 @@
+{
+  "name": "eg-eloma-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/functions/*.js",
+  "dependencies": {
+    "@azure/functions": "^4.7.0"
+  }
+}

@@ -38,3 +38,11 @@ Other hosts are covered too: `public/.htaccess` (Apache / cPanel / Hostinger) an
 `public/web.config` (IIS). Each serves `/seo` from `seo.html`, 301s old `.html` links to clean URLs and answers
 unknown URLs with `404.html` ("Page not found", `src/components/NotFound.tsx`) and a 404 status.
 For manual hosting, upload the contents of `dist/` to the site root.
+
+## Contact form email
+`components/ContactForm` posts to `/api/contact`, an Azure Function in `api/` (deployed with the site by the
+workflow above), which emails the enquiry to connect@egeloma.com.au through Microsoft 365 (Graph `sendMail`).
+It needs these Static Web App environment variables: `M365_TENANT_ID`, `M365_CLIENT_ID`, `M365_CLIENT_SECRET`
+(an Entra app registration with the **Mail.Send** application permission, admin-consented), plus optional
+`MAIL_FROM` / `MAIL_TO` (both default to connect@egeloma.com.au). `/api` only exists on Azure, so on
+`npm run dev` the form shows its "couldn't be sent" message. Other hosts (Apache, IIS) get no API.

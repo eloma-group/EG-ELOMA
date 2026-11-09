@@ -218,6 +218,8 @@ header{position:relative}
 .form select option{color:#111}
 .form .ok{display:none;padding:14px 16px;border:1px solid var(--ok);color:var(--ok);font-weight:400}
 .form.sent .ok{display:block}
+.form .err{padding:14px 16px;border:1px solid #F07171;border-radius:10px;color:#F07171;font-weight:400}
+.form .err a{color:inherit;text-decoration:underline}
 
 /* Footer */
 .fgrid{display:grid;grid-template-columns:1.4fr repeat(4,minmax(0,1fr));gap:28px;padding-block:44px 30px}

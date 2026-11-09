@@ -93,6 +93,8 @@ writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
   // Azure maps the clean URLs itself: /seo serves seo.html, and /seo.html and /seo/ 301 to /seo.
   // (Explicit /seo -> seo.html rewrites would also catch /seo/ and serve it as a duplicate page.)
   trailingSlash: 'never',
+  // Managed Azure Functions in api/ (the contact form's /api/contact).
+  platform: { apiRuntime: 'node:22' },
   routes: [
     { route: '/index.html', redirect: '/', statusCode: 301 },
     // Renamed pages: old URL (and its .html form) -> new URL.
