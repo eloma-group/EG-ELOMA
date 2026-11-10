@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { BUSINESS, LEGAL_UPDATED } from '../siteInfo'
+import { BUSINESS, PRIVACY_UPDATED } from '../siteInfo'
 
 const meta = {
   "title": "Privacy Policy | EG Eloma",
@@ -95,7 +95,7 @@ export default function Privacy() {
       <main className="wrap">
         <section className="s first">
           <article className="prose">
-            <p className="legal-date">Last updated: {LEGAL_UPDATED}</p>
+            <p className="legal-date">Last updated: {PRIVACY_UPDATED}</p>
             <p>
               {BUSINESS.name} (ABN {BUSINESS.abn}) ("{BUSINESS.name}", "we", "us", "our") is an Australian business based at {BUSINESS.address}. We respect your privacy. This policy explains what personal information we collect, why we collect it, how we use, share and protect it, and how you can access it, correct it or make a complaint.
             </p>
@@ -143,6 +143,10 @@ export default function Privacy() {
               </li>
               <li>From publicly available sources, such as the Australian Business Register (ABN Lookup) and business websites.</li>
             </ul>
+            <h3>Our contact form</h3>
+            <p>
+              When you submit our contact form, the details you enter (your name, business name, email, phone, country, industry, the product you are interested in and your message) are sent to our website's hosting on Microsoft Azure, which emails them to our Microsoft 365 mailbox at {BUSINESS.email}. We do not use a third-party form service, and the form does not save your enquiry in a separate database. We keep your enquiry in our mailbox so we can reply and prepare a quote, as described in this policy.
+            </p>
             <p>
               If we receive personal information we did not ask for, we will check whether we could have collected it lawfully. If we could not, we will destroy or de-identify it as soon as practicable.
             </p>

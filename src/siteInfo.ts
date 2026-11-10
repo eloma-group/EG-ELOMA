@@ -38,5 +38,6 @@ export const COUNTRIES = [
 
 export type CountryCode = (typeof COUNTRIES)[number]['code']
 
-// Date shown on the Privacy Policy and Terms of Use pages.
+// Dates shown on the Terms of Use and Privacy Policy pages.
 export const LEGAL_UPDATED = '14 October 2026'
+export const PRIVACY_UPDATED = '10 November 2026'
