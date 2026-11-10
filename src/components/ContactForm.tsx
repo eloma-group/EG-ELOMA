@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { track } from '../pixel'
+import { LEAD_FLAG } from '../pixel'
 
 // Enquiries go to the Azure Function in api/src/functions/contact.js, which emails them to connect@egeloma.com.au via Microsoft 365.
 const ENDPOINT = '/api/contact'
@@ -32,7 +32,11 @@ export default function ContactForm() {
       })
       if (!res.ok) throw new Error(String(res.status))
       setSent(true)
-      track('Lead')
+      try {
+        sessionStorage.setItem(LEAD_FLAG, '1')
+      } catch {}
+      // A full page load (not in-app navigation), so Google Ads and the Google tag count the /thank-you visit.
+      window.location.assign('/thank-you')
     } catch {
       setFailed(true)
     } finally {

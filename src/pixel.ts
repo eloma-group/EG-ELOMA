@@ -5,6 +5,9 @@ declare global {
 
 export const track = (event: 'PageView' | 'Lead' | 'Contact' | 'Schedule') => window.fbq?.('track', event)
 
+// sessionStorage key the contact form sets before going to /thank-you, which sends Lead once and clears it.
+export const LEAD_FLAG = 'eg-lead'
+
 // The site switches pages without reloading, so each in-app navigation sends its own PageView.
 // Starts at the landing URL, which the base code has already counted.
 let lastPath = typeof location === 'undefined' ? '' : location.pathname
