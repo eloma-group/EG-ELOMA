@@ -1,6 +1,6 @@
 // Meta Pixel events. The base code in index.html loads the pixel and sends the first PageView.
 declare global {
-  interface Window { fbq?: (...args: unknown[]) => void }
+  interface Window { fbq?: (...args: unknown[]) => void; dataLayer?: unknown[] }
 }
 
 export const track = (event: 'PageView' | 'Lead' | 'Contact' | 'Schedule') => window.fbq?.('track', event)
@@ -12,7 +12,15 @@ export const LEAD_FLAG = 'eg-lead'
 // Starts at the landing URL, which the base code has already counted.
 let lastPath = typeof location === 'undefined' ? '' : location.pathname
 
+// Google Tag Manager: every page, the landing one included, pushes "virtual_page_view" to the dataLayer,
+// so one Custom Event trigger in GTM fires on each page the visitor sees.
+let lastGtmPath = ''
+
 export const trackPageView = (pathname: string) => {
+  if (pathname !== lastGtmPath) {
+    lastGtmPath = pathname
+    ;(window.dataLayer ??= []).push({ event: 'virtual_page_view', page_path: pathname, page_location: location.href, page_title: document.title })
+  }
   if (pathname === lastPath) return
   lastPath = pathname
   track('PageView')
