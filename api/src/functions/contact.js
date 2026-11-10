@@ -18,6 +18,21 @@ const FIELDS = [
 ]
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+// Failures carry the step and Microsoft's error code (never secrets) so the cause shows in the response and logs.
+class SendError extends Error {
+  constructor(step, status, body) {
+    let code = ''
+    try {
+      const j = JSON.parse(body)
+      code = j.error?.code || j.error || ''
+      if (j.error_codes) code += ` AADSTS${j.error_codes[0]}`
+    } catch {}
+    super(`${step} ${status} ${code}`.trim())
+    this.detail = { step, status, code }
+    this.body = body
+  }
+}
+
 const esc = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
 
 async function graphToken(env) {
@@ -30,7 +45,7 @@ async function graphToken(env) {
       grant_type: 'client_credentials',
     }),
   })
-  if (!res.ok) throw new Error(`token ${res.status}: ${await res.text()}`)
+  if (!res.ok) throw new SendError('token', res.status, await res.text())
   return (await res.json()).access_token
 }
 
@@ -51,6 +66,11 @@ app.http('contact', {
     if (!data.name || !EMAIL.test(data.email)) return { status: 400, jsonBody: { error: 'Name and a valid email are required' } }
 
     const env = process.env
+    const missing = ['M365_TENANT_ID', 'M365_CLIENT_ID', 'M365_CLIENT_SECRET'].filter(k => !env[k])
+    if (missing.length) {
+      ctx.error('contact form not configured, missing', missing.join(', '))
+      return { status: 500, jsonBody: { error: 'Could not send', detail: { step: 'config', missing } } }
+    }
     const from = env.MAIL_FROM || 'connect@egeloma.com.au'
     const to = env.MAIL_TO || 'connect@egeloma.com.au'
     const rows = FIELDS.filter(([k]) => data[k])
@@ -72,10 +92,10 @@ app.http('contact', {
           saveToSentItems: false,
         }),
       })
-      if (!res.ok) throw new Error(`sendMail ${res.status}: ${await res.text()}`)
+      if (!res.ok) throw new SendError('sendMail', res.status, await res.text())
     } catch (err) {
-      ctx.error('contact form email failed', err)
-      return { status: 502, jsonBody: { error: 'Could not send' } }
+      ctx.error('contact form email failed', err.message, err.body || err)
+      return { status: 502, jsonBody: { error: 'Could not send', detail: err.detail || { step: 'network', code: err.message } } }
     }
     return { status: 200, jsonBody: { ok: true } }
   },
