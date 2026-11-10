@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { LEAD_FLAG, track } from '../pixel'
+import { LEAD_FLAG, track, trackAdsConversion } from '../pixel'
 import { BUSINESS } from '../siteInfo'
 
 const meta = {
@@ -16,12 +16,13 @@ const meta = {
 
 // Where the contact form sends people after a successful enquiry. Google Ads counts a conversion when this URL loads.
 export default function ThankYou() {
-  // Count the Meta Pixel Lead once per enquiry, not on reloads or direct visits.
+  // Count the Meta Pixel Lead and the Google Ads conversion once per enquiry, not on reloads or direct visits.
   useEffect(() => {
     try {
       if (sessionStorage.getItem(LEAD_FLAG)) {
         sessionStorage.removeItem(LEAD_FLAG)
         track('Lead')
+        trackAdsConversion()
       }
     } catch {}
   }, [])
