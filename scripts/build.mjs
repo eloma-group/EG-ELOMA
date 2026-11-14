@@ -129,7 +129,7 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
     return `${attr}="${path}${u.search}${u.hash}"`
   })
   // Canonical, og:url and structured data: https://egeloma.com/x.html -> https://egeloma.com/x
-  html = html.replace(/https:\/\/www\.egeloma\.com\/((?:[a-z0-9-]+\/)*[a-z0-9-]+)\.html/g, (_, p) => SITE + (p === 'index' ? '/' : '/' + p))
+  html = html.replace(/https:\/\/egeloma\.com\/((?:[a-z0-9-]+\/)*[a-z0-9-]+)\.html/g, (_, p) => SITE + (p === 'index' ? '/' : '/' + p))
 
   html = html
     .replace(/(<meta name="viewport"[^>]*>)/, `$1\n${HEAD_TOP}`)
