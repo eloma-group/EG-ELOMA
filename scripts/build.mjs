@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url'
 const root = fileURLToPath(new URL('..', import.meta.url))
 const src = root + 'site/'
 const dist = root + 'dist/'
-const SITE = 'https://egeloma.com'
+const SITE = 'https://www.egeloma.com'
 
 const GTM_ID = 'GTM-NNJK4GCG'
 const PIXEL_ID = '4397938067133138'
@@ -128,8 +128,8 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
     if (assetHash[u.pathname] && !u.search) return `${attr}="${u.pathname}?v=${assetHash[u.pathname]}"`
     return `${attr}="${path}${u.search}${u.hash}"`
   })
-  // Canonical, og:url and structured data: https://egeloma.com/x.html -> https://egeloma.com/x
-  html = html.replace(/https:\/\/egeloma\.com\/((?:[a-z0-9-]+\/)*[a-z0-9-]+)\.html/g, (_, p) => SITE + (p === 'index' ? '/' : '/' + p))
+  // Canonical, og:url and structured data: https://www.egeloma.com/x.html -> https://www.egeloma.com/x
+  html = html.replace(/https:\/\/www\.egeloma\.com\/((?:[a-z0-9-]+\/)*[a-z0-9-]+)\.html/g, (_, p) => SITE + (p === 'index' ? '/' : '/' + p))
 
   html = html
     .replace(/(<meta name="viewport"[^>]*>)/, `$1\n${HEAD_TOP}`)
