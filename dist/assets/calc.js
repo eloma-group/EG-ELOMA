@@ -3,7 +3,7 @@
   var root = document.getElementById('calc');
   if (!root) return;
   var WHATSAPP = '61480065856';
-  var EMAIL = 'connect@egeloma.com.au';
+  var EMAIL = 'connect@egeloma.com';
   var KEY = 'egeloma-calc-v1';
   var EXAMPLE = [
     { name: 'CRM', price: 45, per: 'user', users: 5 },

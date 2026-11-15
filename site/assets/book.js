@@ -4,7 +4,7 @@
 (function () {
   var root = document.getElementById('bookpick');
   if (!root) return;
-  var WA = '61480065856', EMAIL = 'connect@egeloma.com.au', HQ = 'Australia/Melbourne';
+  var WA = '61480065856', EMAIL = 'connect@egeloma.com', HQ = 'Australia/Melbourne';
   var SERVICES = [
     { id: 'consult', name: 'Free consultation', mins: 30, desc: 'Talk through your goals for software or marketing.' },
     { id: 'review', name: 'Free subscription review', mins: 30, desc: 'See what one owned system could replace.' },

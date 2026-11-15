@@ -67,7 +67,7 @@
       if (!ENDPOINT) { ok(true); return; }
       btn.disabled = true; btn.textContent = 'Signing up…';
       fetch(ENDPOINT, { method: 'POST', body: new FormData(form) }).then(function (r) { if (!r.ok) throw 0; ok(false); })
-        .catch(function () { btn.disabled = false; btn.textContent = 'Get updates'; msg.className = 'sub-msg sub-err'; msg.hidden = false; msg.textContent = 'Sorry, that didn\'t work. Please try again or email connect@egeloma.com.au.'; });
+        .catch(function () { btn.disabled = false; btn.textContent = 'Get updates'; msg.className = 'sub-msg sub-err'; msg.hidden = false; msg.textContent = 'Sorry, that didn\'t work. Please try again or email connect@egeloma.com.'; });
     });
   }
 })();
