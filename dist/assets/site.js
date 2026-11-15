@@ -9,6 +9,9 @@ if(mb){mb.onclick=function(){var o=nav.classList.toggle('open');mb.setAttribute(
 // Enquiry form (home and contact pages): posted to /api/contact (Azure Function, emails connect@egeloma.com.au
 // through Microsoft 365), then the visitor goes to /thank-you, which counts the lead.
 var f=document.getElementById('form');
+// The footer's Careers link (contact?interest=careers) opens the form with Careers chosen.
+var fp=document.getElementById('f-product');
+if(fp&&/[?&]interest=careers\b/.test(location.search))fp.value='Careers';
 if(f){
   var v=function(id){var e=document.getElementById(id);return e?e.value.trim():''};
   var btn=f.querySelector('button[type=submit]'),err=document.getElementById('form-err'),label=btn.textContent;

@@ -448,7 +448,8 @@ main>section+section,main>section+div,main>div+section{border-top:1px solid var(
 .pf-p{color:var(--muted)}.pf-p small{color:#A2492F}
 .pf-f{background:var(--navy);color:#fff}.pf-f small{color:var(--green)}
 @media (max-width:640px){.pf{grid-template-columns:1fr}}
-.incl2 li b{display:block;color:var(--navy);font-weight:600}
+.incl2 li b,.incl2 li h3{display:block;color:var(--navy);font-weight:600}
+.incl2 li h3{font-family:inherit;font-size:inherit;line-height:inherit;letter-spacing:normal;text-wrap:wrap}
 .incl2 li span{display:block;color:var(--muted);font-weight:400;font-size:.9rem;margin-top:.15rem}
 .callstrip{background:var(--mint);border-block:1px solid #CBEBDD}
 .callstrip .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;padding-block:1.6rem}
@@ -828,3 +829,8 @@ main>section+section,main>section+div,main>div+section{border-top:1px solid var(
 .egc-intro input{font:inherit;padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
 .egc-intro button{border:0;border-radius:8px;background:#4B53BC;color:#fff;font:inherit;font-weight:600;padding:.6rem;cursor:pointer}
 .egc-form input:disabled{background:#F3F5F8}
+
+/* Small labels marked up as headings keep the label look. */
+h2.eyebrow,h3.eyebrow{font-family:var(--body);line-height:inherit;text-wrap:wrap}
+/* Text for screen readers and text-only readers, hidden on screen. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

@@ -26,7 +26,7 @@
   launcher.type = 'button';
   launcher.setAttribute('aria-label', 'Chat with EG Eloma');
   launcher.setAttribute('aria-expanded', 'false');
-  launcher.innerHTML = '<img src="' + logo + '" alt="" width="34" height="28"><span class="egc-dot" aria-hidden="true"></span>';
+  launcher.innerHTML = '<img src="' + logo + '" alt="EG Eloma logo" width="34" height="28"><span class="egc-dot" aria-hidden="true"></span>';
 
   var tip = el('div', 'egc-tip', 'Hi! Questions about our services? <b>Ask me.</b>');
 
@@ -35,7 +35,7 @@
   panel.setAttribute('aria-label', 'EG Eloma assistant');
   panel.hidden = true;
   panel.innerHTML =
-    '<div class="egc-head"><span class="egc-av"><img src="' + logo + '" alt="" width="26" height="21"></span>' +
+    '<div class="egc-head"><span class="egc-av"><img src="' + logo + '" alt="EG Eloma logo" width="26" height="21"></span>' +
     '<div class="egc-ht"><b>EG Eloma assistant</b><small><i></i>' + (AI_ENDPOINT ? 'AI assistant · usually instant' : 'Instant answers · 24/7') + '</small></div>' +
     '<button type="button" class="egc-x" aria-label="Close chat">×</button></div>' +
     '<div class="egc-log" aria-live="polite"></div>' +

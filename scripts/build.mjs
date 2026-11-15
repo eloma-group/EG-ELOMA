@@ -54,10 +54,7 @@ fbq('track', 'PageView');
 </script>
 <!-- End Meta Pixel Code -->`
 
-const BODY_TOP = `<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1"></noscript>`
+// No <noscript> tracking fallbacks (GTM iframe, Pixel image): text-only readers and audits showed them as page content.
 
 // Old site URLs -> new pages (301). Each also redirects with ".html".
 const REDIRECTS = {
@@ -148,11 +145,13 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
   html = html
     .replace(/(<meta name="viewport"[^>]*>)/, `$1\n${HEAD_TOP}`)
     .replace('</head>', `${HEAD_END}\n</head>`)
-    .replace(/<body([^>]*)>/, `<body$1>\n${BODY_TOP}`)
     .replace('</body>', '<script src="/assets/track.js?v=' + assetHash['/assets/track.js'] + '"></script>\n</body>')
     .replace('<html lang="en">', '<html lang="en-AU">')
   for (const tag of ['GTM-NNJK4GCG', 'google-site-verification', 'fbevents.js', 'track.js'])
     if (!html.includes(tag)) throw new Error(`${file}: could not add ${tag}`)
+  // Structured data must parse, or search engines ignore it.
+  for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))
+    try { JSON.parse(json) } catch (e) { throw new Error(`${file}: invalid JSON-LD (${e.message})`) }
 
   if (/<meta name="robots" content="[^"]*noindex/.test(html)) noindex.push(urlOf(file))
   writeFileSync(dist + file, html)
