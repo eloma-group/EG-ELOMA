@@ -309,14 +309,15 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;back
 .s-nav,.s-head,.s-foot{padding-left:16px;padding-right:16px}.s-body{padding:0 16px 16px}.s-foot{flex-wrap:wrap;gap:8px}
 .top{height:auto;min-height:60px;flex-wrap:wrap;padding:10px 16px}.top-r{flex-wrap:wrap;gap:8px}.gw,.mkh,.set-row{flex-wrap:wrap}.ph h1{font-size:21px}}
 @media(max-width:520px){.kpis{grid-template-columns:minmax(0,1fr)!important}.floor{grid-template-columns:repeat(3,minmax(0,1fr))}.legend{flex-wrap:wrap}}
+.egdemo-web{border:1px solid rgba(255,255,255,.55);padding:4px 12px;border-radius:8px;text-decoration:none;white-space:nowrap}.egdemo-web:hover{background:rgba(255,255,255,.12)}
 </style>
 </head>
 <body>
-<div class="egdemo" role="note"><span><b>Live demo</b> · Interactive prototype by EG Eloma with sample data. No real orders, calls or payments are made. Integrations shown are examples of what we can build.</span><span class="egdemo-a"><a href="../demo.html">About this demo</a><a href="../contact.html" class="egdemo-btn">Book a free consultation</a></span></div>
+<div class="egdemo" role="note"><span><b>Live demo</b> · Interactive prototype by EG Eloma with sample data. No real orders, calls or payments are made. Integrations shown are examples of what we can build.</span><span class="egdemo-a"><a href="../index.html" class="egdemo-web" onclick="location.replace(this.href);return false">← Go to website</a><a href="../demo.html">About this demo</a><a href="../contact.html" class="egdemo-btn">Book a free consultation</a></span></div>
 <div class="app">
   <aside class="side">
     <div class="brand"><img id="logo" alt="Logo"></div>
-    <div class="loc"><div class="av">EG</div><div><b id="locName">EG Eloma Demo Kitchen</b><small>Collingwood, VIC</small></div><svg class="i" viewBox="0 0 24 24"><path d="m7 15 5 5 5-5M7 9l5-5 5 5"/></svg></div>
+    <div class="loc"><div class="av">E&amp;O</div><div><b id="locName">Ember &amp; Oak</b><small>Surry Hills, NSW</small></div><svg class="i" viewBox="0 0 24 24"><path d="m7 15 5 5 5-5M7 9l5-5 5 5"/></svg></div>
     <nav class="nav" id="nav"></nav>
     <div class="side-foot">
       <div class="demo"><div class="t">DEMO</div>
@@ -343,7 +344,7 @@ document.getElementById('logo').src='data:image/png;base64,iVBORw0KGgoAAAANSUhEU
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=n=>(+n).toLocaleString('en-AU',{style:'currency',currency:'AUD'});
-const MIN=60000,HR=3600000,KEY='egeloma-demo-v2';
+const MIN=60000,HR=3600000,KEY='tably-demo-v5';
 const MARKETS=['Uber Eats','DoorDash','Menulog'];const isOnl=o=>o.source==='Online'||MARKETS.includes(o.source);
 const ACTIVE=['new','preparing','ready'];
 const CATS=['Starters','Mains','Pizza','Desserts','Drinks'];
@@ -351,7 +352,7 @@ const CATC={Starters:'#2eb88a',Mains:'#0d2239',Pizza:'#7fd3b5',Desserts:'#5b6879
 const STATUS={new:'New',preparing:'Preparing',ready:'Ready',completed:'Completed',cancelled:'Cancelled'};
 const MODS={Pizza:[['Gluten-free base',4],['Extra fior di latte',3],['Add prosciutto',6]],Mains:[['Side of fries',8],['Rocket & parmesan salad',9]],Desserts:[['Extra scoop of gelato',4]],Starters:[],Drinks:[]};
 const NAMES=['Olivia Martin','Jack Thompson','Mia Kelly','Noah Patel','Chloe Russo','Liam Walsh','Zara Hussain','Ethan Lee','Ava Simmons','Lucas Brennan','Isla Douglas','Leo Fernandes'];
-const STREETS=['Smith St','Wellington St','Johnston St','Gipps St','Peel St','Cambridge St','Easey St'];
+const STREETS=['Crown St','Bourke St','Riley St','Albion St','Foveaux St','Devonshire St','Campbell St'];
 const SEED_MENU=[
  ['m1','Garlic & herb flatbread','Starters',9,'Wood-fired, confit garlic, Murray River salt',['V']],
  ['m2','Salt & pepper calamari','Starters',17,'Lemon aioli, pickled chilli',['GF'],1],
@@ -428,13 +429,13 @@ function randomOrder(st,t){
   const table=type==='Dine-in'?'T'+rnd(1,12):null;
   return makeOrder(st,{source,type,table,customer:type==='Dine-in'?'Table '+table.slice(1):type==='Takeaway'?'Walk-in':pick(NAMES),
     phone:source==='Online'?'04'+rnd(10,99)+' '+rnd(100,999)+' '+rnd(100,999):'',
-    address:type==='Delivery'?rnd(2,180)+' '+pick(STREETS)+', Collingwood VIC 3066':'',
+    address:type==='Delivery'?rnd(2,180)+' '+pick(STREETS)+', Surry Hills NSW 2010':'',
     note:Math.random()<.12?pick(['Nut allergy','No chilli please','Birthday — candle on dessert','Extra napkins','Ring on arrival']):'',items:randomItems(st),createdAt:t});
 }
 function seed(){
   const st={menu:SEED_MENU.map(m=>({...m,diet:[...m.diet]})),orders:[],nextNum:2041,cart:[],mode:'Pickup',tracking:null,
-    channels:{website:{domain:'demo.egeloma.com',hooks:['order.created','order.status_changed'],hookUrl:''},markets:{'Uber Eats':{connected:true,storeId:'8f3c1a29-eg-demo',auto:true,syncMenu:true,syncStock:true,paused:false,markup:15,commission:30,lastSync:Date.now()-4*MIN},'DoorDash':{connected:true,storeId:'24418913',auto:false,syncMenu:true,syncStock:true,paused:false,markup:12,commission:25,lastSync:Date.now()-9*MIN},'Menulog':{connected:false,storeId:'',auto:true,syncMenu:true,syncStock:true,paused:false,markup:10,commission:14,lastSync:0}}},
-    settings:{name:'EG Eloma Demo Kitchen',address:'71 Gipps Street, Collingwood VIC 3066',phone:'1800 054 555',abn:'76 693 175 012',gst:10,deliveryFee:6,minDelivery:30,prepTime:20,onlineOpen:true,autoSim:false}};
+    channels:{website:{domain:'emberandoak.com.au',hooks:['order.created','order.status_changed'],hookUrl:''},markets:{'Uber Eats':{connected:true,storeId:'8f3c1a29-ember-oak',auto:true,syncMenu:true,syncStock:true,paused:false,markup:15,commission:30,lastSync:Date.now()-4*MIN},'DoorDash':{connected:true,storeId:'24418913',auto:false,syncMenu:true,syncStock:true,paused:false,markup:12,commission:25,lastSync:Date.now()-9*MIN},'Menulog':{connected:false,storeId:'',auto:true,syncMenu:true,syncStock:true,paused:false,markup:10,commission:14,lastSync:0}}},
+    settings:{name:'Ember & Oak',address:'412 Crown St, Surry Hills NSW 2010',phone:'(02) 9360 4471',abn:'51 824 753 556',gst:10,deliveryFee:6,minDelivery:30,prepTime:20,onlineOpen:true,autoSim:false}};
   const now=Date.now(),times=[];
   for(let i=0;i<44;i++)times.push(now-rnd(40*MIN,11*HR));
   times.sort((a,b)=>a-b).forEach(t=>{const o=randomOrder(st,t);
@@ -565,7 +566,7 @@ function vStore(){
   const avail=S.menu.filter(m=>m.online);
   return `<div class="ph"><div><h1>Storefront</h1><p>Live preview of your customer ordering site. Orders placed here appear instantly in the kitchen.</p></div>
    <div class="acts"><button class="btn" data-act="copyLink">${ic(I.ext)}Copy store link</button></div></div>
-  <div class="browser"><div class="bbar"><div class="d"><i></i><i></i><i></i></div><div class="url">${ic(I.lock)}order.demo.egeloma.com</div><div style="width:46px"></div></div>
+  <div class="browser"><div class="bbar"><div class="d"><i></i><i></i><i></i></div><div class="url">${ic(I.lock)}order.emberandoak.com.au</div><div style="width:46px"></div></div>
   <div class="site">
     <div class="s-nav"><div class="s-logo">${esc(st.name)}</div><nav><span>Menu</span><span>Book a table</span><span>Gift cards</span><span>Contact</span></nav></div>
     ${st.onlineOpen?'':'<div class="s-closed">Online ordering is temporarily unavailable. Please call us to order.</div>'}
@@ -765,7 +766,7 @@ document.addEventListener('click',e=>{
     case 'dec':if(--ci.qty<=0)S.cart=S.cart.filter(c=>c.key!==id);commit();break;
     case 'mode':S.mode=id;commit();break;
     case 'checkout':openCheckout();break;
-    case 'copyLink':try{navigator.clipboard.writeText('https://order.demo.egeloma.com').then(()=>toast('Store link copied'),()=>toast('Store link','order.demo.egeloma.com'))}catch(_){toast('Store link','order.demo.egeloma.com')}break;
+    case 'copyLink':try{navigator.clipboard.writeText('https://order.emberandoak.com.au').then(()=>toast('Store link copied'),()=>toast('Store link','order.emberandoak.com.au'))}catch(_){toast('Store link','order.emberandoak.com.au')}break;
     case 'closeModal':closeModal();break;
     case 'clearTrack':S.tracking=null;commit();break;
     case 'posType':pos.type=id;if(id==='Takeaway')pos.table=null;render();break;
@@ -939,7 +940,7 @@ function overflow(c){
 }
 function phoneOrder(name,number,note){
   const type=Math.random()<.75?'Pickup':'Delivery';
-  const o=makeOrder(S,{source:'Phone',type,customer:name,phone:number,address:type==='Delivery'?rnd(2,180)+' '+pick(STREETS)+', Collingwood VIC 3066':'',items:randomItems(S),note});
+  const o=makeOrder(S,{source:'Phone',type,customer:name,phone:number,address:type==='Delivery'?rnd(2,180)+' '+pick(STREETS)+', Surry Hills NSW 2010':'',items:randomItems(S),note});
   o.payment={status:'Pending',method:'SMS payment link'};S.orders.push(o);
   const oid=o.id;setTimeout(()=>{const x=S.orders.find(y=>y.id===oid);if(x&&x.payment.status==='Pending'){x.payment={status:'Paid',method:'Visa •••• '+rnd(1000,9999)+' (link)'};save()}},12000);
   return o;
@@ -1120,7 +1121,7 @@ function openMarket(n){
   modal(`<div class="dh"><div><h3>Connect ${n}</h3><div class="muted small" style="margin-top:3px">You’ll sign in to ${n} and approve access to your store.</div></div><button class="x" data-act="closeModal">${ic(I.x)}</button></div>
   <form id="mkForm" class="db" data-name="${n}">
    <ol class="small" style="padding-left:18px;margin:0 0 16px;line-height:1.8;color:var(--n80)"><li>Sign in with your ${n} merchant account</li><li>Choose the store to link</li><li>We import orders and keep your menu, prices and stock in sync</li></ol>
-   <div class="field"><label>${n} store</label><select class="input" name="store"><option>${esc(S.settings.name)} — Collingwood</option></select><div class="hint">In the live product this list comes from ${n} after you sign in.</div></div>
+   <div class="field"><label>${n} store</label><select class="input" name="store"><option>${esc(S.settings.name)} — Surry Hills</option></select><div class="hint">In the live product this list comes from ${n} after you sign in.</div></div>
    <label class="opt"><input type="checkbox" name="push" checked>Replace the ${n} menu with my menu</label>
    <label class="opt"><input type="checkbox" name="auto" checked>Auto-accept orders</label>
    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px"><button type="button" class="btn" data-act="closeModal">Cancel</button><button class="btn primary" type="submit">Sign in &amp; connect</button></div></form>`,false);
