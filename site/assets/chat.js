@@ -1,7 +1,7 @@
 /* EG Eloma chat assistant
  * Works in two modes:
  *  1. Instant answers (default): matches questions against the site's own service and FAQ content.
- *  2. AI mode: set AI_ENDPOINT below to your deployed chat worker URL to answer with Claude.
+ *  2. AI mode: set AI_ENDPOINT below to your deployed chat worker URL to answer with AI.
  */
 (function () {
   var AI_ENDPOINT = window.EG_CHAT_ENDPOINT || ''; // or paste here, e.g. 'https://egeloma-chat.<your-account>.workers.dev'
