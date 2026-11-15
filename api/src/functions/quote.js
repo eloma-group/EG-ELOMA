@@ -2,7 +2,8 @@ import { app } from '@azure/functions'
 import { EMAIL, SITE, send, table } from '../mail.js'
 
 // POST /api/quote (multipart/form-data): the "Request a quote" form, with the visitor's files as email attachments.
-// Graph sendMail takes up to 4 MB per message, so files are capped at 2.5 MB in total (site/assets/quote.js has the same limit).
+// Files are capped at 25 MB in total, the Outlook attachment limit (site/assets/quote.js has the same limit). Over 3 MB,
+// ../mail.js sends through a draft and upload sessions. Static Web Apps accepts requests up to 30 MB.
 
 const FIELDS = [
   ['reference', 'Reference'],
@@ -26,7 +27,7 @@ const FIELDS = [
   ['page', 'Sent from'],
 ]
 const MAX_FILES = 10
-const MAX_BYTES = 2.5 * 1024 * 1024
+const MAX_BYTES = 25 * 1024 * 1024
 const REF = /^EGQ-[0-9A-Z-]{4,20}$/
 
 app.http('quote', {

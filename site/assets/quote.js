@@ -5,8 +5,8 @@
   var form = document.getElementById('quote-form');
   if (!form) return;
   var ENDPOINT = form.getAttribute('data-endpoint') || window.EG_FORM_ENDPOINT || '';
-  // Files travel as email attachments (Microsoft Graph sendMail takes up to 4 MB per message, base64 included).
-  var MAX_FILES = 10, MAX_MB = 2.5, MAX_TOTAL_MB = 2.5;
+  // Files travel as email attachments: 25 MB in total, the Outlook attachment limit (api/src/functions/quote.js checks it too).
+  var MAX_FILES = 10, MAX_MB = 25, MAX_TOTAL_MB = 25;
   var OK_EXT = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'heic', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv', 'ppt', 'pptx', 'txt', 'rtf', 'zip'];
   var files = [];
   var $ = function (s) { return form.querySelector(s); };
