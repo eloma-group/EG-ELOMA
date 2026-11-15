@@ -24,7 +24,13 @@ app.http('teams-bot', {
     const bad = await checkBotRequest(req.headers.get('authorization'), act?.serviceUrl)
     if (bad) {
       ctx.warn('teams bot request rejected:', bad)
-      return { status: 401, jsonBody: { error: bad } }
+      // Header names only (no values), to see which header carries the Bot Framework token behind Static Web Apps.
+      let seen = {}
+      try {
+        const [h, p] = (req.headers.get('authorization') || '').replace(/^Bearer\s+/i, '').split('.')
+        seen = { alg: JSON.parse(Buffer.from(h, 'base64url')).alg, iss: JSON.parse(Buffer.from(p, 'base64url')).iss }
+      } catch {}
+      return { status: 401, jsonBody: { error: bad, headers: [...req.headers.keys()], token: seen } }
     }
 
     try {
