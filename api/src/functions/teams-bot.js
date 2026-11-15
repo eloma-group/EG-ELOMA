@@ -1,5 +1,5 @@
 import { app } from '@azure/functions'
-import { checkBotRequest, configured, get, key, msgKey, plain, put, replyTo } from '../teams.js'
+import { checkBotRequest, checkTeamsActivity, configured, get, key, msgKey, plain, put, replyTo } from '../teams.js'
 
 // POST /api/teams-bot: messaging endpoint of the Azure Bot (Teams -> website). See ../teams.js.
 // - Bot added to a team: website chats go to that team's General channel, unless a channel was already chosen.
@@ -21,17 +21,12 @@ app.http('teams-bot', {
     } catch {
       return { status: 400 }
     }
-    const bad = await checkBotRequest(req.headers.get('authorization'), act?.serviceUrl)
+    // A valid Bot Framework token, or (behind Static Web Apps, which drops that token) the endpoint key, see ../teams.js
+    const tokenProblem = await checkBotRequest(req.headers.get('authorization'), act?.serviceUrl).catch(e => e.message)
+    const bad = tokenProblem && checkTeamsActivity(act, req.query.get('key'))
     if (bad) {
       ctx.warn('teams bot request rejected:', bad)
-      // Header names only (no values), to see which header carries the Bot Framework token behind Static Web Apps.
-      let seen = {}
-      try {
-        const [h, p] = (req.headers.get('authorization') || '').replace(/^Bearer\s+/i, '').split('.')
-        seen = { alg: JSON.parse(Buffer.from(h, 'base64url')).alg, iss: JSON.parse(Buffer.from(p, 'base64url')).iss }
-      } catch {}
-      const alt = req.headers.get('x-ms-auth-token') || ''
-      return { status: 401, jsonBody: { error: bad, headers: [...req.headers.keys()], token: seen, altIsProbe: alt.includes('probe-123') } }
+      return { status: 401, jsonBody: { error: 'Unauthorized' } }
     }
 
     try {

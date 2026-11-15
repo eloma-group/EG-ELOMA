@@ -2,9 +2,10 @@
 // A Teams bot posts each website visitor's chat as a thread in one channel; replies in that thread go back to the visitor.
 // App settings (Static Web App > Environment variables):
 //   CHAT_STORAGE   connection string of an Azure Storage account (table "webchat" is created on first use)
+//   BOT_ENDPOINT_KEY  random secret (24+ characters) in the Azure Bot's messaging endpoint URL, see checkTeamsActivity
 //   BOT_APP_ID, BOT_APP_SECRET, BOT_TENANT_ID  the Azure Bot's app registration; default to M365_CLIENT_ID,
 //                  M365_CLIENT_SECRET and M365_TENANT_ID when the bot uses the same app as the form emails
-import { createPublicKey, verify, randomBytes } from 'node:crypto'
+import { createPublicKey, verify, randomBytes, timingSafeEqual } from 'node:crypto'
 import { TableClient } from '@azure/data-tables'
 
 const env = process.env
@@ -82,7 +83,24 @@ export const postToThread = (serviceUrl, conversationId, html) =>
 export const replyTo = (activity, text) =>
   connector(activity.serviceUrl, `v3/conversations/${encodeURIComponent(activity.conversation.id)}/activities/${encodeURIComponent(activity.id)}`, { type: 'message', text })
 
-// ---------- requests from Teams (Teams -> bot): check the Bot Framework token ----------
+// ---------- requests from Teams (Teams -> bot) ----------
+// Static Web Apps replaces the Authorization header on requests to managed functions with its own token, so the
+// Bot Framework token never reaches us. Instead the Azure Bot's messaging endpoint carries a secret:
+//   https://egeloma.com/api/teams-bot?key=<BOT_ENDPOINT_KEY>
+// and the activity must come from our tenant's Teams service. The token check below still runs first, in case the
+// header ever does get through.
+const TEAMS_SERVICE = /^https:\/\/smba\.trafficmanager\.net\//
+export function checkTeamsActivity(act, providedKey) {
+  const expected = env.BOT_ENDPOINT_KEY || ''
+  if (expected.length < 24) return 'endpoint key not configured'
+  const a = Buffer.from(String(providedKey || '')), b = Buffer.from(expected)
+  if (a.length !== b.length || !timingSafeEqual(a, b)) return 'bad key'
+  if (!TEAMS_SERVICE.test(act?.serviceUrl || '')) return 'not a Teams service url'
+  if (act?.channelData?.tenant?.id !== botTenant()) return 'wrong tenant'
+  return ''
+}
+
+// Bot Framework token check
 let keys = { list: [], exp: 0 }
 async function signingKeys(refresh) {
   if (!refresh && keys.exp > Date.now()) return keys.list
