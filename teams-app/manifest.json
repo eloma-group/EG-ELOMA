@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "1.0.0",
+  "id": "{{BOT_APP_ID}}",
+  "developer": {
+    "name": "EG Eloma",
+    "websiteUrl": "https://egeloma.com",
+    "privacyUrl": "https://egeloma.com/privacy",
+    "termsOfUseUrl": "https://egeloma.com/terms"
+  },
+  "name": { "short": "EG Eloma Website Chat", "full": "EG Eloma Website Chat" },
+  "description": {
+    "short": "Chats from the egeloma.com website, answered in Teams",
+    "full": "Brings chats from the chat widget on egeloma.com into a Teams channel, one thread per visitor. Reply in a chat's thread and the visitor sees the reply on the website. To choose the channel, post \"@EG Eloma Website Chat setup\" in it."
+  },
+  "icons": { "color": "color.png", "outline": "outline.png" },
+  "accentColor": "#0D2239",
+  "bots": [
+    {
+      "botId": "{{BOT_APP_ID}}",
+      "scopes": ["team"],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [{ "scopes": ["team"], "commands": [{ "title": "setup", "description": "Send website chats to this channel" }] }]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": ["egeloma.com"],
+  "webApplicationInfo": { "id": "{{BOT_APP_ID}}", "resource": "https://egeloma.com" },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [{ "name": "ChannelMessage.Read.Group", "type": "Application" }]
+    }
+  }
+}

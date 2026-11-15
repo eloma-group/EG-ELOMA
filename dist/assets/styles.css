@@ -814,3 +814,14 @@ main>section+section,main>section+div,main>div+section{border-top:1px solid var(
 .legal-prose code{font-size:.92em}
 .legal-date{font-size:.9rem!important}
 .legal a{color:inherit}
+/* chat widget: Teams mode (site/assets/chat.js) */
+.egc-log[hidden],.egc-chips[hidden]{display:none}
+.egc-row button.egc-wa{border:0;cursor:pointer;font:inherit;font-weight:600;font-size:.86rem}
+.egc-by{display:block;font-size:.72rem;font-weight:700;color:#4B53BC;margin-bottom:.15rem}
+.egc-note{align-self:center!important;max-width:92%;background:#EEF1F5!important;border:0!important;color:var(--muted)!important;font-size:.82rem;text-align:center}
+.egc-intro{display:flex;flex-direction:column;gap:.6rem;width:86%}
+.egc-intro label{display:flex;flex-direction:column;gap:.25rem;font-size:.82rem;font-weight:600}
+.egc-intro small{font-weight:400;color:var(--muted)}
+.egc-intro input{font:inherit;padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.egc-intro button{border:0;border-radius:8px;background:#4B53BC;color:#fff;font:inherit;font-weight:600;padding:.6rem;cursor:pointer}
+.egc-form input:disabled{background:#F3F5F8}
