@@ -30,7 +30,8 @@ app.http('teams-bot', {
         const [h, p] = (req.headers.get('authorization') || '').replace(/^Bearer\s+/i, '').split('.')
         seen = { alg: JSON.parse(Buffer.from(h, 'base64url')).alg, iss: JSON.parse(Buffer.from(p, 'base64url')).iss }
       } catch {}
-      return { status: 401, jsonBody: { error: bad, headers: [...req.headers.keys()], token: seen } }
+      const alt = req.headers.get('x-ms-auth-token') || ''
+      return { status: 401, jsonBody: { error: bad, headers: [...req.headers.keys()], token: seen, altIsProbe: alt.includes('probe-123') } }
     }
 
     try {
