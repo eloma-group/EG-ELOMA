@@ -3,13 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NNJK4GCG');</script>
+<!-- Google Tag Manager (loads after the page) -->
+<script>(function(w,d,i){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var done,E=['scroll','pointerdown','keydown','touchstart'];function l(){if(done)return;done=1;
+E.forEach(function(x){w.removeEventListener(x,l,true)});var j=d.createElement('script');j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j)}
+E.forEach(function(x){w.addEventListener(x,l,{capture:true,passive:true,once:true})});
+function t(){setTimeout(l,3500)}if(d.readyState==='complete')t();else w.addEventListener('load',t)})(window,document,'GTM-NNJK4GCG');</script>
 <!-- End Google Tag Manager -->
+<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="google-site-verification" content="j76VNDkhTJUYx6CERezc3DDBNqwMDS-skQo8uTs1VoY" />
 <meta name="google-site-verification" content="8s5bdvivx-upHe87ffZMoPkunOoJeCYxjDAjWY2PKI8" />
 <meta name="p:domain_verify" content="024c5d844002bfd8ce7de2ec61d525cb"/>

@@ -17,13 +17,19 @@ const SITE = 'https://egeloma.com'
 const GTM_ID = 'GTM-NNJK4GCG'
 const PIXEL_ID = '4397938067133138'
 
-const HEAD_TOP = `<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTM_ID}');</script>
+// GTM starts its dataLayer at once (events pushed early are kept), but gtm.js is fetched on the first
+// scroll, tap, click or key press, or 3.5 s after the page has loaded, like the Meta Pixel below,
+// so its scripts never slow down the first paint or block taps while the page loads.
+const HEAD_TOP = `<!-- Google Tag Manager (loads after the page) -->
+<script>(function(w,d,i){w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var done,E=['scroll','pointerdown','keydown','touchstart'];function l(){if(done)return;done=1;
+E.forEach(function(x){w.removeEventListener(x,l,true)});var j=d.createElement('script');j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i;d.head.appendChild(j)}
+E.forEach(function(x){w.addEventListener(x,l,{capture:true,passive:true,once:true})});
+function t(){setTimeout(l,3500)}if(d.readyState==='complete')t();else w.addEventListener('load',t)})(window,document,'${GTM_ID}');</script>
 <!-- End Google Tag Manager -->
+<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="google-site-verification" content="j76VNDkhTJUYx6CERezc3DDBNqwMDS-skQo8uTs1VoY" />
 <meta name="google-site-verification" content="8s5bdvivx-upHe87ffZMoPkunOoJeCYxjDAjWY2PKI8" />
 <meta name="p:domain_verify" content="024c5d844002bfd8ce7de2ec61d525cb"/>`
@@ -113,6 +119,10 @@ for (const f of files.filter(f => /^assets\/.+\.js$/.test(f))) {
   if (out !== js) writeFileSync(dist + f, out)
 }
 
+// styles.css, minified: comments and spacing removed.
+const CSS = readFileSync(src + 'assets/styles.css', 'utf8')
+  .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/ ?([{};,>]) ?/g, '$1').replace(/;}/g, '}').trim()
+
 const SKIP = /^(?:[a-z][a-z0-9+.-]*:|#|\/\/|\$|\{)/i
 const noindex = []
 for (const file of files.filter(f => f.endsWith('.html'))) {
@@ -131,6 +141,9 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
   })
   // Canonical, og:url and structured data: https://egeloma.com/x.html -> https://egeloma.com/x
   html = html.replace(/https:\/\/egeloma\.com\/((?:[a-z0-9-]+\/)*[a-z0-9-]+)\.html/g, (_, p) => SITE + (p === 'index' ? '/' : '/' + p))
+
+  // The stylesheet goes inline, so the first paint needs only the HTML (no second round trip).
+  html = html.replace(/<link rel="stylesheet" href="\/assets\/styles\.css\?v=[0-9a-f]+">/, () => `<style>${CSS}</style>`)
 
   html = html
     .replace(/(<meta name="viewport"[^>]*>)/, `$1\n${HEAD_TOP}`)

@@ -21,7 +21,7 @@
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   // ---------- UI ----------
-  var logo = ROOT + 'assets/logo.png';
+  var logo = ROOT + 'assets/logo.webp';
   var launcher = el('button', 'egc-launch');
   launcher.type = 'button';
   launcher.setAttribute('aria-label', 'Chat with EG Eloma');

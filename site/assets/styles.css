@@ -1,5 +1,8 @@
 
 /* Layout: light, airy page with navy bands; the hummingbird's wing curve repeats as a soft arc behind key sections. */
+/* Self-hosted Manrope and Inter (variable, Latin subset), so text needs no request to Google Fonts. */
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 700;font-display:swap;src:url(/assets/fonts/manrope-latin.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 600;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format("woff2")}
 :root{
   --navy:#0B213A; --navy-2:#13304F; --green:#2DB88C; --green-deep:#157A5A; --mint:#E7F6F0;
   --bg:#FFFFFF; --surface:#FFFFFF; --ink:#0B213A; --muted:#506274; --line:#DDE4EC; --on-navy:#E9F1F6; --on-navy-muted:#A9BCCB;
