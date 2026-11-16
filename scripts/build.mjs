@@ -30,7 +30,6 @@ function t(){setTimeout(l,3500)}if(d.readyState==='complete')t();else w.addEvent
 <!-- End Google Tag Manager -->
 <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<meta name="google-site-verification" content="j76VNDkhTJUYx6CERezc3DDBNqwMDS-skQo8uTs1VoY" />
 <meta name="p:domain_verify" content="024c5d844002bfd8ce7de2ec61d525cb"/>`
 
 // fbq queues events at once; fbevents.js is fetched on the first scroll, tap, click or key press,
@@ -157,7 +156,7 @@ for (const file of files.filter(f => f.endsWith('.html') && !VERIFY.test(f))) {
     .replace('</head>', `${HEAD_END}\n</head>`)
     .replace('</body>', '<script src="/assets/track.js?v=' + assetHash['/assets/track.js'] + '"></script>\n</body>')
     .replace('<html lang="en">', '<html lang="en-AU">')
-  for (const tag of ['GTM-NNJK4GCG', 'google-site-verification', 'fbevents.js', 'track.js'])
+  for (const tag of ['GTM-NNJK4GCG', 'fbevents.js', 'track.js'])
     if (!html.includes(tag)) throw new Error(`${file}: could not add ${tag}`)
   // Structured data must parse, or search engines ignore it.
   for (const [, json] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))
