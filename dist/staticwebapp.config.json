@@ -10,6 +10,14 @@
       "statusCode": 301
     },
     {
+      "route": "/google2518a2c8ba9ec026.html",
+      "rewrite": "/google2518a2c8ba9ec026"
+    },
+    {
+      "route": "/google4fe940118146c103.html",
+      "rewrite": "/google4fe940118146c103"
+    },
+    {
       "route": "/services",
       "redirect": "/products",
       "statusCode": 301

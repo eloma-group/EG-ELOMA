@@ -187,6 +187,8 @@ writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
   platform: { apiRuntime: 'node:22' },
   routes: [
     { route: '/index.html', redirect: '/', statusCode: 301 },
+    // Google fetches its verification files at /google<token>.html and must get them without the clean-URL redirect.
+    ...files.filter(f => VERIFY.test(f)).map(f => ({ route: '/' + f, rewrite: '/' + f.replace(/\.html$/, '') })),
     ...Object.entries(REDIRECTS).flatMap(([from, to]) => [from, from + '.html'].map(route => ({ route, redirect: to, statusCode: 301 }))),
     // CSS and JS links carry ?v=<hash>; images and fonts are cached for a week.
     { route: '/assets/*', headers: { 'Cache-Control': 'public, max-age=604800' } },
