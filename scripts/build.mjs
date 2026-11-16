@@ -127,9 +127,11 @@ const COUNTRY_OPTIONS = COUNTRY_CODES.split(' ').map(c => regionName.of(c)).sort
 const CSS = readFileSync(src + 'assets/styles.css', 'utf8')
   .replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/ ?([{};,>]) ?/g, '$1').replace(/;}/g, '}').trim()
 
+// Google Search Console verification files (google<token>.html) are served exactly as downloaded.
+const VERIFY = /^google[0-9a-f]+\.html$/
 const SKIP = /^(?:[a-z][a-z0-9+.-]*:|#|\/\/|\$|\{)/i
 const noindex = []
-for (const file of files.filter(f => f.endsWith('.html'))) {
+for (const file of files.filter(f => f.endsWith('.html') && !VERIFY.test(f))) {
   // 404.html is served for any missing URL, so its links resolve from the site root.
   const base = new URL(file === '404.html' ? '/' : '/' + file, SITE)
   let html = readFileSync(dist + file, 'utf8')
@@ -170,7 +172,7 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
 const today = new Date().toISOString().slice(0, 10)
 const git = (...args) => { try { return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim() } catch { return '' } }
 const lastmod = file => (git('status', '--porcelain', '--', 'site/' + file) ? today : git('log', '-1', '--format=%cs', '--', 'site/' + file) || today)
-const pages = files.filter(f => f.endsWith('.html') && !noindex.includes(urlOf(f)))
+const pages = files.filter(f => f.endsWith('.html') && !VERIFY.test(f) && !noindex.includes(urlOf(f)))
   .sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.split('/').length - b.split('/').length || a.localeCompare(b)))
 writeFileSync(dist + 'sitemap.xml',
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
