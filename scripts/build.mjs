@@ -105,8 +105,8 @@ cpSync(src, dist, { recursive: true })
 const files = walk(dist)
 
 const hash = file => createHash('sha256').update(readFileSync(dist + file)).digest('hex').slice(0, 8)
-// CSS, JS and the site icons get ?v=<hash>, so a changed file reaches browsers at once.
-const assetHash = Object.fromEntries(files.filter(f => /^assets\/(?:.+\.(?:css|js)|favicon\.png|apple-touch-icon\.png)$/.test(f)).map(f => ['/' + f, hash(f)]))
+// CSS and JS get ?v=<hash>, so a changed file reaches browsers at once. The icons sit at the site root (no-cache).
+const assetHash = Object.fromEntries(files.filter(f => /^assets\/.+\.(?:css|js)$/.test(f)).map(f => ['/' + f, hash(f)]))
 
 // Links inside the chat assistant and updates scripts ("services/seo.html") also point at clean URLs.
 for (const f of files.filter(f => /^assets\/.+\.js$/.test(f))) {
