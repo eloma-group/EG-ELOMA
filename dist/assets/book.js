@@ -1,10 +1,10 @@
 /* EG Eloma meeting picker: choose a service, day and time (shown in the visitor's time zone),
-   then send the request by WhatsApp or email. The team confirms with a Teams link.
+   then send the request to the team by email (/api/book). The team confirms with a Teams link.
    The Microsoft Bookings calendar is in the second tab for instant booking. */
 (function () {
   var root = document.getElementById('bookpick');
   if (!root) return;
-  var WA = '61480065856', EMAIL = 'connect@egeloma.com', HQ = 'Australia/Melbourne';
+  var HQ = 'Australia/Melbourne';
   var SERVICES = [
     { id: 'consult', name: 'Free consultation', mins: 30, desc: 'Talk through your goals for software or marketing.' },
     { id: 'review', name: 'Free subscription review', mins: 30, desc: 'See what one owned system could replace.' },
@@ -33,21 +33,28 @@
   }
   function fmt(d, zone, opts) { return d.toLocaleString('en-AU', Object.assign({ timeZone: zone }, opts)); }
 
-  // next 10 Melbourne weekdays
-  function days() {
-    var out = [], now = new Date();
-    var parts = new Intl.DateTimeFormat('en-CA', { timeZone: HQ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(now).split('-');
-    var y = +parts[0], m = +parts[1] - 1, d = +parts[2];
-    for (var i = 1; out.length < 10 && i < 20; i++) {
-      var noon = melb(y, m, d + i, 12, 0);
-      var wd = fmt(noon, HQ, { weekday: 'short' });
-      if (wd !== 'Sat' && wd !== 'Sun') out.push({ y: y, m: m, d: d + i, noon: noon });
-    }
-    return out;
-  }
+  // Month calendar of Melbourne dates: weekdays from tomorrow up to 90 days ahead can be booked.
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  var todayParts = new Intl.DateTimeFormat('en-CA', { timeZone: HQ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()).split('-');
+  var TODAY = Date.UTC(+todayParts[0], +todayParts[1] - 1, +todayParts[2]);
+  var DAY_MS = 864e5, MAX = TODAY + 90 * DAY_MS;
+  // Today counts while it still has a slot at least 30 minutes away.
+  var bookable = function (t) {
+    var dt = new Date(t), wd = dt.getUTCDay();
+    if (t < TODAY || t > MAX || wd === 0 || wd === 6) return false;
+    return t > TODAY || slots({ y: dt.getUTCFullYear(), m: dt.getUTCMonth(), d: dt.getUTCDate() }).length > 0;
+  };
+  var first = TODAY; while (!bookable(first)) first += DAY_MS;
+  var view = { y: new Date(first).getUTCFullYear(), m: new Date(first).getUTCMonth() };
+  var monthIndex = function (y, m) { return y * 12 + m; };
+  var MIN_VIEW = monthIndex(view.y, view.m), MAX_VIEW = monthIndex(new Date(MAX).getUTCFullYear(), new Date(MAX).getUTCMonth());
   function slots(day) {
-    var out = [];
-    for (var h = 9; h < 17; h++) for (var mi = 0; mi < 60; mi += 30) out.push(melb(day.y, day.m, day.d, h, mi));
+    var out = [], soonest = Date.now() + 30 * 60000;
+    for (var h = 9; h < 17; h++) for (var mi = 0; mi < 60; mi += 30) {
+      var t = melb(day.y, day.m, day.d, h, mi);
+      if (t.getTime() >= soonest) out.push(t);
+    }
     return out;
   }
 
@@ -61,13 +68,37 @@
       sv.appendChild(b);
     });
     var dv = $('#bp-days'); dv.innerHTML = '';
-    days().forEach(function (d) {
-      var key = d.y + '-' + d.m + '-' + d.d, on = st.day && st.day.key === key;
-      var b = el('button', 'bp-day' + (on ? ' on' : ''), '<span>' + fmt(d.noon, tz, { weekday: 'short' }) + '</span><b>' + fmt(d.noon, tz, { day: 'numeric' }) + '</b><small>' + fmt(d.noon, tz, { month: 'short' }) + '</small>');
-      b.type = 'button'; b.setAttribute('aria-pressed', on);
-      b.onclick = function () { st.day = { key: key, d: d }; st.slot = null; render(); };
-      dv.appendChild(b);
+    var vi = monthIndex(view.y, view.m);
+    var head = el('div', 'bp-cal-head',
+      '<button type="button" class="bp-nav" data-step="-1" aria-label="Previous month"' + (vi <= MIN_VIEW ? ' disabled' : '') + '><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>' +
+      '<b aria-live="polite">' + MONTHS[view.m] + ' ' + view.y + '</b>' +
+      '<button type="button" class="bp-nav" data-step="1" aria-label="Next month"' + (vi >= MAX_VIEW ? ' disabled' : '') + '><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>');
+    head.querySelectorAll('.bp-nav').forEach(function (n) {
+      n.onclick = function () { var i = vi + +n.getAttribute('data-step'); view = { y: Math.floor(i / 12), m: i % 12 }; render(); };
     });
+    dv.appendChild(head);
+    var grid = el('div', 'bp-cal-grid');
+    WEEKDAYS.forEach(function (w) { grid.appendChild(el('span', 'bp-wd', '<abbr title="' + w + '">' + w.slice(0, 3) + '</abbr>')); });
+    var lead = (new Date(Date.UTC(view.y, view.m, 1)).getUTCDay() + 6) % 7;
+    for (var i = 0; i < lead; i++) grid.appendChild(el('span', 'bp-cd-x'));
+    var dim = new Date(Date.UTC(view.y, view.m + 1, 0)).getUTCDate();
+    for (var dd = 1; dd <= dim; dd++) (function (dd) {
+      var t = Date.UTC(view.y, view.m, dd), key = view.y + '-' + view.m + '-' + dd;
+      var on = st.day && st.day.key === key, ok = bookable(t);
+      var b = el('button', 'bp-cd' + (on ? ' on' : '') + (t === TODAY ? ' today' : ''), String(dd));
+      b.type = 'button';
+      b.setAttribute('aria-label', WEEKDAYS[(new Date(t).getUTCDay() + 6) % 7] + ' ' + dd + ' ' + MONTHS[view.m] + ' ' + view.y + (ok ? '' : ', not available'));
+      if (!ok) b.disabled = true;
+      else {
+        b.setAttribute('aria-pressed', on);
+        b.onclick = function () { st.day = { key: key, t: t, d: { y: view.y, m: view.m, d: dd } }; st.slot = null; render(); };
+      }
+      grid.appendChild(b);
+    })(dd);
+    dv.appendChild(grid);
+    dv.appendChild(el('p', 'bp-cal-note', st.day
+      ? 'Selected: <b>' + WEEKDAYS[(new Date(st.day.t).getUTCDay() + 6) % 7] + ' ' + st.day.d.d + ' ' + MONTHS[st.day.d.m] + ' ' + st.day.d.y + '</b>'
+      : 'Weekdays only, up to 3 months ahead. Days are in Melbourne time.'));
     var tv = $('#bp-times'); tv.innerHTML = '';
     if (!st.day) tv.innerHTML = '<p class="bp-hint">Choose a day to see times.</p>';
     else slots(st.day.d).forEach(function (t) {
@@ -82,21 +113,34 @@
       ? '<b>' + st.svc.name + '</b> · ' + fmt(st.slot, tz, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' }) + ' <span>(your time)</span><br><small>Melbourne time: ' + fmt(st.slot, HQ, { weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }) + '</small>'
       : 'Choose a meeting type, day and time.';
     $('#bp-form').hidden = !ready;
-    updateLinks();
   }
-  function updateLinks() {
-    if (!st.svc || !st.slot) return;
-    var f = function (id) { var e = $('#' + id); return e ? e.value.trim() : ''; };
-    var msg = 'Hi EG Eloma, I would like to book a ' + st.svc.name + ' (' + st.svc.mins + ' min, Microsoft Teams).\n' +
-      'Preferred time: ' + fmt(st.slot, tz, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' }) + ' (' + tz + ')\n' +
-      'Melbourne time: ' + fmt(st.slot, HQ, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' }) + '\n' +
-      (f('bp-name') ? 'Name: ' + f('bp-name') + '\n' : '') + (f('bp-biz') ? 'Business: ' + f('bp-biz') + '\n' : '') +
-      (f('bp-email') ? 'Email: ' + f('bp-email') + '\n' : '') + (f('bp-notes') ? 'About: ' + f('bp-notes') + '\n' : '');
-    $('#bp-wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
-    var tm = $('#bp-teams'); if (tm) tm.href = 'https://teams.microsoft.com/l/chat/0/0?users=' + EMAIL + '&message=' + encodeURIComponent(msg);
-    $('#bp-mail').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Meeting request: ' + st.svc.name) + '&body=' + encodeURIComponent(msg);
-  }
-  ['bp-name', 'bp-biz', 'bp-email', 'bp-notes'].forEach(function (id) { var e = $('#' + id); if (e) e.addEventListener('input', updateLinks); });
+
+  // One submit: POST /api/book (Azure Function, emails the team through Microsoft 365), then /thank-you counts the lead.
+  var form = $('#bp-form'), submit = $('.bp-submit'), err = $('#bp-err'), label = submit.textContent;
+  var val = function (id) { return $('#' + id).value.trim(); };
+  var fail = function (msg) { err.textContent = msg; err.hidden = false; submit.disabled = false; submit.textContent = label; };
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.hidden = true;
+    if (!st.svc || !st.slot) return fail('Choose a meeting type, day and time first.');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    submit.disabled = true; submit.textContent = 'Sending…';
+    fetch('/api/book', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        service: st.svc.id, start: st.slot.toISOString(), tz: tz,
+        name: val('bp-name'), email: val('bp-email'), business: val('bp-biz'), phone: val('bp-phone'), notes: val('bp-notes'),
+        website: val('bp-hp')
+      })
+    }).then(function (r) {
+      if (!r.ok) throw r.status;
+      if (window.egTrack) egTrack.flagLead();
+      location.assign('/thank-you');
+    }).catch(function () {
+      fail('Sorry, your request didn’t send. Please try again, or call 1800 054 555.');
+    });
+  });
 
   // tabs
   var tabs = document.querySelectorAll('[data-booktab]');

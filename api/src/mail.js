@@ -104,8 +104,8 @@ async function sendLarge(token, from, message, attachments) {
 }
 
 // Sends the email and returns an HTTP response for the function to return.
-// attachments: [{ name, contentType, bytes: Buffer }]
-export async function send(ctx, { subject, html, replyTo, attachments = [] }) {
+// attachments: [{ name, contentType, bytes: Buffer }]; to: recipient (default MAIL_TO, the team mailbox)
+export async function send(ctx, { subject, html, replyTo, attachments = [], to: recipient }) {
   const env = process.env
   const missing = ['M365_TENANT_ID', 'M365_CLIENT_ID', 'M365_CLIENT_SECRET'].filter(k => !env[k])
   if (missing.length) {
@@ -113,7 +113,7 @@ export async function send(ctx, { subject, html, replyTo, attachments = [] }) {
     return { status: 500, jsonBody: { error: 'Could not send', detail: { step: 'config', missing } } }
   }
   const from = env.MAIL_FROM || 'connect@egeloma.com.au'
-  const to = env.MAIL_TO || 'connect@egeloma.com.au'
+  const to = recipient || env.MAIL_TO || 'connect@egeloma.com.au'
   try {
     const token = await graphToken(env)
     const message = {

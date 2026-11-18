@@ -181,7 +181,7 @@ writeFileSync(dist + 'sitemap.xml',
 writeFileSync(dist + 'staticwebapp.config.json', JSON.stringify({
   // Azure maps clean URLs itself: /contact serves contact.html, and /contact.html and /contact/ 301 to /contact.
   trailingSlash: 'never',
-  // Managed Azure Functions in api/ (/api/contact, /api/quote, /api/subscribe).
+  // Managed Azure Functions in api/ (/api/contact, /api/quote, /api/subscribe, /api/book).
   platform: { apiRuntime: 'node:22' },
   routes: [
     { route: '/index.html', redirect: '/', statusCode: 301 },
