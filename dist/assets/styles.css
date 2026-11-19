@@ -162,6 +162,7 @@ section{padding-block:5.5rem}
 .plan .price span{font-size:.9rem;font-weight:600;color:var(--muted);letter-spacing:.04em;margin-right:.15rem;vertical-align:.45em}
 .plan.feature .price{color:#fff;border-color:rgba(233,241,246,.15)}.plan.feature .price span{color:var(--green)}
 .scard .sc-price{font-style:normal;font:700 1.15rem var(--display);color:var(--navy);margin-top:.35rem;font-variant-numeric:tabular-nums}.scard .sc-price span{font-size:.75rem;font-weight:600;color:var(--green-deep);letter-spacing:.04em;margin-right:.1rem}
+.price .per,.sc-price .per{font-size:.45em;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:.2rem}.sc-price .per{font-size:.7em}.plan.feature .price .per{color:rgba(233,241,246,.75)}
 .plan.feature{background:var(--navy);color:var(--on-navy);border-color:var(--navy);position:relative}
 .plan.feature .for{color:var(--on-navy-muted)}
 .plan.feature ul{border-color:rgba(233,241,246,.15)}
