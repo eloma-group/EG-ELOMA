@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "route": "/*", "rewrite": "/api/go" }
+  ],
+  "platform": { "apiRuntime": "node:22" }
+}

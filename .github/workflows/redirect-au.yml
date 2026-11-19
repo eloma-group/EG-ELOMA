@@ -1,0 +1,24 @@
+name: Redirect app (egeloma.com.au, egdigital.com.au)
+
+# Deploys redirect-au/ to its own Static Web App, which 301s every path on the .com.au domains to egeloma.com.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'redirect-au/**'
+      - '.github/workflows/redirect-au.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_SWA_TOKEN_REDIRECT_AU }}
+          action: upload
+          app_location: redirect-au/public
+          api_location: redirect-au/api
+          skip_app_build: true
