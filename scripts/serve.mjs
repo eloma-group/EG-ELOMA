@@ -22,6 +22,14 @@ watch(root + 'site', { recursive: true }, () => { clearTimeout(timer); timer = s
 const isFile = p => existsSync(p) && statSync(p).isFile()
 
 createServer((req, res) => {
+  // A rebuild empties dist/ for a moment; answer 503 then instead of crashing the server.
+  try { handle(req, res) } catch {
+    if (!res.headersSent) res.writeHead(503, { 'Content-Type': 'text/plain', 'Retry-After': '1' })
+    res.end('Rebuilding, refresh in a second.')
+  }
+}).listen(PORT, () => console.log(`\n  EG Eloma preview: http://localhost:${PORT}/\n`))
+
+function handle(req, res) {
   const url = new URL(req.url, 'http://localhost')
   const path = decodeURIComponent(url.pathname)
   const config = JSON.parse(readFileSync(dist + 'staticwebapp.config.json', 'utf8'))
@@ -36,4 +44,4 @@ createServer((req, res) => {
   if (!isFile(file)) file = isFile(file + '.html') ? file + '.html' : ((status = 404), dist + '404.html')
   res.writeHead(status, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-cache' })
   res.end(readFileSync(file))
-}).listen(PORT, () => console.log(`\n  EG Eloma preview: http://localhost:${PORT}/\n`))
+}
