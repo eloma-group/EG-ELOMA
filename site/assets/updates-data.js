@@ -19,6 +19,19 @@
 */
 window.EG_UPDATES = [
   {
+    "id": "software-subscription-cost-5-years",
+    "date": "2026-11-19",
+    "category": "news",
+    "priority": "info",
+    "title": "New blog: what your software subscriptions really cost over 5 years",
+    "summary": "Six tools at $880 a month add up to $52,800 over five years, or about $58,350 with 5% yearly price rises. Our new guide shows how to add up your own subscriptions and when custom software starts to cost less.",
+    "action": "No action needed. Read the guide, then try the subscription calculator with your own apps.",
+    "link": "blog/software-subscription-cost-5-years.html",
+    "linkText": "Read the article",
+    "source": "",
+    "sourceUrl": ""
+  },
+  {
     "id": "quote-with-files",
     "date": "2026-11-13",
     "category": "news",

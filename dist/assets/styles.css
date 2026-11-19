@@ -988,3 +988,54 @@ h2.eyebrow,h3.eyebrow{font-family:var(--body);line-height:inherit;text-wrap:wrap
 @media (max-width:1000px){.hc-grid{grid-template-columns:1fr;gap:2.5rem}.hc-preview{max-width:560px}.hc-top{grid-template-columns:1fr}.hc-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.hc{padding-block:3.5rem}.hc-field{flex-wrap:wrap;padding:.5rem}.hc-field>svg{display:none}.hc .hc-field input{flex:1 1 100%;padding:.75rem .6rem}.hc-go{flex:1 1 100%;justify-content:center}.hc-cats{grid-template-columns:1fr}.hc-fixes li{grid-template-columns:1fr}.hc-fixes .hc-sev{justify-self:start}.hc-float{display:none}.hc-win{transform:none}.hc-bars li{grid-template-columns:96px 1fr 26px}.hc-preview{padding:0}}
 @media (prefers-reduced-motion:reduce){.hc *,.hc *::before{animation:none!important;transition:none!important}}
+
+/* Blog posts (site/blog/) */
+.post-meta{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin-top:1.1rem;color:var(--muted);font-size:.92rem}
+.post{max-width:46rem;margin-inline:auto}
+.post-img{margin:0 0 2.2rem}
+.post-img-ph{display:grid;place-items:center;aspect-ratio:16/9;border:2px dashed var(--line);border-radius:var(--r);background:var(--mint);color:var(--green-deep);font-weight:600;text-align:center;padding:1rem}
+.post-img-ph small{display:block;font-weight:400;color:var(--muted);margin-top:.3rem}
+.post-img figcaption{color:var(--muted);font-size:.88rem;margin-top:.6rem}
+.post h2{font-size:clamp(1.4rem,2.6vw,1.85rem);margin:2.4rem 0 .4rem}
+.post p,.post li{color:var(--muted);font-size:1.05rem;line-height:1.7}
+.post p{margin-top:1rem}
+.post .post-answer{color:var(--ink);font-size:1.15rem;border-left:4px solid var(--green);padding:.2rem 0 .2rem 1.1rem;margin-top:0}
+.post ul,.post ol{margin:1rem 0 0 1.3rem}
+.post li{margin-top:.45rem}
+.post li::marker{color:var(--green-deep)}
+.post a:not(.btn){color:var(--green-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.post .note{font-size:.95rem;background:#F5F8FA;border-radius:10px;padding:.8rem 1rem}
+.post-tw{overflow-x:auto;margin-top:1.2rem;border:1px solid var(--line);border-radius:var(--r)}
+.post-t{width:100%;border-collapse:collapse;font-size:.98rem}
+.post-t th,.post-t td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--line)}
+.post-t thead th{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.post-t td{color:var(--muted)}
+.post-t tbody th{color:var(--navy);font-weight:600}
+.post-t .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.post-t tfoot th,.post-t tfoot td{color:var(--navy);font-weight:700;background:var(--mint);border-bottom:0}
+.post .qs{margin-top:1rem}
+
+/* Blog posts (site/blog/) */
+.post-meta{display:flex;flex-wrap:wrap;gap:.4rem 1rem;margin-top:1.1rem;color:var(--muted);font-size:.92rem}
+.post{max-width:46rem;margin-inline:auto}
+.post-img{margin:0 0 2.2rem}
+.post-img-ph{display:grid;place-items:center;aspect-ratio:16/9;border:2px dashed var(--line);border-radius:var(--r);background:var(--mint);color:var(--green-deep);font-weight:600;text-align:center;padding:1rem}
+.post-img-ph small{display:block;font-weight:400;color:var(--muted);margin-top:.3rem}
+.post-img img{display:block;width:100%;height:auto;border-radius:var(--r)}
+.post h2{font-size:clamp(1.4rem,2.6vw,1.85rem);margin:2.4rem 0 .4rem}
+.post p,.post li{color:var(--muted);font-size:1.05rem;line-height:1.7}
+.post p{margin-top:1rem}
+.post .post-answer{color:var(--ink);font-size:1.15rem;border-left:4px solid var(--green);padding:.2rem 0 .2rem 1.1rem;margin-top:0}
+.post ul,.post ol{margin:1rem 0 0 1.3rem}
+.post li{margin-top:.45rem}
+.post li::marker{color:var(--green-deep)}
+.post a:not(.btn){color:var(--green-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.post .note{font-size:.95rem;background:#F5F8FA;border-radius:10px;padding:.8rem 1rem}
+.post-tw{overflow-x:auto;margin-top:1.2rem;border:1px solid var(--line);border-radius:var(--r)}
+.post-t{width:100%;border-collapse:collapse;font-size:.98rem}
+.post-t th,.post-t td{padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--line)}
+.post-t thead th{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.post-t td{color:var(--muted)}
+.post-t tbody th{color:var(--navy);font-weight:600}
+.post-t .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.post-t tfoot th,.post-t tfoot td{color:var(--navy);font-weight:700;background:var(--mint);border-bottom:0}
